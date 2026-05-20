@@ -105,7 +105,11 @@ function MossPage() {
             </div>
           </div>
           <div className="mt-6">
-            <Placeholder label="Requirements · field data + interviews" className="aspect-[16/7] w-full" />
+            <img
+              src="/moss-inventory-screen.jpg"
+              alt="Inventory sheets on office computer — the manual data process being replaced"
+              className="w-full max-w-[720px] mx-auto block"
+            />
             <Caption>
               Product requirements derived from field data, interviews with 3 inventory managers, field supervisors, and
               office workers across Oregon farms, covering physical ergonomics, UI preferences, environmental thresholds,
@@ -138,12 +142,15 @@ function MossPage() {
               </p>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
             <div>
-              <Placeholder label="ATV in tree rows · Oregon farm · sensor kit mounted" className="aspect-[4/3] w-full" />
+              <img src="/moss-atv-rows.jpg" alt="ATV in tree rows at Oregon farm" className="w-full aspect-[4/3] object-cover" />
             </div>
             <div>
-              <Placeholder label="Field worker · manual caliper measurement" className="aspect-[4/3] w-full" />
+              <img src="/moss-caliper.jpg" alt="Field worker demonstrating manual caliper measurement" className="w-full aspect-[4/3] object-cover" />
+            </div>
+            <div>
+              <img src="/moss-field-lift.jpg" alt="Boom lift above tree rows for height assessment" className="w-full aspect-[4/3] object-cover object-top" />
             </div>
           </div>
         </Container>
@@ -198,27 +205,72 @@ function MossPage() {
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             System <span className="font-serif-i italic text-accent-green">architecture</span>: device · firmware · environment.
           </h2>
-          <Placeholder label="Subsystem diagram · Sensing & Alignment / Core Processing / Power & Telemetry Hub" className="aspect-[16/7] w-full mb-10" />
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                tag: "Physical",
-                body: "Custom industrial enclosure optimized for field ergonomics and weight distribution. Three modular interconnected zones: Sensor & Interface Wing, Compute Engine Core, and Power & Climate Matrix.",
-              },
-              {
-                tag: "Firmware",
-                body: "Sensor data acquisition pipeline and edge computation on a dedicated 32-bit microcontroller. Coordinates high-precision temporal synchronization across GPS, LiDAR, and IMU data via an active clock multiplexer pipeline.",
-              },
-              {
-                tag: "Hardware Integration",
-                body: "Dense environmental monitoring matrix: multi-point thermal probes, humidity tracking units, voltage and current telemetry, and firmware-driven fan relay controls.",
-              },
-            ].map((l) => (
-              <div key={l.tag} className="rounded-2xl border border-rule p-6">
-                <span className="text-xs uppercase tracking-[0.22em] text-accent-green">{l.tag}</span>
-                <p className="mt-3 text-sm leading-relaxed text-foreground">{l.body}</p>
-              </div>
-            ))}
+          <img
+            src="/moss-architecture.jpg"
+            alt="Three-panel subsystem block diagram: Sensing & Alignment, Core Processing, Power & Telemetry Hub"
+            className="w-full max-w-[900px] mx-auto block mb-10"
+          />
+
+          {/* Physical */}
+          <div className="mb-6 rounded-2xl border border-rule p-6 md:p-8">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-green">Physical</span>
+            <p className="mt-3 text-sm leading-relaxed text-foreground">
+              Custom industrial enclosure engineered for field serviceability and ruggedized deployment. All components are
+              mounted directly to the interior walls of the enclosure, organized across three detachable backplanes for
+              modular access and replacement. Small components and custom PCBs are grouped onto dedicated backplanes; the
+              primary backplate detaches via a Molex connector, allowing full removal without rewiring. Every component
+              carries an IP67 rating, independently verified through in-house water jet and immersion testing.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {[
+                { zone: "Sensor & Interface Wing", desc: "Manages primary spatial sensing arrays and localized data routing infrastructure." },
+                { zone: "Compute Engine Core", desc: "Houses the central high-performance processing node and industrial power injection hardware." },
+                { zone: "Power & Climate Matrix", desc: "Controls environmental monitoring, active thermal regulation, power distribution, and system status indication." },
+              ].map((z) => (
+                <div key={z.zone} className="border-l-2 border-accent-green pl-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">{z.zone}</p>
+                  <p className="text-sm leading-relaxed text-foreground">{z.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* HCI */}
+          <div className="mb-6 rounded-2xl border border-rule p-6 md:p-8">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-green">Human-Computer Interface</span>
+            <p className="mt-3 text-sm leading-relaxed text-foreground">
+              Designed explicitly around agricultural field conditions. Field workers wear gloves and operate in direct
+              sunlight, making standard touchscreens impractical. The kit ships with a ruggedized tablet featuring physical
+              buttons, high-brightness display, and an IP67 rating with a sealed charging port. The tablet connects to the
+              sensor kit via a physical tethered cable — a deliberate choice, as field workers expressed stronger trust in
+              wired connections over wireless.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-foreground">
+              Status LEDs on the enclosure exterior are color-coded to communicate system state without requiring the
+              operator to stop or dismount: green for active collection, yellow for processing, red for error, flashing for
+              attention required. The entire assembly mounts to any standard tractor or ATV configuration.
+            </p>
+          </div>
+
+          {/* Firmware + Hardware Integration */}
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-rule p-6 md:p-8">
+              <span className="text-xs uppercase tracking-[0.22em] text-accent-green">Firmware</span>
+              <p className="mt-3 text-sm leading-relaxed text-foreground">
+                Sensor data acquisition pipeline and edge computation running on a dedicated 32-bit microcontroller.
+                Coordinates high-precision temporal synchronization across sensing and compute nodes via an active clock
+                multiplexer pipeline, ensuring microsecond-accurate alignment of GPS, LiDAR, and IMU data during field
+                navigation.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-rule p-6 md:p-8">
+              <span className="text-xs uppercase tracking-[0.22em] text-accent-green">Hardware Integration</span>
+              <p className="mt-3 text-sm leading-relaxed text-foreground">
+                Dense environmental monitoring matrix managed through an internal communication hub: multi-point thermal
+                probes, environmentally isolated humidity tracking units, integrated voltage and current telemetry for
+                real-time power metrics, and firmware-driven fan relay controls.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
@@ -301,8 +353,8 @@ function MossPage() {
                 incorporated into the hardware specification, not added retroactively.
               </p>
               <div className="mt-8 grid grid-cols-2 gap-4">
-                <Placeholder label="Mid-fidelity prototype · cardboard" className="aspect-[4/3] w-full" />
-                <Placeholder label="High-fidelity enclosure · field deployment" className="aspect-[4/3] w-full" />
+                <img src="/moss-todo-wall.jpg" alt="TODO/DOING/DONE prototyping wall with sticky notes" className="w-full aspect-[4/3] object-cover" />
+                <img src="/moss-device-atv.jpg" alt="High-fidelity sensor kit mounted on ATV for field deployment" className="w-full aspect-[4/3] object-cover" />
               </div>
             </div>
           </div>
@@ -315,8 +367,8 @@ function MossPage() {
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
-                src={farmSensorKit}
-                alt="Moss farm sensor kit deployed"
+                src="/moss-device-atv.jpg"
+                alt="Moss sensor kit mounted on ATV, field deployed"
                 className="w-full border border-rule block"
               />
             </div>
