@@ -62,7 +62,7 @@ function PulsePage() {
                 CMU ECE · 18-500 · Spring 2026
               </p>
             </div>
-            <div className="md:col-span-6 flex justify-center md:justify-end items-start pt-10">
+            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-4">
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
@@ -197,7 +197,7 @@ function PulsePage() {
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="w-full rounded-xl border border-rule block mb-10"
+            className="w-full max-w-[640px] rounded-xl border border-rule block mb-10"
           />
           <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[640px]">
             {[
@@ -224,18 +224,18 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-4 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
             Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
           </h2>
-          <p className="mb-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
-            landed at ~140ms against a 200ms target.
-          </p>
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
             className="w-full max-w-[820px] mx-auto rounded-xl block"
           />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
+            landed at ~140ms against a 200ms target.
+          </p>
         </Container>
       </section>
 
