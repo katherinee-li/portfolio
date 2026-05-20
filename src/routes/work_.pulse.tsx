@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
-import { Container, Footer, Nav, SectionLabel } from "@/components/site";
+import { Container, Nav, SectionLabel } from "@/components/site";
 import pulseDevice from "@/assets/pulse-device.png";
 import pulseRequirements from "@/assets/pulse-requirements.jpg";
 import pulseArchitecture from "@/assets/pulse-architecture.jpg";
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/work_/pulse")({
 
 
 function Caption({ children }: { children: React.ReactNode }) {
-  return <p className="mt-3 text-sm leading-relaxed text-foreground text-center">{children}</p>;
+  return <p className="mt-3 text-base leading-relaxed text-foreground text-center">{children}</p>;
 }
 
 function Eq({ children }: { children: React.ReactNode }) {
@@ -52,8 +52,8 @@ function PulsePage() {
               <h1 className="font-display text-6xl leading-[0.92] tracking-tight md:text-8xl">
                 Pulse<span className="text-accent-orange">.</span>
               </h1>
-              <p className="mt-6 font-serif-i text-2xl leading-snug text-accent-cream md:text-4xl">
-                The compass that <span className="italic text-accent-orange">connects</span>.
+              <p className="mt-6 font-serif-i text-2xl leading-snug text-accent-orange md:text-4xl">
+                The compass that <span className="italic">connects</span>.
               </p>
               <p className="mt-8 max-w-md text-base leading-relaxed text-foreground md:text-lg">
                 A dedicated, single-purpose device for spontaneous human connection.
@@ -62,7 +62,7 @@ function PulsePage() {
                 CMU ECE · 18-500 · Spring 2026
               </p>
             </div>
-            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-8">
+            <div className="md:col-span-6 flex justify-center md:justify-end items-start pt-10">
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
@@ -199,7 +199,7 @@ function PulsePage() {
             alt="5-step meetup flow: Device Wake to SUCCESS"
             className="w-full rounded-xl border border-rule block mb-10"
           />
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+          <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[640px]">
             {[
               { src: "/pulse-screen-welcome.jpg", label: "Welcome" },
               { src: "/pulse-screen-send-request.jpg", label: "Send request" },
@@ -211,7 +211,7 @@ function PulsePage() {
                 <img
                   src={s.src}
                   alt={s.label}
-                  className="aspect-[3/4] w-full rounded-xl object-cover border border-rule"
+                  className="aspect-[3/4] w-full rounded-lg object-cover border border-rule"
                 />
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">{s.label}</p>
               </div>
@@ -224,18 +224,18 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-4 font-display text-4xl leading-[1.05] md:text-6xl">
             Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
           </h2>
+          <p className="mb-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
+            landed at ~140ms against a 200ms target.
+          </p>
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
             className="w-full max-w-[820px] mx-auto rounded-xl block"
           />
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
-            landed at ~140ms against a 200ms target.
-          </p>
         </Container>
       </section>
 
@@ -287,7 +287,6 @@ function PulsePage() {
         </Container>
       </section>
 
-      <Footer />
     </main>
   );
 }
