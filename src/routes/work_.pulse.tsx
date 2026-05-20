@@ -210,14 +210,18 @@ function PulsePage() {
           />
           <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
             {[
-              { label: "Success" },
-              { label: "Welcome" },
-              { label: "Send request" },
-              { label: "Navigating" },
-              { label: "Waiting for response" },
+              { src: "/pulse-screen-welcome.jpg", label: "Welcome" },
+              { src: "/pulse-screen-send-request.jpg", label: "Send request" },
+              { src: "/pulse-screen-waiting.jpg", label: "Waiting for response" },
+              { src: "/pulse-screen-navigating.jpg", label: "Navigating" },
+              { src: "/pulse-screen-success.jpg", label: "Success" },
             ].map((s) => (
               <div key={s.label}>
-                <Placeholder label={s.label} className="aspect-[3/4] w-full" />
+                <img
+                  src={s.src}
+                  alt={s.label}
+                  className="aspect-[3/4] w-full rounded-xl object-cover border border-rule"
+                />
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">{s.label}</p>
               </div>
             ))}
