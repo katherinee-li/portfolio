@@ -3,8 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import { Container, Nav, SectionLabel } from "@/components/site";
 import pulseDevice from "@/assets/pulse-device.png";
 import pulseRequirements from "@/assets/pulse-requirements.jpg";
-import pulseArchitecture from "@/assets/pulse-architecture.jpg";
-import pulsePipeline from "@/assets/pulse-pipeline.jpg";
+import pulseArchitecture from "@/assets/pulse-pipeline.jpg";
+import pulsePipeline from "@/assets/pulse-architecture.jpg";
 
 export const Route = createFileRoute("/work_/pulse")({
   head: () => ({
@@ -111,7 +111,7 @@ function PulsePage() {
             System <span className="font-serif-i italic text-accent-orange">architecture</span>: device · firmware · server.
           </h2>
           <img
-            src={pulseArchitecture}
+            src={pulsePipeline}
             alt="Full system architecture diagram"
             className="w-full max-w-[820px] mx-auto rounded-xl block"
           />
@@ -137,7 +137,7 @@ function PulsePage() {
           <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
             Sensor-to-display <span className="font-serif-i italic text-accent-orange">pipeline</span>, 200ms budget.
           </h2>
-          <img src={pulsePipeline} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto rounded-xl block" />
+          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto rounded-xl block" />
           <div className="mt-12 grid gap-12 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
@@ -197,9 +197,9 @@ function PulsePage() {
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="w-full max-w-[640px] rounded-xl border border-rule block mb-10"
+            className="w-full max-w-[820px] mx-auto rounded-xl border border-rule block mb-10"
           />
-          <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[640px]">
+          <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[820px] mx-auto">
             {[
               { src: "/pulse-screen-welcome.jpg", label: "Welcome" },
               { src: "/pulse-screen-send-request.jpg", label: "Send request" },
