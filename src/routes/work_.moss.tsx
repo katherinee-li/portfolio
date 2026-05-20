@@ -9,7 +9,7 @@ export const Route = createFileRoute("/work_/moss")({
       { title: "Moss — The Sensor Kit That Scales" },
       { name: "description", content: "A production-ready sensor kit autonomizing tree inventory for a venture-backed agricultural robotics startup." },
       { property: "og:title", content: "Moss — The Sensor Kit That Scales" },
-      { property: "og:description", content: "A production-ready sensor kit autonomizing tree inventory — count, height, and caliper." },
+      { property: "og:description", content: "A production-ready sensor kit autonomizing tree inventory: count, height, and caliper." },
     ],
   }),
   component: MossPage,
@@ -60,7 +60,7 @@ function MossPage() {
                 The sensor kit that <span className="italic">scales</span>.
               </p>
               <p className="mt-8 max-w-md text-base leading-relaxed text-foreground md:text-lg">
-                A production-ready sensor kit autonomizing tree inventory — count, height, and caliper — for a venture-backed agricultural robotics startup.
+                A production-ready sensor kit autonomizing tree inventory (count, height, and caliper) for a venture-backed agricultural robotics startup.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 Moss · Firmware Intern · Summer 2024
@@ -88,21 +88,21 @@ function MossPage() {
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Tree farms manage between 2 and 10 million trees. Inventory runs a minimum of twice per year. The previous
-                process required 3 people, 2 months, manual counting, and paper records — with rows missed, varieties mixed,
+                process required 3 people, 2 months, manual counting, and paper records, with rows missed, varieties mixed,
                 and containers moved without notice. Version 2.0 of the moss sensor kit autonomizes this pipeline: mount the
                 box to an ATV, drive the rows, plug in at end of day, and the data appears.
               </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-6">
-                {[
-                  "Improved field accuracy by 16%",
-                  "Reduced sensor failure rates by 20%",
-                ].map((s) => (
-                  <div key={s} className="border-l-2 border-accent-green pl-4">
-                    <p className="text-base font-medium text-foreground">{s}</p>
-                  </div>
-                ))}
-              </div>
             </div>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-6">
+            {[
+              "Improved field accuracy by 16%",
+              "Reduced sensor failure rates by 20%",
+            ].map((s) => (
+              <div key={s} className="border-l-2 border-accent-green pl-4">
+                <p className="text-base font-medium text-foreground">{s}</p>
+              </div>
+            ))}
           </div>
           <div className="mt-6">
             <img
@@ -111,7 +111,7 @@ function MossPage() {
               className="w-full max-w-[400px] mx-auto block"
             />
             <Caption>
-              Manually measuring caliper in the field — every fifth to tenth tree, fifteen seconds minimum per measurement,
+              Manually measuring caliper in the field: every fifth to tenth tree, fifteen seconds minimum per measurement,
               recorded by hand. Across millions of trees, the arithmetic made the case for automation.
             </Caption>
           </div>
@@ -289,9 +289,9 @@ function MossPage() {
             <div className="md:col-span-5">
               <ol className="space-y-5">
                 {[
-                  "User interviews — 3 farmers, 5 office workers",
-                  "Mid-fidelity prototype — components wired into a cardboard box, photos shared with Oregon customers",
-                  "Customer feedback — physical dimensions, button placement, handle ergonomics, indicator light placement",
+                  "User interviews: 3 farmers, 5 office workers",
+                  "Mid-fidelity prototype: components wired into a cardboard box, photos shared with Oregon customers",
+                  "Customer feedback: physical dimensions, button placement, handle ergonomics, indicator light placement",
                   "High-fidelity hardware specification and field deployment",
                 ].map((step, i) => (
                   <li key={i} className="flex gap-4">
