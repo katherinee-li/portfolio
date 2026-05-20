@@ -107,7 +107,7 @@ export function Footer() {
 
 
 export const projects = [
-  { title: "Farm Sensor Kit", kind: "Moss · Internship", year: "2024", tint: "from-accent-green/30 to-accent-orange/15", image: farmSensorKit },
+  { title: "Farm Sensor Kit", kind: "Moss · Internship", year: "2024", tint: "from-accent-green/30 to-accent-orange/15", image: farmSensorKit, href: "/work/moss" },
   { title: "Proximity-Based Social Navigation", kind: "ECE Capstone", year: "2026", tint: "from-accent-orange/30 to-accent-rose/20", image: proximityDevice, href: "/work/pulse" },
   { title: "Farm Inventory App", kind: "Moss · Internship", year: "2024", tint: "from-accent-rose/25 to-accent-cream/15" },
   { title: "SLAM Auto-Calibration", kind: "Biorobotics Lab", year: "2023", tint: "from-accent-green/30 to-accent-cream/15" },
