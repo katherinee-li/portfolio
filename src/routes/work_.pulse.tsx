@@ -49,7 +49,7 @@ function PulsePage() {
           <SectionLabel dot="orange">ECE Capstone · Spring 2026</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
-              <h1 className="font-display text-6xl leading-[0.92] tracking-tight md:text-8xl">
+              <h1 className="font-display text-5xl leading-[0.92] tracking-tight md:text-7xl">
                 Pulse<span className="text-accent-orange">.</span>
               </h1>
               <p className="mt-6 font-serif-i text-2xl leading-snug text-accent-orange md:text-4xl">
@@ -79,7 +79,7 @@ function PulsePage() {
           <SectionLabel dot="rose">problem & requirements</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
-              <h2 className="font-display text-4xl leading-[1.05] md:text-6xl">
+              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
                 Smartphones engineer <span className="font-serif-i italic text-accent-orange">engagement</span>, not connection.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
@@ -93,7 +93,7 @@ function PulsePage() {
             <img
               src={pulseRequirements}
               alt="Use-case to design requirements table"
-              className="w-full max-w-[720px] mx-auto rounded-xl block"
+              className="w-full max-w-[720px] mx-auto block"
             />
             <Caption>
               Four use-case requirements mapped to engineering specs with explicit justification, the traceability matrix
@@ -107,13 +107,13 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             System <span className="font-serif-i italic text-accent-orange">architecture</span>: device · firmware · server.
           </h2>
           <img
             src={pulsePipeline}
             alt="Full system architecture diagram"
-            className="w-full max-w-[820px] mx-auto rounded-xl block"
+            className="w-full max-w-[820px] mx-auto block"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -134,55 +134,55 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="orange">firmware & state machine</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             Sensor-to-display <span className="font-serif-i italic text-accent-orange">pipeline</span>, 200ms budget.
           </h2>
-          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto rounded-xl block" />
-          <div className="mt-12 grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
-                The end-to-end pipeline runs inside a single 200ms budget, from accelerometer sample to rendered arrow on the
-                opposite device.
-              </p>
-              <Eq>
-                τ<sub>total</sub> = τ<sub>imu</sub> + τ<sub>filter</sub> + τ<sub>net</sub> + τ<sub>render</sub> ≤ 200 ms
-              </Eq>
-              <dl className="grid grid-cols-2 gap-y-5">
-                {[
-                  { k: "Sensor read", v: "≤ 5 ms" },
-                  { k: "Filter + PDR", v: "≤ 15 ms" },
-                  { k: "WiFi round-trip", v: "≤ 150 ms" },
-                  { k: "Render", v: "≤ 25 ms" },
-                ].map((m) => (
-                  <div key={m.k}>
-                    <dt className="text-xs uppercase tracking-[0.22em] text-foreground">{m.k}</dt>
-                    <dd className="mt-1 font-display text-2xl">{m.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-            <div className="md:col-span-5">
-              <div className="rounded-2xl border border-rule p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">UI state machine</p>
-                <ul className="mt-4 space-y-2 font-mono text-sm text-foreground">
-                  <li>OFF → power on</li>
-                  <li>CONNECTING → handshake w/ server</li>
-                  <li>ACTIVE → idle home screen</li>
-                  <li>NAVIGATING → live arrow loop</li>
-                  <li>IDLE → low-power hold</li>
-                </ul>
-              </div>
-            </div>
+          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto block" />
+
+          {/* Pipeline budget — centered */}
+          <div className="mt-12 max-w-2xl mx-auto text-center">
+            <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
+              The end-to-end pipeline runs inside a single 200ms budget, from accelerometer sample to rendered arrow on the
+              opposite device.
+            </p>
+            <Eq>
+              τ<sub>total</sub> = τ<sub>imu</sub> + τ<sub>filter</sub> + τ<sub>net</sub> + τ<sub>render</sub> ≤ 200 ms
+            </Eq>
+            <dl className="grid grid-cols-2 gap-y-5 mt-2">
+              {[
+                { k: "Sensor read", v: "≤ 5 ms" },
+                { k: "Filter + PDR", v: "≤ 15 ms" },
+                { k: "WiFi round-trip", v: "≤ 150 ms" },
+                { k: "Render", v: "≤ 25 ms" },
+              ].map((m) => (
+                <div key={m.k}>
+                  <dt className="text-xs uppercase tracking-[0.22em] text-foreground">{m.k}</dt>
+                  <dd className="mt-1 font-display text-2xl">{m.v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
 
-          {/* State transitions diagram */}
-          <div className="mt-10">
-            <p className="text-xs uppercase tracking-[0.22em] text-foreground text-center mb-4">State transitions · per-state current draw</p>
-            <img
-              src="/pulse-state-machine.jpg"
-              alt="State machine with per-state current draw"
-              className="w-full max-w-[640px] mx-auto rounded-xl border border-rule block"
-            />
+          {/* State transitions — image left, list right */}
+          <div className="mt-14 grid gap-8 md:grid-cols-2 items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.22em] text-foreground mb-4">State transitions · per-state current draw</p>
+              <img
+                src="/pulse-state-machine.jpg"
+                alt="State machine with per-state current draw"
+                className="w-full border border-rule block"
+              />
+            </div>
+            <div className="rounded-2xl border border-rule p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">UI state machine</p>
+              <ul className="mt-4 space-y-2 font-mono text-sm text-foreground">
+                <li>OFF → power on</li>
+                <li>CONNECTING → handshake w/ server</li>
+                <li>ACTIVE → idle home screen</li>
+                <li>NAVIGATING → live arrow loop</li>
+                <li>IDLE → low-power hold</li>
+              </ul>
+            </div>
           </div>
         </Container>
       </section>
@@ -191,13 +191,13 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">UI walkthrough</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             UI flow: idle <span className="font-serif-i italic text-accent-orange">→ request → navigate → meetup</span>.
           </h2>
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="w-full max-w-[820px] mx-auto rounded-xl border border-rule block mb-10"
+            className="w-full max-w-[820px] mx-auto border border-rule block mb-10"
           />
           <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[820px] mx-auto">
             {[
@@ -211,7 +211,7 @@ function PulsePage() {
                 <img
                   src={s.src}
                   alt={s.label}
-                  className="aspect-[3/4] w-full rounded-lg object-cover border border-rule"
+                  className="aspect-[3/4] w-full object-cover border border-rule"
                 />
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">{s.label}</p>
               </div>
@@ -224,13 +224,13 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl text-center">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
             Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
           </h2>
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
-            className="w-full max-w-[820px] mx-auto rounded-xl block"
+            className="w-full max-w-[820px] mx-auto block"
           />
           <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
             Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
@@ -243,7 +243,7 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="orange">risk mitigations</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             Failure modes and <span className="font-serif-i italic text-accent-orange">mitigations</span>.
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -269,12 +269,12 @@ function PulsePage() {
               <img
                 src="/pulse-device-final.jpg"
                 alt="Pulse device displaying ARE YOU STILL THERE? idle prompt"
-                className="w-full rounded-2xl border border-rule block"
+                className="w-full border border-rule block"
               />
             </div>
             <div className="md:col-span-7">
               <SectionLabel dot="orange">final iteration</SectionLabel>
-              <h2 className="font-display text-4xl leading-[1.05] md:text-6xl mt-4">
+              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
                 A compass that <span className="font-serif-i italic text-accent-orange">asks to be put down</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
