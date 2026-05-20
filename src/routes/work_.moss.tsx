@@ -92,7 +92,7 @@ function MossPage() {
                 and containers moved without notice. Version 2.0 of the moss sensor kit autonomizes this pipeline: mount the
                 box to an ATV, drive the rows, plug in at end of day, and the data appears.
               </p>
-              <div className="mt-8 flex flex-wrap gap-6">
+              <div className="mt-8 flex flex-wrap justify-center gap-6">
                 {[
                   "Improved field accuracy by 16%",
                   "Reduced sensor failure rates by 20%",
@@ -108,7 +108,7 @@ function MossPage() {
             <img
               src="/moss-caliper.jpg"
               alt="Manually measuring tree caliper in the field"
-              className="w-full max-w-[720px] mx-auto block"
+              className="w-full max-w-[400px] mx-auto block"
             />
             <Caption>
               Manually measuring caliper in the field — every fifth to tenth tree, fifteen seconds minimum per measurement,
@@ -141,14 +141,10 @@ function MossPage() {
               </p>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
             <div>
               <img src="/moss-atv-rows.jpg" alt="Team testing farming equipment on ATV in tree rows" className="w-full aspect-[4/3] object-cover" />
               <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Team testing ATV and farming equipment in the rows</p>
-            </div>
-            <div>
-              <img src="/moss-caliper.jpg" alt="Manually measuring tree caliper in the field" className="w-full aspect-[4/3] object-cover" />
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Manual caliper measurement, Oregon farm</p>
             </div>
             <div>
               <img src="/moss-field-lift.jpg" alt="Sensor kit mounted to a boom lift for aerial tree shots" className="w-full aspect-[4/3] object-cover object-top" />
