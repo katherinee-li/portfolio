@@ -44,7 +44,7 @@ function PulsePage() {
       </Container>
 
       {/* 1. Hero */}
-      <section className="pt-10 pb-24 md:pt-16 md:pb-32">
+      <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
           <SectionLabel dot="orange">ECE Capstone · Spring 2026</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
@@ -62,7 +62,7 @@ function PulsePage() {
                 CMU ECE · 18-500 · Spring 2026
               </p>
             </div>
-            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-4">
+            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-10">
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
@@ -89,7 +89,7 @@ function PulsePage() {
             </div>
           </div>
 
-          <div className="mt-12">
+          <div className="mt-6">
             <img
               src={pulseRequirements}
               alt="Use-case to design requirements table"
@@ -164,7 +164,7 @@ function PulsePage() {
           </div>
 
           {/* State transitions — image left, list right */}
-          <div className="mt-14 grid gap-8 md:grid-cols-2 items-start">
+          <div className="mt-14 grid gap-8 md:grid-cols-2 items-end">
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-foreground mb-4">State transitions · per-state current draw</p>
               <img
@@ -191,7 +191,7 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">UI walkthrough</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
             UI flow: idle <span className="font-serif-i italic text-accent-orange">→ request → navigate → meetup</span>.
           </h2>
           <img
