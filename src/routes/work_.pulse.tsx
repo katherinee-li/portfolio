@@ -18,15 +18,6 @@ export const Route = createFileRoute("/work_/pulse")({
   component: PulsePage,
 });
 
-function Placeholder({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div
-      className={`flex items-center justify-center rounded-2xl border border-dashed border-rule bg-foreground/[0.02] px-6 text-center text-xs uppercase tracking-[0.22em] text-foreground ${className}`}
-    >
-      {label}
-    </div>
-  );
-}
 
 function Caption({ children }: { children: React.ReactNode }) {
   return <p className="mt-3 text-sm leading-relaxed text-foreground text-center">{children}</p>;
@@ -236,7 +227,11 @@ function PulsePage() {
           <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
             Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
           </h2>
-          <Placeholder label="Validation results table" className="aspect-[16/9] w-full" />
+          <img
+            src="/pulse-validation.jpg"
+            alt="Validation results table: targets vs. measured"
+            className="w-full max-w-[820px] mx-auto rounded-xl block"
+          />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
             Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
             landed at ~140ms against a 200ms target.
