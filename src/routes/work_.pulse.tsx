@@ -224,7 +224,7 @@ function PulsePage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl">
+          <h2 className="mb-10 font-display text-4xl leading-[1.05] md:text-6xl text-center">
             Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
           </h2>
           <img
@@ -232,7 +232,7 @@ function PulsePage() {
             alt="Validation results table: targets vs. measured"
             className="w-full max-w-[820px] mx-auto rounded-xl block"
           />
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+          <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
             Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
             landed at ~140ms against a 200ms target.
           </p>
