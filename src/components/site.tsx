@@ -84,7 +84,7 @@ export function Footer() {
         <div className="mt-12 grid gap-10 md:grid-cols-12">
           <a
             href="mailto:kli5@andrew.cmu.edu"
-            className="font-serif-i text-3xl text-accent-cream underline decoration-accent-green decoration-2 underline-offset-8 md:col-span-7 md:text-5xl"
+            className="font-serif-i text-3xl text-accent-orange underline decoration-accent-orange decoration-2 underline-offset-8 md:col-span-7 md:text-5xl"
           >
             kli5@andrew.cmu.edu
           </a>
