@@ -48,9 +48,10 @@ const entries = [
     ],
   },
   {
-    role: "Co-founder",
+    role: "Founder",
     org: "STEMbox",
-    when: "2021 — 2023",
+    when: "2020 — 2023",
+    href: "/work/stembox",
     desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
     tint: "hover:bg-accent-rose/10",
   },
@@ -72,7 +73,7 @@ function ExperiencePage() {
         <Container>
           <SectionLabel dot="orange">experience</SectionLabel>
           <h1 className="mb-12 font-display text-5xl leading-[0.95] md:text-7xl">
-            Where I've <span className="font-serif-i italic text-accent-orange">worked</span>.
+            Where I've <span className="font-serif-i italic text-accent-orange">been</span>.
           </h1>
           <ul>
             {entries.map((entry) => {
