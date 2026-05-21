@@ -53,7 +53,7 @@ function FarmAppPage() {
             </div>
             <div className="md:col-span-7 flex items-start justify-center">
               <img
-                src="/moss-tablet-app.jpg"
+                src="/moss-tablet.jpg"
                 alt="Farm inventory tablet application showing active collection session"
                 className="w-full max-w-[560px] object-contain"
               />
@@ -227,7 +227,7 @@ function FarmAppPage() {
             </div>
             <div className="md:col-span-7 flex flex-col gap-6">
               <img
-                src="/moss-tablet-app.jpg"
+                src="/moss-tablet.jpg"
                 alt="Tablet application showing active collection session with speed, location, and row progress"
                 className="w-full rounded-2xl border border-rule"
               />
