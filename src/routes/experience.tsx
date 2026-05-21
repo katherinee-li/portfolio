@@ -18,6 +18,7 @@ const entries = [
   {
     role: "Product Management Intern",
     org: "Coinbase",
+    logo: "/logo-coinbase.png",
     when: "Summer 2026",
     desc: "Scaling product systems at one of the largest crypto platforms.",
     tint: "hover:bg-accent-orange/10",
@@ -25,6 +26,7 @@ const entries = [
   {
     role: "Technical PM Intern",
     org: "Lightmatter",
+    logo: "/logo-lightmatter.png",
     when: "Summer 2025",
     desc: "Optimized CI/CD pipelines and deployment automation for program managers at a photonic computing startup.",
     tint: "hover:bg-accent-rose/10",
@@ -32,6 +34,7 @@ const entries = [
   {
     role: "President, PM Club",
     org: "CMU",
+    logo: "/logo-cmu.png",
     when: "2024 — Now",
     desc: "Running a 100-person PM accelerator — organizing workshops, recruiting programming, and mentoring.",
     tint: "hover:bg-accent-green/10",
@@ -39,6 +42,7 @@ const entries = [
   {
     role: "Engineering Intern",
     org: "Moss",
+    logo: "/logo-moss.png",
     when: "Summer 2024",
     desc: "Built the sensor kit hardware and tablet HCI for autonomous agricultural tree inventory.",
     tint: "hover:bg-accent-green/10",
@@ -50,6 +54,7 @@ const entries = [
   {
     role: "Founder",
     org: "STEMbox",
+    logo: "/logo-stembox.png",
     when: "2020 — 2023",
     href: "/work/stembox",
     desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
@@ -58,6 +63,7 @@ const entries = [
   {
     role: "Robot Exploration Researcher",
     org: "CMU Biorobotics",
+    logo: "/logo-biorobotics.png",
     when: "2023 — 2024",
     desc: "Data visualization and operator control GUIs for a fleet of autonomous search and rescue robots.",
     tint: "hover:bg-accent-orange/10",
@@ -86,7 +92,10 @@ function ExperiencePage() {
                     <p className="font-display text-xl md:text-2xl">{entry.role}</p>
                     <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
                   </div>
-                  <span className="col-span-7 font-serif-i text-lg text-accent-orange md:col-span-4">{entry.org}</span>
+                  <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
+                    <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
+                    {entry.org}
+                  </span>
                   <span className="col-span-5 text-right text-sm text-ink-soft md:col-span-3">{entry.when}</span>
                 </>
               );
