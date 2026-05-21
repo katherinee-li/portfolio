@@ -34,6 +34,13 @@ function LidarPage() {
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
           <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
+          <div className="flex justify-center mb-10">
+            <img
+              src="/mmpug-rc2.jpg"
+              alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
+              className="w-full max-w-[320px] object-contain"
+            />
+          </div>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
@@ -50,13 +57,6 @@ function LidarPage() {
                 Robot Exploration Researcher · Jan 2024
               </p>
             </div>
-            <div className="md:col-span-5 flex items-start justify-center">
-              <img
-                src="/mmpug-rc2.jpg"
-                alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-                className="w-full object-contain rounded-xl"
-              />
-            </div>
           </div>
         </Container>
       </section>
@@ -68,7 +68,7 @@ function LidarPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                No structured way to review, replay, or verify <span className="font-serif-i italic text-accent-orange">10,000 scans</span>.
+                No structured way to review and replay <span className="font-serif-i italic text-accent-orange">10,000 scans</span>.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 The CMU Biorobotics Lab operates a heterogeneous fleet of autonomous robots, wheeled and legged,
