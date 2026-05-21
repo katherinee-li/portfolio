@@ -66,7 +66,7 @@ function STEMboxPage() {
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 When schools closed in 2020, hands-on science education stopped. Elementary students in the Greater
                 Vancouver Area had no way to run real experiments or experience science as something physical. Worksheets
-                replaced labs. Videos replaced demonstrations. STEMbox was co-founded to close that gap — designing,
+                replaced labs. Videos replaced demonstrations. STEMbox was co-founded to close that gap: designing,
                 assembling, and delivering physical experiment kits directly to students, paired with live virtual
                 instruction.
               </p>
@@ -86,7 +86,7 @@ function STEMboxPage() {
             <div className="md:col-span-7">
               <p className="text-lg leading-relaxed text-foreground">
                 Each STEMbox kit was built around a single experiment. Materials were individually sourced, portioned,
-                and packed for each student — DNA extraction, electromagnets, buoyancy testing, volcano chemistry, UV
+                and packed for each student: DNA extraction, electromagnets, buoyancy testing, volcano chemistry, UV
                 bead sunscreen experiments, Alka-Seltzer film canisters, Cartesian divers, and more. Every box was
                 labeled with a student's name, assembled in a garage, and distributed to partner schools across Vancouver.
               </p>
