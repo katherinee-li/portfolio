@@ -15,24 +15,8 @@ export const Route = createFileRoute("/work_/moss")({
   component: MossPage,
 });
 
-function Placeholder({ label, className = "" }: { label: string; className?: string }) {
-  return (
-    <div className={`flex items-center justify-center border border-dashed border-rule bg-foreground/[0.02] px-6 text-center text-xs uppercase tracking-[0.22em] text-foreground ${className}`}>
-      {label}
-    </div>
-  );
-}
-
 function Caption({ children }: { children: React.ReactNode }) {
   return <p className="mt-3 text-base leading-relaxed text-foreground text-center">{children}</p>;
-}
-
-function Eq({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="my-6 border border-rule bg-foreground/[0.02] px-6 py-5 font-mono text-sm leading-relaxed text-foreground md:text-base">
-      {children}
-    </div>
-  );
 }
 
 function MossPage() {
@@ -104,7 +88,7 @@ function MossPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6">
+          <div className="mt-10">
             <img
               src="/moss-caliper.jpg"
               alt="Manually measuring tree caliper in the field"
@@ -118,85 +102,7 @@ function MossPage() {
         </Container>
       </section>
 
-      {/* 3. Field Discovery */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="green">field discovery · oregon</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            A week in the field before a single <span className="font-serif-i italic text-accent-green">component</span> was specced.
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Prior to any hardware decisions, a week-long deployment to Oregon farms established the operational baseline.
-                Equipment currently used on farms was tested firsthand. The manual measurement process was observed directly:
-                caliper in inches, height in feet, every fifth to tenth plant, fifteen seconds minimum per tree. Across
-                millions of trees, that arithmetic made the case for automation faster than any spec sheet.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Color-signal testing was conducted with field workers to map LED states to intuitive meaning. Findings: green
-                indicated working, red indicated stop, flashing indicated attention required. Consistent preference emerged
-                for fewer interface elements, estimated time remaining over map display, and readability from the ATV
-                driver's seat at under 4 mph.
-              </p>
-            </div>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div>
-              <img src="/moss-atv-rows.jpg" alt="Team testing farming equipment on ATV in tree rows" className="w-full aspect-[4/3] object-cover" />
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Team testing ATV and farming equipment in the rows</p>
-            </div>
-            <div>
-              <img src="/moss-field-lift.jpg" alt="Sensor kit mounted to a boom lift for aerial tree shots" className="w-full aspect-[4/3] object-cover object-top" />
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Sensor kit mounted to a lift for aerial tree canopy data</p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 4. User Research */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="rose">user research · 3 roles · 8 interviews</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            User interviews across <span className="font-serif-i italic text-accent-green">3 stakeholders</span>.
-          </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                role: "Inventory Manager",
-                summary: "The office owns the data.",
-                body: "Two counts per year, mid-June and September, determine water schedules, fertilizer orders, and competitive purchasing decisions. With farms holding millions of trees across dozens of blocks, a single weather or variety concern could require re-counting the same rows five or six times.",
-                needs: "Live quantity numbers, percentage-of-take metrics, and mass-update capability without row-by-row entry.",
-              },
-              {
-                role: "Field Supervisor",
-                summary: "Paper-based by default.",
-                body: "Responsible for dispatching crews and translating office requests into field tasks. Communication was entirely paper-based. Required data hierarchy: farm, section, block, row.",
-                needs: "Deadline attached, originator identified, assignee tracked, operator recorded.",
-              },
-              {
-                role: "Field Worker",
-                summary: "Screen interaction only when something is wrong.",
-                body: "Operates in gloves, outdoors, on an ATV. Preferred error feedback priority: lights first, sound second, display third.",
-                needs: "Current speed, rows remaining, estimated time to complete. Hardware requirements defined around existing workflows, not the reverse.",
-              },
-            ].map((r) => (
-              <div key={r.role} className="rounded-2xl border border-rule p-6">
-                <span className="text-xs uppercase tracking-[0.22em] text-accent-green">{r.role}</span>
-                <p className="mt-2 font-display text-xl">{r.summary}</p>
-                <p className="mt-3 text-base leading-relaxed text-foreground">{r.body}</p>
-                <div className="mt-4 border-t border-rule pt-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">Primary needs</p>
-                  <p className="text-base leading-relaxed text-foreground">{r.needs}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* 5. System Architecture */}
+      {/* 3. System Architecture */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
@@ -204,10 +110,35 @@ function MossPage() {
             System <span className="font-serif-i italic text-accent-green">architecture</span>: device · firmware · environment.
           </h2>
           <img
-            src="/moss-architecture.jpg"
+            src="/moss-architecture-v2.jpg"
             alt="Three-panel subsystem block diagram: Sensing & Alignment, Core Processing, Power & Telemetry Hub"
             className="w-full max-w-[900px] mx-auto block mb-10"
           />
+
+          {/* Physical */}
+          <div className="mb-6 rounded-2xl border border-rule p-6 md:p-8">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-green">Physical</span>
+            <p className="mt-3 text-base leading-relaxed text-foreground">
+              Custom industrial enclosure engineered around three design constraints: field serviceability, environmental
+              ruggedness, and manufacturing scalability. All components mount directly to interior enclosure walls across
+              three detachable backplanes. Small components and custom PCBs are grouped by function onto dedicated
+              backplanes. The primary backplate detaches via a Molex connector, allowing full removal and replacement
+              without rewiring. Every component carries an IP67 rating, independently verified through in-house water jet
+              and immersion testing.
+            </p>
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {[
+                { zone: "Sensor & Interface Wing", desc: "Manages primary spatial sensing arrays and localized data routing infrastructure." },
+                { zone: "Compute Engine Core", desc: "Houses the central high-performance processing node and industrial power injection hardware." },
+                { zone: "Power & Climate Matrix", desc: "Controls environmental monitoring, active thermal regulation, power distribution, and system status indication." },
+              ].map((z) => (
+                <div key={z.zone} className="border-l-2 border-accent-green pl-4">
+                  <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">{z.zone}</p>
+                  <p className="text-base leading-relaxed text-foreground">{z.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Firmware + Hardware Integration */}
           <div className="grid gap-6 md:grid-cols-2">
@@ -232,6 +163,88 @@ function MossPage() {
         </Container>
       </section>
 
+      {/* 4. Serviceability */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="orange">serviceability & ruggedness</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            Designed to be <span className="font-serif-i italic text-accent-green">opened, not replaced</span>.
+          </h2>
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                An external engineering review identified a core constraint early: components that vibrate loose, overheat,
+                or short in field conditions cannot be hot-glued in place and called done. Every component required a
+                dedicated mount, a heat sink path, and a position flush against the enclosure wall with a defined shelf or
+                bracket. Floating wires were eliminated.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                The removable backplane became the central serviceability feature. The battery mounts to the backplane
+                directly. A custom open-and-closable Molex connector allows the battery to connect to the full power
+                distribution system while the backplate remains detachable as a single unit. Swapping the battery or any
+                backplane-mounted component requires no rewiring of the main enclosure.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <img
+              src="/moss-wiring-interior.jpg"
+              alt="Interior of sensor kit showing wall-mounted components and backplane layout"
+              className="w-full max-w-[720px] mx-auto block"
+            />
+            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground text-center">Interior: wall-mounted components and detachable backplane</p>
+          </div>
+        </Container>
+      </section>
+
+      {/* 5. Scalability */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="rose">manufacturing scalability</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            Hand-wired in a week. <span className="font-serif-i italic text-accent-green">Unacceptable at 10 farms.</span>
+          </h2>
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                Version 1 of the electrical system was fully hand-wired. One kit took one week to produce. Scaling to 10
+                farms under that model would require 10 weeks of bench wiring, with no consistency guarantees between units
+                and no path to parallel production.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                The solution was to eliminate hand wiring at the component level. Custom PCBs were designed for the
+                time-synchronization subsystem, consolidating connections that previously required individual wire runs into
+                a single board. Backplanes were designed to accept standardized connectors, reducing assembly to a
+                mount-and-connect operation rather than a wire-by-wire build.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                The power system and budget were designed in parallel: mapping every component's draw by state, summing
+                worst-case consumption, and validating that the battery capacity and regulation stages could support
+                sustained field sessions without thermal or voltage issues.
+              </p>
+            </div>
+            <div className="md:col-span-5 flex flex-col gap-6">
+              <div>
+                <img
+                  src="/moss-pcb-layout.jpg"
+                  alt="PCB layout with tape and sticky notes mapping connections"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+                <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Component wiring map before PCB consolidation</p>
+              </div>
+              <div>
+                <img
+                  src="/moss-cardboard-prototype.jpg"
+                  alt="Cardboard prototype showing component layout inside enclosure"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+                <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Mid-fidelity cardboard prototype: component placement validation</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* 6. Hardware Testing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
@@ -242,8 +255,8 @@ function MossPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
-                Component sourcing was held to strict IP, shock, temperature, and humidity standards for each element of the
-                system. No exceptions were made for availability constraints.
+                Component sourcing was held to strict IP, shock, temperature, and humidity standards for every element of
+                the system. No exceptions were made for availability constraints.
               </p>
               <div className="mt-8 rounded-2xl border border-rule p-6">
                 <p className="text-xs uppercase tracking-[0.22em] text-accent-green">Enclosure protection</p>
@@ -261,7 +274,7 @@ function MossPage() {
             </div>
             <div className="md:col-span-5">
               <p className="text-xs uppercase tracking-[0.22em] text-accent-green mb-4">Component specification</p>
-              <dl className="space-y-5 text-sm">
+              <dl className="space-y-5">
                 {[
                   { k: "Ingress Protection", v: "Heavy-duty environmentally-matted industrial connectors and protective mesh sensor housings." },
                   { k: "Human-Machine Interface", v: "High-vibration tactile switches and multi-color status indicator arrays." },
@@ -278,65 +291,26 @@ function MossPage() {
         </Container>
       </section>
 
-      {/* 7. UX Iteration */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="rose">prototyping · mid to high fidelity</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            From a cardboard box to a <span className="font-serif-i italic text-accent-green">field-ready enclosure</span>.
-          </h2>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <ol className="space-y-5">
-                {[
-                  "User interviews: 3 farmers, 5 office workers",
-                  "Mid-fidelity prototype: components wired into a cardboard box, photos shared with Oregon customers",
-                  "Customer feedback: physical dimensions, button placement, handle ergonomics, indicator light placement",
-                  "High-fidelity hardware specification and field deployment",
-                ].map((step, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-rule font-mono text-xs text-foreground">
-                      {i + 1}
-                    </span>
-                    <p className="text-base leading-relaxed text-foreground">{step}</p>
-                  </li>
-                ))}
-              </ol>
-            </div>
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                A rough prototype was shared with Oregon customers before any mechanical design was committed to. Customer
-                preferences for handle position, button count, display visibility, and indicator light behavior were
-                incorporated into the hardware specification, not added retroactively.
-              </p>
-              <div className="mt-8">
-                <img src="/moss-todo-wall.jpg" alt="TODO/DOING/DONE prototyping wall with sticky notes" className="w-full aspect-[16/9] object-cover" />
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 8. Closing */}
+      {/* 7. Closing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
-                src="/moss-device-atv.jpg"
-                alt="Moss sensor kit mounted on ATV, field deployed"
+                src="/moss-atv-rows.jpg"
+                alt="Team in tree rows at Oregon farm"
                 className="w-full border border-rule block"
               />
             </div>
             <div className="md:col-span-7">
               <SectionLabel dot="green">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Technology that <span className="font-serif-i italic text-accent-green">disappears into the workflow</span>.
+                A sensor kit <span className="font-serif-i italic text-accent-green">built to scale</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                The objective was not to add a screen to a farmer's day. It was to remove a clipboard, a data re-entry step,
-                and an unnecessary office communication. What took 3 people 2 months now runs on an ATV. Inventory data is
-                available before the sales window closes.
+                What took 3 people 2 months now runs on an ATV. The transition from hand-wired prototype to PCB-driven,
+                backplane-organized assembly reduced per-unit production time and created a repeatable manufacturing
+                baseline. Inventory data reaches the office before the sales window closes.
               </p>
             </div>
           </div>
