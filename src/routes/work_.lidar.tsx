@@ -39,7 +39,7 @@ function LidarPage() {
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 MMPUG<span className="text-accent-orange">.</span>
               </h1>
-              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
+              <p className="mt-4 font-serif-i italic text-3xl leading-[1.05] text-accent-orange md:text-5xl">
                 GUI tools for autonomous search and rescue robot fleets.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
