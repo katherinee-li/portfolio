@@ -33,9 +33,9 @@ function LidarPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
+              <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 MMPUG<span className="text-accent-orange">.</span>
               </h1>
