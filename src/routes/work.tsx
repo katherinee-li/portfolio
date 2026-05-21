@@ -52,7 +52,7 @@ function WorkPage() {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[360px] flex-1" : "max-h-64"}`}
+                      className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[360px] flex-1" : i === 3 ? "max-h-[320px]" : "max-h-64"}`}
                     />
                   )}
                   <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
