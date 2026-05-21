@@ -48,6 +48,13 @@ const entries = [
     ],
   },
   {
+    role: "Co-founder",
+    org: "STEMbox",
+    when: "2021 — 2023",
+    desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
+    tint: "hover:bg-accent-rose/10",
+  },
+  {
     role: "Robot Exploration Researcher",
     org: "CMU Biorobotics",
     when: "2023 — 2024",
