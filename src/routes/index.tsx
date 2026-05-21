@@ -42,9 +42,9 @@ function Hero() {
             </h1>
 
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
-              I build across <span className="text-accent-orange">hardware</span>,{" "}
+              I build across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
               <span style={{ color: "#1e3a8a" }}>software</span>, and{" "}
-              <span className="text-accent-green">AI</span> to create reliable products people enjoy using.
+              <span style={{ color: "#1e3a8a" }}>AI</span> to create reliable products people enjoy using.
             </p>
           </div>
 
