@@ -52,8 +52,8 @@ function LidarPage() {
             </div>
             <div className="md:col-span-5 flex items-start justify-center">
               <img
-                src="/mmpug-dual-screen.jpg"
-                alt="Full dual-screen operator setup with RViz and control panel"
+                src="/mmpug-fleet.jpg"
+                alt="MMPUG heterogeneous robot fleet: wheeled RC robots and legged Spot robots"
                 className="w-full object-contain rounded-xl border border-rule"
               />
             </div>
