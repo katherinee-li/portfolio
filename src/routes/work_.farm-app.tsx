@@ -231,11 +231,6 @@ function FarmAppPage() {
                 alt="Tablet application showing active collection session with speed, location, and row progress"
                 className="w-full rounded-2xl border border-rule"
               />
-              <img
-                src="/moss-farm-map.jpg"
-                alt="Farm inventory map showing block and row data with variety color coding"
-                className="w-full rounded-2xl border border-rule"
-              />
             </div>
           </div>
         </Container>
@@ -283,7 +278,7 @@ function FarmAppPage() {
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
-                src="/moss-inventory-screen.jpg"
+                src="/moss-farm-map.jpg"
                 alt="Old inventory sheets on office computer"
                 className="w-full border border-rule block"
               />
