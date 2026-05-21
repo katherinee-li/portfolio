@@ -34,7 +34,7 @@ function STEMboxPage() {
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-8">
+            <div className="md:col-span-7">
               <SectionLabel dot="green">Non-Profit · 2020 — 2023</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 STEMbox<span className="text-accent-green">.</span>
@@ -49,6 +49,13 @@ function STEMboxPage() {
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
                 Co-Founder · Greater Vancouver Area · 2020 — 2023
               </p>
+            </div>
+            <div className="md:col-span-5 flex items-start justify-center">
+              <img
+                src="/stembox-team.jpg"
+                alt="STEMbox team"
+                className="w-full max-w-[340px] object-contain rounded-xl"
+              />
             </div>
           </div>
         </Container>
