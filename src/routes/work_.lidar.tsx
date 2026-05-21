@@ -68,7 +68,7 @@ function LidarPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                No structured way to review and replay <span className="font-serif-i italic text-accent-orange">10,000 scans</span>.
+                No structured way to review and replay.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 The CMU Biorobotics Lab operates a heterogeneous fleet of autonomous robots, wheeled and legged,
