@@ -34,13 +34,6 @@ function LidarPage() {
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
           <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
-          <div className="flex justify-center mb-10">
-            <img
-              src="/mmpug-rc2.jpg"
-              alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-              className="w-full max-w-[320px] object-contain"
-            />
-          </div>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
@@ -56,6 +49,13 @@ function LidarPage() {
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
                 Robot Exploration Researcher · Jan 2024
               </p>
+            </div>
+            <div className="md:col-span-5 flex items-start justify-center">
+              <img
+                src="/mmpug-rc2.jpg"
+                alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
+                className="w-full max-w-[280px] object-contain"
+              />
             </div>
           </div>
         </Container>
