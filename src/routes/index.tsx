@@ -71,7 +71,7 @@ function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="font-serif-i text-3xl leading-snug md:text-5xl">
-              I like sitting in the middle of hard conversations about <span className="text-accent-green">trade-offs</span>, <span className="text-accent-green">merit</span>, and <span className="text-accent-green">who a product is really for</span>.
+              I like sitting in the middle of hard conversations about <span className="text-accent-orange">trade-offs</span>, <span className="text-accent-orange">merit</span>, and <span className="text-accent-orange">who a product is really for</span>.
             </p>
             <p className="mt-10 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               I work across <span className="text-accent-green">technical PM</span>, <span style={{ color: "#1e3a8a" }}>software</span>, and <span className="text-accent-orange">hardware</span>, translating complex systems between engineering, business, and end users. I've built agricultural sensor kits at Moss, optimized CI/CD pipelines and deployment automation for program managers at Lightmatter, and will be scaling product systems at Coinbase this summer.
