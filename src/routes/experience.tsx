@@ -63,7 +63,7 @@ const entries = [
   {
     role: "Robot Exploration Researcher",
     org: "CMU Biorobotics",
-    logo: "/logo-biorobotics.png",
+    logo: "/logo-biorobotics.jpg",
     when: "2023 — 2024",
     desc: "Data visualization and operator control GUIs for a fleet of autonomous search and rescue robots.",
     tint: "hover:bg-accent-orange/10",
