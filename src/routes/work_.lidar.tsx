@@ -188,13 +188,11 @@ function LidarPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">outcome</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                <span className="font-serif-i italic text-accent-orange">10,000 scans</span> validated with a structured framework.
+                Full autonomy hierarchy, <span className="font-serif-i italic text-accent-orange">accessible in the field</span>.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground max-w-lg">
-                The video replay GUI established 10 robustness criteria validated across 10,000 LiDAR scans, giving the
-                lab a structured validation framework that did not exist before. The control panel GUI made the full
-                autonomy hierarchy accessible in high-stress field conditions, with state-aware controls and persistent
-                per-robot status panels.
+                The control panel GUI made the full autonomy hierarchy accessible in high-stress field conditions, with
+                state-aware controls and persistent per-robot status panels.
               </p>
             </div>
           </div>
