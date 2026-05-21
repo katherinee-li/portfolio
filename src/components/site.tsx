@@ -22,10 +22,10 @@ export function Nav() {
     <header className="sticky top-0 z-30 bg-background/70 backdrop-blur-md">
       <Container className="grid grid-cols-3 items-center py-5">
         <nav className="flex flex-wrap gap-4 text-sm text-ink-soft md:gap-6">
-          <Link to="/" className="link-slide hover:text-accent-orange">home</Link>
-          <Link to="/work" className="link-slide hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>projects</Link>
-          <Link to="/experience" className="link-slide hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>experience</Link>
-          <Link to="/thoughts" className="link-slide hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>thoughts</Link>
+          <Link to="/" className="rounded-md px-2 py-1 transition-colors hover:bg-accent-orange/15 hover:text-accent-orange">home</Link>
+          <Link to="/work" className="rounded-md px-2 py-1 transition-colors hover:bg-accent-orange/15 hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>projects</Link>
+          <Link to="/experience" className="rounded-md px-2 py-1 transition-colors hover:bg-accent-orange/15 hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>experience</Link>
+          <Link to="/thoughts" className="rounded-md px-2 py-1 transition-colors hover:bg-accent-orange/15 hover:text-accent-orange" activeProps={{ className: "text-foreground" }}>thoughts</Link>
         </nav>
         <div className="flex justify-center">
           <Link to="/" className="flex items-baseline">
