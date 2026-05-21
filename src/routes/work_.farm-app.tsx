@@ -48,7 +48,7 @@ function FarmAppPage() {
                 not stop moving to interact with software.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Moss · Firmware Intern · Summer 2024
+                Moss · Engineering Intern · Summer 2024
               </p>
             </div>
             <div className="md:col-span-7 flex items-start justify-center">

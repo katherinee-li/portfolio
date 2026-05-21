@@ -47,7 +47,7 @@ function MossPage() {
                 A production-ready sensor kit autonomizing tree inventory (count, height, and caliper) for a venture-backed agricultural robotics startup.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
-                Moss · Firmware Intern · Summer 2024
+                Moss · Engineering Intern · Summer 2024
               </p>
             </div>
             <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-10">
