@@ -5,9 +5,9 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/lidar")({
   head: () => ({
     meta: [
-      { title: "MMPUG — LiDAR Validation GUI" },
+      { title: "MMPUG — GUI for Search and Rescue Robots" },
       { name: "description", content: "Data visualization GUI and live video feedback system for autonomous search and rescue robots." },
-      { property: "og:title", content: "MMPUG — LiDAR Validation GUI" },
+      { property: "og:title", content: "MMPUG — GUI for Search and Rescue Robots" },
       { property: "og:description", content: "GUI tools for a fleet of autonomous search and rescue robots operating in GPS-denied environments." },
     ],
   }),
