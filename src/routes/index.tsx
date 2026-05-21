@@ -132,6 +132,11 @@ function Explore() {
               to={e.to}
               className="group relative flex flex-col justify-between gap-12 overflow-hidden rounded-2xl border border-rule p-8 transition-all hover:-translate-y-1 hover:border-foreground/30 md:min-h-[280px]"
             >
+              <div className={`absolute inset-0 -z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-gradient-to-br ${
+                e.dot === "orange" ? "from-accent-orange/20 to-accent-orange/5" :
+                e.dot === "green"  ? "from-accent-green/20 to-accent-green/5" :
+                                     "from-accent-rose/20 to-accent-rose/5"
+              }`} />
               <div className="flex items-start justify-end">
                 <ArrowUpRight className="h-5 w-5 text-ink-soft transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-orange" />
               </div>
