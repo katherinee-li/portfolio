@@ -33,7 +33,7 @@ function WorkPage() {
                 key={p.title}
                 {...tagProps}
                 className={`group relative overflow-hidden rounded-2xl border border-rule p-6 transition-all hover:-translate-y-1 hover:border-foreground/30 md:p-8 ${
-                  i === 0 ? "md:col-span-7 md:row-span-2 md:min-h-[420px]" :
+                  i === 0 ? "md:col-span-7 md:min-h-[280px]" :
                   i === 1 ? "md:col-span-5 md:min-h-[420px]" :
                   i === 2 ? "md:col-span-5 md:min-h-[200px]" :
                   i === 3 ? "md:col-span-6 md:min-h-[260px]" :
@@ -52,7 +52,7 @@ function WorkPage() {
                     <img
                       src={p.image}
                       alt={p.title}
-                      className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[460px] flex-1" : "max-h-64"}`}
+                      className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[180px]" : "max-h-64"}`}
                     />
                   )}
                   <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
