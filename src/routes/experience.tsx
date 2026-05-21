@@ -93,7 +93,7 @@ function ExperiencePage() {
               if (hasDropdown) {
                 return (
                   <li key={entry.role + entry.when} className="group relative border-b border-rule">
-                    <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors ${entry.tint} md:py-7`}>
+                    <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}>
                       {rowContent}
                     </div>
                     <div className="absolute left-0 right-0 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
@@ -117,7 +117,7 @@ function ExperiencePage() {
                   <li key={entry.role + entry.when}>
                     <Link
                       to={entry.href}
-                      className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors ${entry.tint} md:py-7`}
+                      className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
                     >
                       {rowContent}
                     </Link>
@@ -128,7 +128,7 @@ function ExperiencePage() {
               return (
                 <li
                   key={entry.role + entry.when}
-                  className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors ${entry.tint} md:py-7`}
+                  className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
                 >
                   {rowContent}
                 </li>
