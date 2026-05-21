@@ -37,13 +37,13 @@ function MossPage() {
           <SectionLabel dot="green">Agricultural Robotics · Summer 2024</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
-              <h1 className="font-display text-5xl leading-[0.92] tracking-tight md:text-7xl">
+              <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 moss<span className="text-accent-green">.</span>
               </h1>
-              <p className="mt-6 font-serif-i text-2xl leading-snug text-accent-green md:text-4xl">
-                The sensor kit that <span className="italic">scales</span>.
+              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
+                Agricultural robotics sensor kit for automated tree inventory.
               </p>
-              <p className="mt-8 max-w-md text-base leading-relaxed text-foreground md:text-lg">
+              <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
                 A production-ready sensor kit autonomizing tree inventory (count, height, and caliper) for a venture-backed agricultural robotics startup.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">

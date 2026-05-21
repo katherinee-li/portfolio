@@ -49,13 +49,13 @@ function PulsePage() {
           <SectionLabel dot="orange">ECE Capstone · Spring 2026</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
-              <h1 className="font-display text-5xl leading-[0.92] tracking-tight md:text-7xl">
+              <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 Pulse<span className="text-accent-orange">.</span>
               </h1>
-              <p className="mt-6 font-serif-i text-2xl leading-snug text-accent-orange md:text-4xl">
-                The compass that <span className="italic">connects</span>.
+              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
+                Proximity-based social navigation device.
               </p>
-              <p className="mt-8 max-w-md text-base leading-relaxed text-foreground md:text-lg">
+              <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
                 A dedicated, single-purpose device for spontaneous human connection.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">

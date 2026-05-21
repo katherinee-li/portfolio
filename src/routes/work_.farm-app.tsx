@@ -36,10 +36,13 @@ function FarmAppPage() {
           <SectionLabel dot="green">Human-Computer Interface · Summer 2024</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
-              <h1 className="font-display text-5xl leading-[0.92] tracking-tight md:text-7xl">
-                The interface that field workers actually <span className="text-accent-green">use</span>.
+              <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
+                Farm Inventory<span className="text-accent-green">.</span>
               </h1>
-              <p className="mt-8 max-w-lg text-base leading-relaxed text-foreground md:text-lg">
+              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
+                Tablet application and field HCI for agricultural inventory.
+              </p>
+              <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
                 Parallel to the sensor kit hardware, the tablet application and physical interface were designed from the
                 ground up around one constraint: agricultural field workers wear gloves, work in direct sunlight, and do
                 not stop moving to interact with software.
@@ -167,6 +170,14 @@ function FarmAppPage() {
                 ))}
               </dl>
             </div>
+          </div>
+          <div className="mt-12">
+            <img
+              src="/moss-tablet-candidates.jpg"
+              alt="Tablet candidates evaluated for field use"
+              className="w-full max-w-[500px] mx-auto block"
+            />
+            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground text-center">Tablet candidates evaluated across brightness, buttons, and IP rating</p>
           </div>
         </Container>
       </section>
