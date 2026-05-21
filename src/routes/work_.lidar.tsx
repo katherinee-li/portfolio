@@ -40,21 +40,21 @@ function LidarPage() {
                 MMPUG<span className="text-accent-orange">.</span>
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
-                The robot that maps the unmappable.
+                GUI tools for autonomous search and rescue robot fleets.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
                 Data visualization GUI and live video feedback system for a fleet of autonomous search and rescue robots
                 operating in GPS-denied, communication-degraded environments.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Robot Exploration Researcher · May 2023 · Jan 2024
+                Robot Exploration Researcher · Jan 2024
               </p>
             </div>
             <div className="md:col-span-5 flex items-start justify-center">
               <img
-                src="/mmpug-fleet.jpg"
-                alt="MMPUG heterogeneous robot fleet: wheeled RC robots and legged Spot robots"
-                className="w-full object-contain rounded-xl border border-rule"
+                src="/mmpug-rc2.jpg"
+                alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
+                className="w-full object-contain rounded-xl"
               />
             </div>
           </div>
@@ -68,10 +68,10 @@ function LidarPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Researchers were flying blind through <span className="font-serif-i italic text-accent-orange">10,000 scans</span>.
+                No structured way to review, replay, or verify <span className="font-serif-i italic text-accent-orange">10,000 scans</span>.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
-                The CMU Biorobotics Lab operates a heterogeneous fleet of autonomous robots — wheeled and legged —
+                The CMU Biorobotics Lab operates a heterogeneous fleet of autonomous robots, wheeled and legged,
                 designed to explore unknown structures and locate survivors in search and rescue scenarios. The core
                 challenge was not the robots. It was the researchers validating them. LiDAR datasets across an entire
                 fleet had no structured way to be reviewed, replayed, or verified. Synchronizing maps across multiple
@@ -88,7 +88,7 @@ function LidarPage() {
         <Container>
           <SectionLabel dot="green">contributions</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Two tools. One significantly <span className="font-serif-i italic text-accent-orange">faster research loop</span>.
+            Two GUI tools for <span className="font-serif-i italic text-accent-orange">data validation and operator control</span>.
           </h2>
 
           {/* Video Replay GUI */}
@@ -96,8 +96,8 @@ function LidarPage() {
             <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">Video Replay GUI</span>
             <p className="mt-3 text-lg leading-relaxed text-foreground">
               A data visualization interface allowing researchers to rewind and replay LiDAR camera feeds across the full
-              robot fleet. Established 10 robustness criteria validated across 10,000 scans. The replay feature —
-              accessible directly from the control panel — allows operators to scrub back 30 seconds of footage from any
+              robot fleet. Established 10 robustness criteria validated across 10,000 scans. The replay feature,
+              accessible directly from the control panel, allows operators to scrub back 30 seconds of footage from any
               robot during or after a mission, enabling rapid identification of dataset anomalies without re-running full
               sessions.
             </p>
@@ -105,14 +105,14 @@ function LidarPage() {
               <img
                 src="/mmpug-replay.jpg"
                 alt="Multi-camera replay grid showing RC3 fisheye feeds across three simultaneous viewpoints"
-                className="w-full rounded-xl border border-rule"
+                className="w-full max-w-[560px] mx-auto block rounded-xl border border-rule"
               />
               <Caption>Multi-camera replay grid: RC3 fisheye feeds across three simultaneous viewpoints, victim circled in center frame.</Caption>
             </div>
           </div>
 
           {/* Control Panel GUI */}
-          <div className="mb-8 rounded-2xl border border-rule p-6 md:p-8">
+          <div className="rounded-2xl border border-rule p-6 md:p-8">
             <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">Control Panel GUI</span>
             <p className="mt-3 text-lg leading-relaxed text-foreground">
               Mode switching interface for the operator control panel, handling transitions between Manual, Joystick,
@@ -122,23 +122,11 @@ function LidarPage() {
             </p>
             <div className="mt-6">
               <img
-                src="/mmpug-panel.jpg"
-                alt="Control panel showing cmu_rc3 in Joystick Mode with battery and mode toggle controls"
+                src="/mmpug-dual-screen.jpg"
+                alt="Full operator setup with RViz 3D LiDAR map and control panel side by side"
                 className="w-full rounded-xl border border-rule"
               />
-              <Caption>Control panel: cmu_rc3 in Joystick Mode, battery at 100%, robot notification log and mode toggle controls.</Caption>
             </div>
-          </div>
-
-          {/* Auto-Calibration */}
-          <div className="rounded-2xl border border-rule p-6 md:p-8">
-            <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">Auto-Calibration Feature</span>
-            <p className="mt-3 text-lg leading-relaxed text-foreground">
-              Identified a researcher pain point in SLAM map synchronization — the process of aligning robots to a
-              shared coordinate frame before deployment. Built an auto-calibration feature reducing setup time by 75%,
-              from 4 minutes to approximately 1 minute, enabling researchers to align the full fleet with a single image
-              capture.
-            </p>
           </div>
         </Container>
       </section>
@@ -153,7 +141,7 @@ function LidarPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-lg leading-relaxed text-foreground">
-                The broader MMPUG system operates on a principle of sliding-mode autonomy — operators can blend human
+                The broader MMPUG system operates on a principle of sliding-mode autonomy: operators can blend human
                 control with machine precision at any point in a mission. Four levels: Full Manual for direct
                 teleoperation, Smart Joystick for assisted navigation around obstacles, Waypoint Mode for autonomous path
                 planning to a goal, and Exploration Mode for fully autonomous unknown-area mapping. The GUI contributions
@@ -161,7 +149,7 @@ function LidarPage() {
                 field conditions.
               </p>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
-                The system also supports heterogeneous convoy operations — a wheeled robot maps a staircase, shares the
+                The system also supports heterogeneous convoy operations. A wheeled robot maps a staircase, shares the
                 location across the network, and a legged Spot robot is tasked to navigate there autonomously.
                 Communication-degraded environments are handled via a peel-off maneuver, where trailing robots stop and
                 act as static relay nodes to extend network range.
@@ -192,21 +180,21 @@ function LidarPage() {
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
-                src="/mmpug-dual-screen.jpg"
-                alt="Full operator setup with RViz 3D LiDAR map and control panel"
+                src="/mmpug-fleet.jpg"
+                alt="MMPUG heterogeneous robot fleet: wheeled RC robots and legged Spot robots"
                 className="w-full border border-rule block rounded-xl"
               />
             </div>
             <div className="md:col-span-7">
               <SectionLabel dot="orange">outcome</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                75% faster setup. <span className="font-serif-i italic text-accent-orange">10,000 scans validated.</span>
+                <span className="font-serif-i italic text-accent-orange">10,000 scans</span> validated with a structured framework.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground max-w-lg">
-                The auto-calibration feature reduced SLAM synchronization from a 4-minute manual process to approximately
-                1 minute, enabling researchers to begin missions faster and with less cognitive overhead. The video replay
-                GUI established 10 robustness criteria across 10,000 LiDAR scans, giving the lab a structured validation
-                framework that did not exist before.
+                The video replay GUI established 10 robustness criteria validated across 10,000 LiDAR scans, giving the
+                lab a structured validation framework that did not exist before. The control panel GUI made the full
+                autonomy hierarchy accessible in high-stress field conditions, with state-aware controls and persistent
+                per-robot status panels.
               </p>
             </div>
           </div>
