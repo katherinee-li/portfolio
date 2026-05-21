@@ -85,12 +85,12 @@ function FarmAppPage() {
               </p>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div>
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            <div className="w-full max-w-[340px]">
               <img src="/moss-atv-rows.jpg" alt="ATV in tree rows at Oregon farm" className="w-full aspect-[4/3] object-cover" />
               <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">ATV and farming equipment, Oregon farm rows</p>
             </div>
-            <div>
+            <div className="w-full max-w-[340px]">
               <img src="/moss-caliper.jpg" alt="Manual caliper measurement in the field" className="w-full aspect-[4/3] object-cover" />
               <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Manual caliper measurement: the process being replaced</p>
             </div>
@@ -180,7 +180,7 @@ function FarmAppPage() {
           </div>
           <div className="mt-12">
             <img
-              src="/moss-tablet-candidates.jpg"
+              src="/tablet-candidates.jpg"
               alt="Tablet candidates evaluated for field use"
               className="w-full max-w-[500px] mx-auto block"
             />
