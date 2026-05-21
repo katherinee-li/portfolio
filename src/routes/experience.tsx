@@ -53,15 +53,6 @@ const entries = [
     ],
   },
   {
-    role: "Co-founder",
-    org: "STEMbox",
-    logo: "/logo-stembox.png",
-    when: "2020 — 2023",
-    href: "/work/stembox",
-    desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
-    tint: "hover:bg-accent-rose/10",
-  },
-  {
     role: "Robot Exploration Researcher",
     org: "CMU Biorobotics",
     logo: "/logo-biorobotics.jpg",
@@ -69,6 +60,15 @@ const entries = [
     desc: "Data visualization and operator control GUIs for a fleet of autonomous search and rescue robots.",
     tint: "hover:bg-accent-orange/10",
     href: "/work/lidar",
+  },
+  {
+    role: "Co-founder",
+    org: "STEMbox",
+    logo: "/logo-stembox.png",
+    when: "2020 — 2023",
+    href: "/work/stembox",
+    desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
+    tint: "hover:bg-accent-rose/10",
   },
 ] as const;
 
