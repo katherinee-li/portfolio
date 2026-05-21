@@ -135,7 +135,7 @@ function STEMboxPage() {
             <img
               src="/stembox-lessons.jpg"
               alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
-              className="w-full max-w-[800px] mx-auto block rounded-xl border border-rule"
+              className="w-full max-w-[500px] mx-auto block rounded-xl border border-rule"
             />
             <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
           </div>
