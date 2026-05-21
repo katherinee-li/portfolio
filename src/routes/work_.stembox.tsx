@@ -149,31 +149,25 @@ function STEMboxPage() {
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             Three years. <span className="font-serif-i italic text-accent-green">400+ students. 12 schools.</span>
           </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-lg leading-relaxed text-foreground">
-                What began as a direct response to pandemic learning loss grew into a three-year program with school
-                partnerships across the region. Kits were assembled by hand, logistics were managed independently, and
-                curriculum was iterated based on student and teacher feedback each session.
-              </p>
-            </div>
-            <div className="md:col-span-5">
-              <dl className="space-y-5">
-                {[
-                  { k: "Students reached", v: "400+" },
-                  { k: "Partner schools", v: "12+ across the Greater Vancouver Area" },
-                  { k: "Years of operation", v: "3 continuous years" },
-                  { k: "Grades served", v: "Grades 1 through 7" },
-                  { k: "Subjects covered", v: "Physics, chemistry, biology, and engineering" },
-                ].map((s) => (
-                  <div key={s.k} className="border-b border-rule pb-5">
-                    <dt className="text-xs uppercase tracking-[0.18em] text-accent-green mb-1">{s.k}</dt>
-                    <dd className="text-base leading-relaxed text-foreground">{s.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
+          <p className="mb-10 text-lg leading-relaxed text-foreground max-w-2xl">
+            What began as a direct response to pandemic learning loss grew into a three-year program with school
+            partnerships across the region. Kits were assembled by hand, logistics were managed independently, and
+            curriculum was iterated based on student and teacher feedback each session.
+          </p>
+          <dl className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+            {[
+              { k: "Students reached", v: "400+" },
+              { k: "Partner schools", v: "12+ across the Greater Vancouver Area" },
+              { k: "Years of operation", v: "3 continuous years" },
+              { k: "Grades served", v: "Grades 1 through 7" },
+              { k: "Subjects covered", v: "Physics, chemistry, biology, and engineering" },
+            ].map((s) => (
+              <div key={s.k} className="border-l-2 border-accent-green pl-4">
+                <dt className="text-xs uppercase tracking-[0.18em] text-accent-green mb-1">{s.k}</dt>
+                <dd className="text-base leading-relaxed text-foreground">{s.v}</dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
 
