@@ -168,7 +168,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="orange">serviceability & ruggedness</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Designed to be <span className="font-serif-i italic text-accent-green">opened, not replaced</span>.
+            Serviceability: modular backplanes, <span className="font-serif-i italic text-accent-green">no rewiring required</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -190,7 +190,7 @@ function MossPage() {
             <img
               src="/moss-wiring-interior.jpg"
               alt="Interior of sensor kit showing wall-mounted components and backplane layout"
-              className="w-full max-w-[720px] mx-auto block"
+              className="w-full max-w-[420px] mx-auto block"
             />
             <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground text-center">Interior: wall-mounted components and detachable backplane</p>
           </div>
@@ -202,7 +202,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="rose">manufacturing scalability</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Hand-wired in a week. <span className="font-serif-i italic text-accent-green">Unacceptable at 10 farms.</span>
+            Scalability: from <span className="font-serif-i italic text-accent-green">hand-wired prototype to repeatable assembly</span>.
           </h2>
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-7">
