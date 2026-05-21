@@ -201,6 +201,13 @@ function STEMboxPage() {
       {/* 7. Closing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
+          <div className="mb-12">
+            <img
+              src="/stembox-class.jpg"
+              alt="STEMbox students in virtual class"
+              className="w-full rounded-xl border border-rule"
+            />
+          </div>
           <div className="md:col-span-7">
             <SectionLabel dot="green">conviction</SectionLabel>
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
