@@ -52,7 +52,7 @@ const entries = [
     ],
   },
   {
-    role: "Founder",
+    role: "Co-founder",
     org: "STEMbox",
     logo: "/logo-stembox.png",
     when: "2020 — 2023",
