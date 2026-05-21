@@ -208,23 +208,25 @@ function STEMboxPage() {
       {/* 7. Closing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <div className="mb-12">
-            <img
-              src="/stembox-class.jpg"
-              alt="STEMbox students in virtual class"
-              className="w-full rounded-xl border border-rule"
-            />
-          </div>
-          <div className="md:col-span-7">
-            <SectionLabel dot="green">conviction</SectionLabel>
-            <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-              Science is something <span className="font-serif-i italic text-accent-green">you do</span>.
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-foreground max-w-xl">
-              STEMbox was built on one conviction: a student who has extracted DNA from a strawberry or built a working
-              electromagnet understands science differently than one who has only read about it. The kits were the
-              product. The curiosity was the point.
-            </p>
+          <div className="grid gap-14 md:grid-cols-12 items-center">
+            <div className="md:col-span-5">
+              <img
+                src="/stembox-class.jpg"
+                alt="STEMbox students in virtual class"
+                className="w-full rounded-xl border border-rule block"
+              />
+            </div>
+            <div className="md:col-span-7">
+              <SectionLabel dot="green">conviction</SectionLabel>
+              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
+                Science is something <span className="font-serif-i italic text-accent-green">you do</span>.
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-foreground max-w-xl">
+                STEMbox was built on one conviction: a student who has extracted DNA from a strawberry or built a working
+                electromagnet understands science differently than one who has only read about it. The kits were the
+                product. The curiosity was the point.
+              </p>
+            </div>
           </div>
         </Container>
       </section>
