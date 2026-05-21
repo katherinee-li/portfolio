@@ -22,6 +22,7 @@ const entries = [
     when: "Summer 2026",
     desc: "Scaling product systems at one of the largest crypto platforms.",
     tint: "hover:bg-accent-orange/10",
+    coming: true,
   },
   {
     role: "Technical PM Intern",
@@ -89,7 +90,12 @@ function ExperiencePage() {
               const rowContent = (
                 <>
                   <div className="col-span-12 md:col-span-5">
-                    <p className="font-display text-xl md:text-2xl">{entry.role}</p>
+                    <div className="flex items-center gap-3">
+                      <p className="font-display text-xl md:text-2xl">{entry.role}</p>
+                      {"coming" in entry && entry.coming && (
+                        <span className="text-xs uppercase tracking-[0.18em] text-ink-soft border border-rule rounded px-2 py-0.5">coming soon</span>
+                      )}
+                    </div>
                     <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
                   </div>
                   <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
