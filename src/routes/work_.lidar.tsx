@@ -54,7 +54,7 @@ function LidarPage() {
               <img
                 src="/mmpug-rc2.jpg"
                 alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-                className="w-full max-w-[280px] object-contain"
+                className="w-full max-w-[420px] object-contain"
               />
             </div>
           </div>
