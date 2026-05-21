@@ -92,8 +92,8 @@ function STEMboxPage() {
               </p>
             </div>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div>
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            <div className="w-full max-w-[340px]">
               <img
                 src="/stembox-assembly.jpg"
                 alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
@@ -101,7 +101,7 @@ function STEMboxPage() {
               />
               <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
             </div>
-            <div>
+            <div className="w-full max-w-[340px]">
               <img
                 src="/stembox-boxes.jpg"
                 alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
@@ -137,7 +137,7 @@ function STEMboxPage() {
               alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
               className="w-full max-w-[800px] mx-auto block rounded-xl border border-rule"
             />
-            <Caption>12+ original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
+            <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
           </div>
         </Container>
       </section>
