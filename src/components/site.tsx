@@ -92,6 +92,9 @@ export function Footer() {
             <a href="https://linkedin.com/in/katherinee-li" className="link-slide self-start text-ink-soft hover:text-foreground">
               LinkedIn ↗
             </a>
+            <a href="https://github.com/katherinee-li" className="link-slide self-start text-ink-soft hover:text-foreground">
+              GitHub ↗
+            </a>
           </div>
         </div>
 
