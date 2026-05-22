@@ -144,9 +144,7 @@ function FarmAppPage() {
                 compatibility. The selected tablet connects to the sensor kit via a tethered cable, a deliberate
                 choice based on field worker preference for wired over wireless during active sessions.
               </p>
-            </div>
-            <div className="md:col-span-5">
-              <dl className="space-y-5">
+              <dl className="mt-8 space-y-5">
                 {[
                   { k: "Physical buttons", v: "Required for gloved operation without touchscreen dependency." },
                   { k: "Display brightness", v: "Validated against direct Oregon summer sun conditions." },
@@ -159,14 +157,14 @@ function FarmAppPage() {
                   </div>
                 ))}
               </dl>
+              <div className="mt-10">
+                <img
+                  src="/tablet-candidates.jpg"
+                  alt="Tablet candidates evaluated for field use"
+                  className="w-full max-w-[480px] rounded-2xl border border-rule"
+                />
+              </div>
             </div>
-          </div>
-          <div className="mt-12">
-            <img
-              src="/tablet-candidates.jpg"
-              alt="Tablet candidates evaluated for field use"
-              className="w-full max-w-[500px] mx-auto block rounded-2xl border border-rule"
-            />
           </div>
         </Container>
       </section>
