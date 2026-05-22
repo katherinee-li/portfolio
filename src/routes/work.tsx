@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Footer, Nav, SectionLabel, projects } from "@/components/site";
+import { Container, Nav, SectionLabel, projects } from "@/components/site";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -63,7 +63,6 @@ function WorkPage() {
           </div>
         </Container>
       </section>
-      <Footer />
     </main>
   );
 }

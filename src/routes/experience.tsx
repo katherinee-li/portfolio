@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Footer, Nav, SectionLabel } from "@/components/site";
+import { Container, Nav, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/experience")({
   head: () => ({
@@ -153,7 +153,6 @@ function ExperiencePage() {
           </ul>
         </Container>
       </section>
-      <Footer />
     </main>
   );
 }

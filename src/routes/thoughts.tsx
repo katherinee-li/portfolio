@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Footer, Nav, SectionLabel } from "@/components/site";
+import { Container, Nav, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/thoughts")({
   head: () => ({
@@ -71,7 +71,6 @@ function ThoughtsPage() {
           </ul>
         </Container>
       </section>
-      <Footer />
     </main>
   );
 }
