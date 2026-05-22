@@ -145,7 +145,7 @@ function MossPage() {
               <img
                 src="/IMG_2924.jpg"
                 alt="Interior wall mounting and detachable backplane"
-                className="w-full rounded-2xl border border-rule block"
+                className="w-full max-w-[300px] rounded-2xl border border-rule block"
               />
             </div>
           </div>
@@ -226,7 +226,7 @@ function MossPage() {
               <img
                 src="/IMG_2927.jpg"
                 alt="Waterproof testing, sensor kit over water tub"
-                className="w-full rounded-2xl border border-rule block"
+                className="w-full max-w-[300px] rounded-2xl border border-rule block"
               />
             </div>
           </div>

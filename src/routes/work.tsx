@@ -35,7 +35,7 @@ function WorkPage() {
                 className={`group relative overflow-hidden rounded-2xl border border-rule p-6 transition-all hover:-translate-y-1 hover:border-foreground/30 md:p-8 ${
                   i === 0 ? "md:col-span-7 md:min-h-[480px]" :
                   i === 1 ? "md:col-span-5 md:min-h-[420px]" :
-                  i === 2 ? "md:col-span-5 md:min-h-[200px]" :
+                  i === 2 ? "md:col-span-6 md:min-h-[200px]" :
                   i === 3 ? "md:col-span-6 md:min-h-[260px]" :
                             "md:col-span-6 md:min-h-[260px]"
                 }`}

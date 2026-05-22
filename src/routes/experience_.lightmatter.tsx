@@ -16,7 +16,7 @@ export const Route = createFileRoute("/experience_/lightmatter")({
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="border-l-2 border-accent-orange pl-4">
+    <div className="border-l-2 border-accent-blue pl-4">
       <p className="font-display text-2xl text-foreground">{value}</p>
       <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{label}</p>
     </div>
@@ -38,13 +38,13 @@ function LightmatterPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="orange">Technical Program Management · Summer 2025</SectionLabel>
+          <SectionLabel dot="blue">Technical Program Management · Summer 2025</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Lightmatter<span className="text-accent-orange">.</span>
+                Lightmatter<span className="text-accent-blue">.</span>
               </h1>
-              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
+              <p className="mt-4 font-serif-i text-xl leading-snug text-accent-blue md:text-2xl">
                 Technical Program Management Intern at Lightmatter.
               </p>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
@@ -70,11 +70,11 @@ function LightmatterPage() {
       {/* 2. Context */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">the company</SectionLabel>
+          <SectionLabel dot="blue">the company</SectionLabel>
           <div className="grid gap-12">
             <div className="max-w-2xl">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                What <span className="font-serif-i italic text-accent-orange">Lightmatter builds</span>.
+                What <span className="font-serif-i italic text-accent-blue">Lightmatter builds</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
@@ -93,9 +93,9 @@ function LightmatterPage() {
       {/* 3. Work 1: Product Lifecycle */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">task 01 · product lifecycle</SectionLabel>
+          <SectionLabel dot="blue">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Defining product lifecycle <span className="font-serif-i italic text-accent-orange">milestones</span>.
+            Defining product lifecycle <span className="font-serif-i italic text-accent-blue">milestones</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -129,7 +129,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Authoring engineering <span className="font-serif-i italic text-accent-orange">validation criteria</span>.
+            Authoring engineering <span className="font-serif-i italic text-accent-blue">validation criteria</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -157,7 +157,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Building a <span className="font-serif-i italic text-accent-orange">documentation pipeline</span>.
+            Building a <span className="font-serif-i italic text-accent-blue">documentation pipeline</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -176,16 +176,16 @@ function LightmatterPage() {
           </div>
 
           <div className="mt-10 rounded-2xl border border-rule p-6 md:p-8">
-            <p className="text-xs uppercase tracking-[0.22em] text-accent-orange mb-6">Documentation architecture</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-accent-blue mb-6">Documentation architecture</p>
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="border-l-2 border-accent-orange pl-4">
+              <div className="border-l-2 border-accent-blue pl-4">
                 <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">Production Docs</p>
                 <p className="text-base leading-relaxed text-foreground">
                   Static, signed-off, milestone-linked. The authoritative record that follows each program through its
                   full lifecycle.
                 </p>
               </div>
-              <div className="border-l-2 border-accent-orange pl-4">
+              <div className="border-l-2 border-accent-blue pl-4">
                 <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">Working Docs</p>
                 <p className="text-base leading-relaxed text-foreground">
                   Dynamic, linked to live Google Drives, organized by functional area. Landing pages designed to be
@@ -206,9 +206,9 @@ function LightmatterPage() {
       {/* 6. Goals & Growth */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">internship goals</SectionLabel>
+          <SectionLabel dot="blue">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            30-60-90 <span className="font-serif-i italic text-accent-orange">goals</span>.
+            30-60-90 <span className="font-serif-i italic text-accent-blue">goals</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -232,7 +232,7 @@ function LightmatterPage() {
               { label: "Cross-Functional Influence", desc: "Forming opinionated conclusions from incomplete information and communicating findings across every level of the org." },
             ].map((p) => (
               <div key={p.label} className="rounded-2xl border border-rule p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange mb-3">{p.label}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-accent-blue mb-3">{p.label}</p>
                 <p className="text-base leading-relaxed text-foreground">{p.desc}</p>
               </div>
             ))}
@@ -245,9 +245,9 @@ function LightmatterPage() {
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-start">
             <div className="md:col-span-7">
-              <SectionLabel dot="orange">result</SectionLabel>
+              <SectionLabel dot="blue">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What the <span className="font-serif-i italic text-accent-orange">summer was</span>.
+                What the <span className="font-serif-i italic text-accent-blue">summer was</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
                 Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc
@@ -255,6 +255,31 @@ function LightmatterPage() {
                 The summer was spent building those systems: for milestones, for validation, and for documentation.
                 Each one designed to scale with the org rather than constrain it.
               </p>
+              <div className="mt-10 flex flex-col gap-6">
+                {[
+                  {
+                    name: "Eric Chin",
+                    title: "Technical Program Manager, OpenAI · formerly Lightmatter",
+                    rel: "Managed Katherine directly · September 2025",
+                    quote: "Katherine is a self-starter who came onboard with a strong desire to influence the way we manage programs. By the end of the internship, she had aligned our team and engineering stakeholders on the list of reference milestones for future programs at Lightmatter. Her ability to ask insightful questions and engage in meaningful conversations makes her a fantastic team member. She takes ownership of her work, consistently delivers high-quality results, and isn't afraid to seek out new challenges.",
+                  },
+                  {
+                    name: "Meg O'Brien",
+                    title: "Director of Foundry & Test Engineering, Lightmatter",
+                    rel: "Managed Katherine directly · October 2025",
+                    quote: "Katherine proved to be an invaluable intern with Lightmatter's TPM team, quickly making a significant impact by streamlining our product lifecycle. Her strong eagerness to learn and high level of drive were consistently evident. I was particularly impressed by her deliberate approach to career development. Katherine's proactive nature and effortless ability to connect with people allowed her to efficiently advance her work. Any team would be fortunate to have her leading their programs.",
+                  },
+                ].map((r) => (
+                  <div key={r.name} className="border-l-2 border-accent-blue pl-5">
+                    <p className="font-serif-i text-base leading-relaxed text-foreground">"{r.quote}"</p>
+                    <div className="mt-3">
+                      <p className="text-sm font-medium text-foreground">{r.name}</p>
+                      <p className="text-xs text-ink-soft">{r.title}</p>
+                      <p className="text-xs text-ink-soft">{r.rel}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="md:col-span-5 flex flex-col gap-6">
               <img
@@ -267,6 +292,14 @@ function LightmatterPage() {
                 alt="Lightmatter intern feature card"
                 className="w-full rounded-2xl border border-rule block"
               />
+              <a
+                href="https://www.linkedin.com/pulse/lightmatter-2025-internship-program-angela-bertolini-she-her--wt0lc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
+              >
+                Lightmatter 2025 Internship Program ↗
+              </a>
             </div>
           </div>
         </Container>

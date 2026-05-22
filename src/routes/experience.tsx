@@ -38,7 +38,7 @@ const entries = [
     org: "CMUBTG",
     logo: "/logo-cmu.png",
     when: "2024 — Now",
-    desc: "Running a 100-person PM accelerator — organizing workshops, recruiting programming, and mentoring.",
+    desc: "Running a 100-person PM accelerator: organizing workshops, recruiting programming, and mentoring.",
     tint: "hover:bg-accent-green/10",
     href: "/experience/pma",
   },
@@ -92,13 +92,13 @@ function ExperiencePage() {
               const rowContent = (
                 <>
                   <div className="col-span-12 md:col-span-5">
-                    <div className="flex items-center gap-3">
-                      <p className="font-display text-xl md:text-2xl">{entry.role}</p>
+                    <p className="font-display text-xl md:text-2xl">{entry.role}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                      {entry.desc}
                       {"coming" in entry && entry.coming && (
-                        <span className="text-xs uppercase tracking-[0.18em] text-ink-soft border border-rule rounded px-2 py-0.5">in the works</span>
+                        <span className="ml-1 font-semibold text-foreground"> In the works.</span>
                       )}
-                    </div>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
+                    </p>
                   </div>
                   <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
                     <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
@@ -114,7 +114,7 @@ function ExperiencePage() {
                     <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}>
                       {rowContent}
                     </div>
-                    <div className="absolute left-0 right-0 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
+                    <div className="absolute -left-6 -right-6 md:-left-10 md:-right-10 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
                       {entry.links.map((link) => (
                         <Link
                           key={link.href}

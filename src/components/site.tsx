@@ -59,8 +59,8 @@ export function Marquee() {
   );
 }
 
-export function SectionLabel({ children, dot = "orange" }: { children: ReactNode; dot?: "orange" | "green" | "rose" }) {
-  const dotClass = dot === "green" ? "bg-accent-green" : dot === "rose" ? "bg-accent-rose" : "bg-accent-orange";
+export function SectionLabel({ children, dot = "orange" }: { children: ReactNode; dot?: "orange" | "green" | "rose" | "blue" }) {
+  const dotClass = dot === "green" ? "bg-accent-green" : dot === "rose" ? "bg-accent-rose" : dot === "blue" ? "bg-accent-blue" : "bg-accent-orange";
   return (
     <p className="mb-10 flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-ink-soft">
       <span className={`inline-block h-2 w-2 rounded-full ${dotClass}`} />

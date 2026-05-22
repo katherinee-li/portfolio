@@ -136,7 +136,7 @@ function FarmAppPage() {
             Why standard tablets <span className="font-serif-i italic text-accent-green">did not work</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
+            <div className="md:col-span-6">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
                 Consumer tablets were disqualified on three counts: touchscreens fail with gloves, displays wash out
                 in direct sun, and IP ratings are insufficient for field conditions. Candidates were evaluated on
@@ -144,7 +144,16 @@ function FarmAppPage() {
                 compatibility. The selected tablet connects to the sensor kit via a tethered cable, a deliberate
                 choice based on field worker preference for wired over wireless during active sessions.
               </p>
-              <dl className="mt-8 space-y-5">
+              <div className="mt-10">
+                <img
+                  src="/tablet-candidates.jpg"
+                  alt="Tablet candidates evaluated for field use"
+                  className="w-full max-w-[480px] rounded-2xl border border-rule"
+                />
+              </div>
+            </div>
+            <div className="md:col-span-5 md:col-start-8">
+              <dl className="space-y-5">
                 {[
                   { k: "Physical buttons", v: "Required for gloved operation without touchscreen dependency." },
                   { k: "Display brightness", v: "Validated against direct Oregon summer sun conditions." },
@@ -157,13 +166,6 @@ function FarmAppPage() {
                   </div>
                 ))}
               </dl>
-              <div className="mt-10">
-                <img
-                  src="/tablet-candidates.jpg"
-                  alt="Tablet candidates evaluated for field use"
-                  className="w-full max-w-[480px] rounded-2xl border border-rule"
-                />
-              </div>
             </div>
           </div>
         </Container>

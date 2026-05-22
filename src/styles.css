@@ -35,6 +35,7 @@
   --color-accent-green: var(--accent-green);
   --color-accent-rose: var(--accent-rose);
   --color-accent-cream: var(--accent-cream);
+  --color-accent-blue: var(--accent-blue);
 
   --font-display: "Archivo Black", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
@@ -55,6 +56,7 @@
   --accent-green: oklch(0.55 0.14 145);   /* muted sage green */
   --accent-rose: oklch(0.82 0.13 10);     /* soft pink */
   --accent-cream: oklch(0.97 0.04 95);    /* ivory */
+  --accent-blue: #1e3a8a;
 
   --background: var(--bg);
   --foreground: var(--ink);

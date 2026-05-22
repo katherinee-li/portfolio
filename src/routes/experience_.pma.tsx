@@ -81,8 +81,6 @@ function PMAPage() {
           <div className="mt-10 flex flex-wrap gap-8">
             <Stat value="60+" label="students trained per year" />
             <Stat value="2" label="company partnerships secured" />
-            <Stat value="70+" label="user interviews across one project cycle" />
-            <Stat value="Duolingo, PNC" label="judges sourced from industry" />
           </div>
         </Container>
       </section>
@@ -111,6 +109,14 @@ function PMAPage() {
               />
             </div>
           </div>
+          <div className="mt-10">
+            <iframe
+              src="/pma-industry-presentation.pdf"
+              className="w-full rounded-2xl border border-rule"
+              style={{ height: "520px" }}
+              title="Industry Presentation Assignment"
+            />
+          </div>
         </Container>
       </section>
 
@@ -134,6 +140,14 @@ function PMAPage() {
                 constraints.
               </p>
             </div>
+          </div>
+          <div className="mt-10">
+            <iframe
+              src="/pma-perflection.pdf"
+              className="w-full rounded-2xl border border-rule"
+              style={{ height: "520px" }}
+              title="PMA x Perflection AI Project Documentation"
+            />
           </div>
         </Container>
       </section>
@@ -184,6 +198,14 @@ function PMAPage() {
                 repeatable process for the next leadership team.
               </p>
             </div>
+          </div>
+          <div className="mt-10">
+            <iframe
+              src="/pma-developing-product.pdf"
+              className="w-full rounded-2xl border border-rule"
+              style={{ height: "520px" }}
+              title="Developing a New Product — curriculum slides"
+            />
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
