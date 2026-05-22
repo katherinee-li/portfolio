@@ -89,8 +89,8 @@ function PMAPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">project 1 · industry presentation</SectionLabel>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-7">
+          <div className="grid gap-10 md:grid-cols-12 items-start">
+            <div className="md:col-span-5">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
                 Project 1: <span className="font-serif-i italic text-accent-green">Industry presentations.</span>
               </h2>
@@ -100,22 +100,20 @@ function PMAPage() {
                 judged the most recent cycle, providing professional-grade feedback on problem framing, solution
                 design, and business case.
               </p>
-            </div>
-            <div className="md:col-span-5">
               <img
                 src="/pma-presentation.jpg"
                 alt="Students presenting an Xbox AI assistant redesign"
-                className="w-full rounded-2xl border border-rule block"
+                className="mt-8 w-full rounded-2xl border border-rule block"
               />
             </div>
-          </div>
-          <div className="mt-10">
-            <iframe
-              src="/pma-industry-presentation.pdf"
-              className="w-full max-w-2xl rounded-2xl border border-rule"
-              style={{ height: "520px" }}
-              title="Industry Presentation Assignment"
-            />
+            <div className="md:col-span-7">
+              <iframe
+                src="/pma-industry-presentation.pdf"
+                className="w-full rounded-2xl border border-rule"
+                style={{ height: "520px" }}
+                title="Industry Presentation Assignment"
+              />
+            </div>
           </div>
         </Container>
       </section>
@@ -124,12 +122,12 @@ function PMAPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="orange">project 2 · company partnership</SectionLabel>
-          <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Project 2: <span className="font-serif-i italic text-accent-green">Company partnership.</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
+          <div className="grid gap-10 md:grid-cols-12 items-start">
+            <div className="md:col-span-5">
+              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+                Project 2: <span className="font-serif-i italic text-accent-green">Company partnership.</span>
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 PMA partnered with Perflection AI, a sports analysis startup, placing 20 members into active user
                 research and product strategy roles. Members conducted user interviews, developed PRDs, and built a
                 market expansion strategy delivered directly to the founder.
@@ -140,14 +138,14 @@ function PMAPage() {
                 constraints.
               </p>
             </div>
-          </div>
-          <div className="mt-10">
-            <iframe
-              src="/pma-perflection.pdf"
-              className="w-full max-w-2xl rounded-2xl border border-rule"
-              style={{ height: "520px" }}
-              title="PMA x Perflection AI Project Documentation"
-            />
+            <div className="md:col-span-7">
+              <iframe
+                src="/pma-perflection.pdf"
+                className="w-full rounded-2xl border border-rule"
+                style={{ height: "520px" }}
+                title="PMA x Perflection AI Project Documentation"
+              />
+            </div>
           </div>
         </Container>
       </section>
@@ -182,12 +180,12 @@ function PMAPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose">running the org</SectionLabel>
-          <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Running <span className="font-serif-i italic text-accent-green">the org.</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
+          <div className="grid gap-10 md:grid-cols-12 items-start">
+            <div className="md:col-span-5">
+              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+                Running <span className="font-serif-i italic text-accent-green">the org.</span>
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Leading PMA meant running weekly exec syncs, managing project oversight across 6 teams simultaneously,
                 coordinating external company relationships, and designing the curriculum from scratch each semester.
                 The operational challenge was keeping 10 exec members aligned on priorities while giving each enough
@@ -198,14 +196,14 @@ function PMAPage() {
                 repeatable process for the next leadership team.
               </p>
             </div>
-          </div>
-          <div className="mt-10">
-            <iframe
-              src="/pma-developing-product.pdf"
-              className="w-full max-w-2xl rounded-2xl border border-rule"
-              style={{ height: "520px" }}
-              title="Developing a New Product — curriculum slides"
-            />
+            <div className="md:col-span-7">
+              <iframe
+                src="/pma-developing-product.pdf"
+                className="w-full rounded-2xl border border-rule"
+                style={{ height: "520px" }}
+                title="Developing a New Product — curriculum slides"
+              />
+            </div>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
