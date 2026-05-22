@@ -35,7 +35,7 @@ const entries = [
   },
   {
     role: "President, PM Club",
-    org: "CMU",
+    org: "CMUBTG",
     logo: "/logo-cmu.png",
     when: "2024 — Now",
     desc: "Running a 100-person PM accelerator — organizing workshops, recruiting programming, and mentoring.",
@@ -44,7 +44,7 @@ const entries = [
   },
   {
     role: "Engineering Intern",
-    org: "Moss",
+    org: "moss",
     logo: "/logo-moss.png",
     when: "Summer 2024",
     desc: "Built the sensor kit hardware and tablet HCI for autonomous agricultural tree inventory.",
@@ -95,7 +95,7 @@ function ExperiencePage() {
                     <div className="flex items-center gap-3">
                       <p className="font-display text-xl md:text-2xl">{entry.role}</p>
                       {"coming" in entry && entry.coming && (
-                        <span className="text-xs uppercase tracking-[0.18em] text-ink-soft border border-rule rounded px-2 py-0.5">coming soon</span>
+                        <span className="text-xs uppercase tracking-[0.18em] text-ink-soft border border-rule rounded px-2 py-0.5">in the works</span>
                       )}
                     </div>
                     <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
