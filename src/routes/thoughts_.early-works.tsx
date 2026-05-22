@@ -51,35 +51,18 @@ function EarlyWorksPage() {
             </p>
 
             <p className="mt-8 text-base leading-relaxed text-foreground md:text-lg">
-              Eddy current braking is the physics behind frictionless braking on high-speed trains. A changing magnetic
-              field induces circulating currents in a conductor, and those currents oppose motion. The closer the magnet,
-              the stronger the field, the faster the stop.
+              I was first exposed to the phenomenon of eddy currents when I read about the experiment where you drop a
+              magnet through a copper tube. However, what intrigued me was the varied practical applications of an eddy
+              current braking system and how it can aid or even replace our standard method of braking. I particularly
+              wanted to gain a better understanding of the limitations of this phenomenon.
             </p>
 
             <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-              The apparatus was built from scratch. A mechanical fan was stripped down to its DC motor. An aluminum disk
-              was bolted to the shaft. A cedar wood lever system held neodymium magnets at controlled distances from the
-              spinning disk. A phone magnetometer measured rotational velocity. An iPhone recorded the braking at 60fps
-              and footage was analyzed frame by frame in Tracker.
+              This experiment is concerned with how changing the air gap between a permanent magnet and a non-ferrous
+              rotating disk affects the braking time of the disk, determining the effectiveness of an eddy current
+              braking system. Effectiveness in this study refers to the ECB being able to stop motion in the shortest
+              amount of time.
             </p>
-
-            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-              Ten air gaps. Three trials each. Thirty data points.
-            </p>
-
-            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-              Results confirmed the theoretical inverse-square relationship between magnetic field intensity and braking
-              time. The data also exposed a real limitation: at smaller air gaps, the magnets were close enough to induce
-              early braking even when out of position, introducing systematic error that required several pages to
-              properly account for.
-            </p>
-
-            <div className="mt-8 border-l-2 border-accent-blue pl-5">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Braking time varies with the inverse square of magnetic field intensity. Reducing the air gap by half
-                does not halve the braking time. It reduces it by a factor of four.
-              </p>
-            </div>
 
             <div className="mt-8">
               <a
@@ -107,30 +90,11 @@ function EarlyWorksPage() {
             </p>
 
             <p className="mt-8 text-base leading-relaxed text-foreground md:text-lg">
-              A CRT accelerates electrons from a heated filament through an anode, then deflects them using electric
-              fields between charged plates. The beam hits a phosphor screen and leaves a glowing dot. Theory predicts
-              deflection is inversely proportional to accelerating voltage.
+              I am particularly interested in the motion of electrons in electric and magnetic fields. During an
+              in-class demonstration, I watched the luminous spot on the Cathode Ray Tube's phosphor screen move as I
+              changed the accelerating voltage knob in the slightest way. I want to explore the underlying workings of
+              electron beam deflection.
             </p>
-
-            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-              A CRT demonstration unit was connected to a potentiometer to vary accelerating voltage, measured with a
-              voltmeter, and the deflected spot was marked at 18 different voltage settings across 3 trials each. 54
-              data points total. Deflection distances were measured in Tracker.
-            </p>
-
-            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-              The data confirmed the inverse relationship with a correlation of 0.9996. The systematic error came from
-              an unexpected source: Earth's magnetic field. When the deflecting voltage was removed entirely, the beam
-              still deflected. Theoretical deflection due to Earth's field at the experiment location matched the
-              observed residual deflection closely enough to identify it as the dominant source of error.
-            </p>
-
-            <div className="mt-8 border-l-2 border-accent-blue pl-5">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Deflection is inversely proportional to accelerating voltage and proportional to deflecting voltage.
-                A 5.1% systematic error, fully explained.
-              </p>
-            </div>
 
             <div className="mt-8">
               <a
@@ -145,19 +109,7 @@ function EarlyWorksPage() {
         </Container>
       </section>
 
-      {/* Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="blue">closing</SectionLabel>
-          <div className="max-w-2xl">
-            <p className="text-base leading-relaxed text-foreground md:text-lg">
-              Both experiments were finished before knowing what an ECE degree looked like. The instinct was the same
-              one that showed up later in every project: build something, measure it carefully, and take the error
-              seriously.
-            </p>
-          </div>
-        </Container>
-      </section>
+
     </main>
   );
 }
