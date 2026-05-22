@@ -5,10 +5,10 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/experience_/lightmatter")({
   head: () => ({
     meta: [
-      { title: "Lightmatter — Technical Program Management" },
-      { name: "description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn — defining product lifecycle milestones, authoring validation criteria, and building documentation systems." },
-      { property: "og:title", content: "Lightmatter — Technical Program Management" },
-      { property: "og:description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn — defining product lifecycle milestones, authoring validation criteria, and building documentation systems for a 300-person engineering org." },
+      { title: "Lightmatter · Technical Program Management" },
+      { name: "description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems." },
+      { property: "og:title", content: "Lightmatter · Technical Program Management" },
+      { property: "og:description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems for a 300-person engineering org." },
     ],
   }),
   component: LightmatterPage,
@@ -48,7 +48,7 @@ function LightmatterPage() {
                 Building the infrastructure behind the infrastructure.
               </p>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
-                Technical PM intern at a $4.4B AI photonic computing unicorn — defining product lifecycle milestones,
+                Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones,
                 authoring validation criteria, and building documentation systems for a 300-person engineering org
                 shipping AI data center hardware.
               </p>
@@ -79,7 +79,7 @@ function LightmatterPage() {
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
                 of copper. At a $4.4B valuation and ~300 people, the company was at the inflection point between
-                startup speed and enterprise rigor — scaling programs and processes without losing the ability to ship.
+                startup speed and enterprise rigor, scaling programs and processes without losing the ability to ship.
               </p>
               <p className="mt-4 text-base leading-relaxed text-foreground md:text-lg">
                 The TPM role sat at that intersection: owning cross-functional alignment across engineering, hardware,
@@ -100,7 +100,7 @@ function LightmatterPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The core project was creating a program playbook — a structured framework for how programs start, run,
+                The core project was creating a program playbook: a structured framework for how programs start, run,
                 and close at Lightmatter. This required interviewing team leads across engineering and product to
                 understand what milestones actually mattered, where handoffs broke down, and what information program
                 managers needed at each stage but were not getting.
@@ -162,7 +162,7 @@ function LightmatterPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Program and product managers at Lightmatter maintained documentation manually — a process that introduced
+                Program and product managers at Lightmatter maintained documentation manually, a process that introduced
                 version drift, inconsistency, and significant update overhead across 30+ PMs. The solution was to treat
                 documentation like code: a CI/CD pipeline built via GitHub Actions that automated documentation
                 generation, validation, and publishing on every commit.
@@ -189,7 +189,7 @@ function LightmatterPage() {
                 <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">Working Docs</p>
                 <p className="text-base leading-relaxed text-foreground">
                   Dynamic, linked to live Google Drives, organized by functional area. Landing pages designed to be
-                  non-prescriptive — teams adopt the structure at their own pace.
+                  non-prescriptive. Teams adopt the structure at their own pace.
                 </p>
               </div>
             </div>
@@ -208,14 +208,14 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="orange">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            What I was <span className="font-serif-i italic text-accent-orange">here to do</span>.
+            Internship <span className="font-serif-i italic text-accent-orange">goals</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The internship was structured around three pillars. Ownership — building something real, not shadowing.
-                Technical fluency — learning to speak the language of hardware and software engineering teams well
-                enough to be genuinely useful, not just present. Iteration and influence — learning to form opinionated
+                The internship was structured around three pillars. Ownership: building something real, not shadowing.
+                Technical fluency: learning to speak the language of hardware and software engineering teams well
+                enough to be genuinely useful, not just present. Iteration and influence: learning to form opinionated
                 conclusions from incomplete information, identify bottlenecks, and communicate findings to people at
                 every level of the org.
               </p>
@@ -227,7 +227,7 @@ function LightmatterPage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { label: "Ownership", desc: "Building something real — three shipped deliverables with measurable org impact, not shadow work." },
+              { label: "Ownership", desc: "Building something real: three shipped deliverables with measurable org impact, not shadow work." },
               { label: "Technical Fluency", desc: "Learning to speak hardware and software engineering well enough to be useful to both, not just present in the room." },
               { label: "Cross-Functional Influence", desc: "Forming opinionated conclusions from incomplete information and communicating findings across every level of the org." },
             ].map((p) => (
@@ -247,10 +247,10 @@ function LightmatterPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                TPM work at the <span className="font-serif-i italic text-accent-orange">speed of a unicorn</span>.
+                Three systems built to <span className="font-serif-i italic text-accent-orange">scale with the org</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                Lightmatter was at the exact moment where process starts to matter — large enough that ad hoc
+                Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc
                 coordination breaks down, small enough that the right system could still be designed from scratch.
                 The summer was spent building those systems: for milestones, for validation, and for documentation.
                 Each one designed to scale with the org rather than constrain it.
