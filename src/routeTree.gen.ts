@@ -15,6 +15,7 @@ import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkPulseRouteImport } from './routes/work_.pulse'
 import { Route as ExperienceLightmatterRouteImport } from './routes/experience_.lightmatter'
+import { Route as ExperiencePMARouteImport } from './routes/experience_.pma'
 
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
@@ -46,6 +47,11 @@ const ExperienceLightmatterRoute = ExperienceLightmatterRouteImport.update({
   path: '/experience/lightmatter',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ExperiencePMARoute = ExperiencePMARouteImport.update({
+  id: '/experience_/pma',
+  path: '/experience/pma',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/work': typeof WorkRoute
   '/work/pulse': typeof WorkPulseRoute
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
+  '/experience/pma': typeof ExperiencePMARoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/work': typeof WorkRoute
   '/work/pulse': typeof WorkPulseRoute
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
+  '/experience/pma': typeof ExperiencePMARoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +79,14 @@ export interface FileRoutesById {
   '/work': typeof WorkRoute
   '/work_/pulse': typeof WorkPulseRoute
   '/experience_/lightmatter': typeof ExperienceLightmatterRoute
+  '/experience_/pma': typeof ExperiencePMARoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter'
+  fullPaths: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter'
-  id: '__root__' | '/' | '/experience' | '/thoughts' | '/work' | '/work_/pulse' | '/experience_/lightmatter'
+  to: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma'
+  id: '__root__' | '/' | '/experience' | '/thoughts' | '/work' | '/work_/pulse' | '/experience_/lightmatter' | '/experience_/pma'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -87,6 +96,7 @@ export interface RootRouteChildren {
   WorkRoute: typeof WorkRoute
   WorkPulseRoute: typeof WorkPulseRoute
   ExperienceLightmatterRoute: typeof ExperienceLightmatterRoute
+  ExperiencePMARoute: typeof ExperiencePMARoute
 }
 
 declare module '@tanstack/react-router' {
@@ -133,6 +143,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExperienceLightmatterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/experience_/pma': {
+      id: '/experience_/pma'
+      path: '/experience/pma'
+      fullPath: '/experience/pma'
+      preLoaderRoute: typeof ExperiencePMARouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -143,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   WorkRoute: WorkRoute,
   WorkPulseRoute: WorkPulseRoute,
   ExperienceLightmatterRoute: ExperienceLightmatterRoute,
+  ExperiencePMARoute: ExperiencePMARoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

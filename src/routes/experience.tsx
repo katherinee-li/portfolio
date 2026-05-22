@@ -40,6 +40,7 @@ const entries = [
     when: "2024 — Now",
     desc: "Running a 100-person PM accelerator — organizing workshops, recruiting programming, and mentoring.",
     tint: "hover:bg-accent-green/10",
+    href: "/experience/pma",
   },
   {
     role: "Engineering Intern",
