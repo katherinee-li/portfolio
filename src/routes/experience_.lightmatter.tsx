@@ -71,8 +71,8 @@ function LightmatterPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="orange">the company</SectionLabel>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-7">
+          <div className="grid gap-12">
+            <div className="max-w-2xl">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
                 Photonic computing for <span className="font-serif-i italic text-accent-orange">AI data centers</span>.
               </h2>
@@ -85,13 +85,6 @@ function LightmatterPage() {
                 The TPM role sat at that intersection: owning cross-functional alignment across engineering, hardware,
                 and product teams simultaneously building toward large-scale data center deployment.
               </p>
-            </div>
-            <div className="md:col-span-5">
-              <img
-                src="/lightmatter-rack.jpg"
-                alt="Lightmatter photonic computing rack with fiber optic interconnects"
-                className="w-full object-contain rounded-2xl border border-rule"
-              />
             </div>
           </div>
         </Container>
