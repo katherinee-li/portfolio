@@ -271,7 +271,7 @@ function LightmatterPage() {
                   },
                 ].map((r) => (
                   <div key={r.name} className="border-l-2 border-accent-blue pl-5">
-                    <p className="font-serif-i text-base leading-relaxed text-foreground">"{r.quote}"</p>
+                    <p className="text-base leading-relaxed text-foreground">"{r.quote}"</p>
                     <div className="mt-3">
                       <p className="text-sm font-medium text-foreground">{r.name}</p>
                       <p className="text-xs text-ink-soft">{r.title}</p>
