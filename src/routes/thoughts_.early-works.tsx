@@ -83,7 +83,8 @@ function EarlyWorksPage() {
 
             <div className="mt-8">
               <a
-                href="#"
+                href="/early-works-eddy-current.pdf"
+                download
                 className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Download PDF ↗
@@ -133,7 +134,8 @@ function EarlyWorksPage() {
 
             <div className="mt-8">
               <a
-                href="#"
+                href="/early-works-crt.pdf"
+                download
                 className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Download PDF ↗
