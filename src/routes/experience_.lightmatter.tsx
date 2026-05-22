@@ -100,9 +100,9 @@ function LightmatterPage() {
       {/* 3. Work 1: Product Lifecycle */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">product lifecycle · milestone definition</SectionLabel>
+          <SectionLabel dot="orange">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            55+ milestones. <span className="font-serif-i italic text-accent-orange">One org-wide playbook.</span>
+            Build an org-wide <span className="font-serif-i italic text-accent-orange">program playbook</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -134,9 +134,9 @@ function LightmatterPage() {
       {/* 4. Work 2: Validation Criteria */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">engineering validation</SectionLabel>
+          <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            40+ criteria. <span className="font-serif-i italic text-accent-orange">Unblocking data center deployment.</span>
+            Author hardware <span className="font-serif-i italic text-accent-orange">validation criteria</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -162,9 +162,9 @@ function LightmatterPage() {
       {/* 5. Work 3: CI/CD Documentation Pipeline */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="green">docs as code · ci/cd pipeline</SectionLabel>
+          <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Documentation that <span className="font-serif-i italic text-accent-orange">ships like software</span>.
+            Automate documentation <span className="font-serif-i italic text-accent-orange">as code</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -213,9 +213,9 @@ function LightmatterPage() {
       {/* 6. Goals & Growth */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">30-60-90</SectionLabel>
+          <SectionLabel dot="orange">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Ownership, technical fluency, <span className="font-serif-i italic text-accent-orange">cross-functional influence</span>.
+            What I was <span className="font-serif-i italic text-accent-orange">here to do</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
