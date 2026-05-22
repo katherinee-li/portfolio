@@ -88,7 +88,7 @@ function LightmatterPage() {
             </div>
             <div className="md:col-span-5">
               <img
-                src="/lightmatter-rack-2.jpg"
+                src="/lightmatter-rack.jpg"
                 alt="Lightmatter photonic computing rack with fiber optic interconnects"
                 className="w-full object-contain rounded-2xl border border-rule"
               />
@@ -262,15 +262,6 @@ function LightmatterPage() {
                 The summer was spent building those systems: for milestones, for validation, and for documentation.
                 Each one designed to scale with the org rather than constrain it.
               </p>
-              <blockquote className="mt-10 border-l-2 border-accent-orange pl-6">
-                <p className="font-serif-i text-lg leading-relaxed text-foreground">
-                  "Lightmatter is at a very exciting point in its development. People here move fast, while
-                  intentionally expanding structure and organization. This is a sweet spot for students because
-                  you will get to experience the agility of a growing company while benefiting from a maturing
-                  environment."
-                </p>
-                <p className="mt-3 text-xs uppercase tracking-[0.18em] text-ink-soft">Lightmatter intern cohort</p>
-              </blockquote>
             </div>
             <div className="md:col-span-5 flex flex-col gap-6">
               <img
