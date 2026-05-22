@@ -117,7 +117,7 @@ function About() {
 const explore = [
   { to: "/work" as const, label: "selected work", desc: "Hardware, software, and product capstones.", dot: "orange" as const },
   { to: "/experience" as const, label: "experience", desc: "Internships, research, and leadership.", dot: "green" as const },
-  { to: "/thoughts" as const, label: "thoughts & writing", desc: "Essays on product, merit, and craft.", dot: "rose" as const },
+  { to: "/thoughts" as const, label: "thoughts & writing", desc: "In the works.", dot: "rose" as const },
 ];
 
 function Explore() {

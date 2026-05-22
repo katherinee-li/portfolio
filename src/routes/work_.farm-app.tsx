@@ -5,18 +5,14 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/farm-app")({
   head: () => ({
     meta: [
-      { title: "Farm Inventory App — Moss" },
-      { name: "description", content: "The tablet application and physical interface for agricultural field workers collecting tree inventory data." },
-      { property: "og:title", content: "Farm Inventory App — Moss" },
-      { property: "og:description", content: "Tablet application and HCI designed for gloved agricultural field workers." },
+      { title: "Farm Inventory · Moss" },
+      { name: "description", content: "Tablet application for agricultural inventory collection, designed for field workers wearing gloves in direct sunlight." },
+      { property: "og:title", content: "Farm Inventory · Moss" },
+      { property: "og:description", content: "Tablet application for agricultural inventory collection, designed for field workers wearing gloves in direct sunlight." },
     ],
   }),
   component: FarmAppPage,
 });
-
-function Caption({ children }: { children: React.ReactNode }) {
-  return <p className="mt-3 text-base leading-relaxed text-foreground text-center">{children}</p>;
-}
 
 function FarmAppPage() {
   return (
@@ -33,22 +29,22 @@ function FarmAppPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="green">Human-Computer Interface · Summer 2024</SectionLabel>
+          <SectionLabel dot="green">App Design · Summer 2024</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 Farm Inventory<span className="text-accent-green">.</span>
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Tablet application and field HCI for agricultural inventory.
+                Tablet application for agricultural inventory collection.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
-                Parallel to the sensor kit hardware, the tablet application and physical interface were designed from the
-                ground up around one constraint: agricultural field workers wear gloves, work in direct sunlight, and do
-                not stop moving to interact with software.
+                Designed the tablet application and field interface for the moss sensor kit. Built around one
+                constraint: field workers wear gloves, work in direct sunlight, and do not stop moving to interact
+                with software.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Moss · Engineering Intern · Summer 2024
+                Engineering Intern · Moss · Summer 2024
               </p>
             </div>
             <div className="md:col-span-7 flex items-start justify-center">
@@ -65,34 +61,26 @@ function FarmAppPage() {
       {/* 2. Field Discovery */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="green">field discovery · oregon</SectionLabel>
+          <SectionLabel dot="green">field discovery · Oregon</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            A week in the field before a single <span className="font-serif-i italic text-accent-green">screen</span> was designed.
+            A week in the <span className="font-serif-i italic text-accent-green">field first</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Prior to any interface decisions, a week-long deployment to Oregon farms established the operational
-                baseline. The manual measurement process was observed directly: caliper in inches, height in feet, every
-                fifth to tenth plant, fifteen seconds minimum per tree. Existing tools used in the field were tested and
-                assessed for display brightness, button placement, and ease of use with gloves.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Color-signal testing was conducted with field workers to map LED and UI states to intuitive meaning.
-                Findings: green indicated working, red indicated stop, flashing indicated attention required. Consistent
-                preference emerged for fewer interface elements, estimated time remaining over map display, and physical
-                buttons over touchscreen interaction.
+                Before any interface decisions, a week-long deployment to Oregon farms established what field workers
+                actually needed. The manual inventory process was observed firsthand. Existing field tools were tested
+                for brightness, button usability with gloves, and general ergonomics. Color-signal testing with field
+                workers mapped LED states to intuitive meaning before any color was finalized.
               </p>
             </div>
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-6">
             <div className="w-full max-w-[340px]">
               <img src="/moss-atv-rows.jpg" alt="ATV in tree rows at Oregon farm" className="w-full aspect-[4/3] object-cover" />
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">ATV and farming equipment, Oregon farm rows</p>
             </div>
             <div className="w-full max-w-[340px]">
               <img src="/moss-caliper.jpg" alt="Manual caliper measurement in the field" className="w-full aspect-[4/3] object-cover" />
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Manual caliper measurement: the process being replaced</p>
             </div>
           </div>
         </Container>
@@ -103,39 +91,39 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="rose">user research · 3 roles · 8 interviews</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Three roles, three completely different <span className="font-serif-i italic text-accent-green">mental models</span>.
+            Three roles, three different <span className="font-serif-i italic text-accent-green">needs</span>.
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
               {
                 role: "Inventory Manager",
-                summary: "The office owns the data.",
-                body: "Two counts per year, mid-June and September, determine water schedules, fertilizer orders, and competitive purchasing decisions. With farms holding millions of trees across dozens of blocks, a single weather or variety concern could require re-counting the same rows five or six times.",
-                needs: "Live quantity numbers, percentage-of-take metrics, and mass-update capability without row-by-row entry.",
+                summary: "Owns the data.",
+                body: "Needs live counts, percentage-of-take metrics, and mass updates without row-by-row entry. Recounts the same rows up to six times per season when issues arise.",
               },
               {
                 role: "Field Supervisor",
-                summary: "Paper-based by default.",
-                body: "Responsible for dispatching crews and translating office requests into field tasks. Communication was entirely paper-based. Required data hierarchy: farm, section, block, row.",
-                needs: "Deadline attached, originator identified, assignee tracked, operator recorded.",
+                summary: "Dispatches crews from paper lists.",
+                body: "Needs farm, section, block, row in that order, with deadline and operator tracked per mission.",
               },
               {
                 role: "Field Worker",
-                summary: "Screen interaction only when something is wrong.",
-                body: "Operates in gloves, outdoors, on an ATV. Preferred error feedback priority: lights first, sound second, display third.",
-                needs: "Current speed, rows remaining, estimated time to complete. Hardware requirements defined around existing workflows, not the reverse.",
+                summary: "Checks the screen only when something is wrong.",
+                body: "Operates in gloves on an ATV. Needs current speed, rows remaining, and time to completion. Nothing else.",
               },
             ].map((r) => (
               <div key={r.role} className="rounded-2xl border border-rule p-6">
                 <span className="text-xs uppercase tracking-[0.22em] text-accent-green">{r.role}</span>
                 <p className="mt-2 font-display text-xl">{r.summary}</p>
                 <p className="mt-3 text-base leading-relaxed text-foreground">{r.body}</p>
-                <div className="mt-4 border-t border-rule pt-4">
-                  <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">Primary needs</p>
-                  <p className="text-base leading-relaxed text-foreground">{r.needs}</p>
-                </div>
               </div>
             ))}
+          </div>
+          <div className="mt-10">
+            <img
+              src="/moss-inventory-screen.jpg"
+              alt="Existing paper-based inventory system on office computer"
+              className="w-full max-w-[500px] mx-auto block rounded-2xl border border-rule"
+            />
           </div>
         </Container>
       </section>
@@ -143,23 +131,18 @@ function FarmAppPage() {
       {/* 4. Tablet Hardware Selection */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">hardware selection · tablet</SectionLabel>
+          <SectionLabel dot="orange">hardware selection</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            The right <span className="font-serif-i italic text-accent-green">tablet</span> for the field.
+            Why standard tablets <span className="font-serif-i italic text-accent-green">did not work</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Standard consumer tablets were disqualified immediately: touchscreens fail with gloves, screens wash out
-                in direct sunlight, and IP ratings are insufficient for agricultural environments. Tablet candidates were
-                evaluated across four criteria: physical button availability, display brightness under direct sun, IP67
-                rating with sealed charging port, and form factor compatible with ATV mounting.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Testing was conducted in field conditions to validate brightness thresholds and button tactility with
-                gloves. The selected tablet met all four criteria and paired with the sensor kit via a tethered physical
-                cable, a deliberate choice reflecting field worker preference for wired connections over wireless during
-                data collection sessions.
+                Consumer tablets were disqualified on three counts: touchscreens fail with gloves, displays wash out
+                in direct sun, and IP ratings are insufficient for field conditions. Candidates were evaluated on
+                physical button availability, brightness under direct sunlight, IP67 rating, and ATV mounting
+                compatibility. The selected tablet connects to the sensor kit via a tethered cable, a deliberate
+                choice based on field worker preference for wired over wireless during active sessions.
               </p>
             </div>
             <div className="md:col-span-5">
@@ -182,9 +165,8 @@ function FarmAppPage() {
             <img
               src="/tablet-candidates.jpg"
               alt="Tablet candidates evaluated for field use"
-              className="w-full max-w-[500px] mx-auto block"
+              className="w-full max-w-[500px] mx-auto block rounded-2xl border border-rule"
             />
-            <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground text-center">Tablet candidates evaluated across brightness, buttons, and IP rating</p>
           </div>
         </Container>
       </section>
@@ -199,8 +181,7 @@ function FarmAppPage() {
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-5">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The tablet application was scoped to exactly what field workers needed during a collection session, and
-                nothing beyond it.
+                The application covers exactly what a field worker needs during a collection session.
               </p>
               <ol className="mt-8 space-y-4">
                 {[
@@ -208,8 +189,8 @@ function FarmAppPage() {
                   "Enter field information: farm, section, block, row",
                   "Monitor sensor kit battery level in real time",
                   "View active errors from the sensor kit",
-                  "Follow the row-by-row collection timeline for the current mission",
-                  "Manually log individual plant records during a session",
+                  "Follow the row-by-row mission timeline",
+                  "Manually log individual plant records",
                 ].map((item, i) => (
                   <li key={i} className="flex gap-4">
                     <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-rule font-mono text-xs text-foreground">
@@ -220,15 +201,14 @@ function FarmAppPage() {
                 ))}
               </ol>
               <p className="mt-8 text-base leading-relaxed text-foreground">
-                Color coding, large tap targets, and physical button shortcuts were incorporated throughout. All critical
-                actions were accessible without removing gloves. Error states surfaced immediately with plain-language
-                descriptions rather than codes.
+                All critical actions work without removing gloves. Error states surface in plain language, not codes.
+                Large tap targets and physical button shortcuts throughout.
               </p>
             </div>
             <div className="md:col-span-7 flex flex-col gap-6">
               <img
                 src="/moss-tablet.jpg"
-                alt="Tablet application showing active collection session with speed, location, and row progress"
+                alt="Active collection screen showing current speed, location, row progress, and session timer"
                 className="w-full rounded-2xl border border-rule"
               />
             </div>
@@ -236,19 +216,18 @@ function FarmAppPage() {
         </Container>
       </section>
 
-      {/* 6. Status Indication */}
+      {/* 6. LED System */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">LED system · enclosure exterior</SectionLabel>
+          <SectionLabel dot="orange">status indication</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Status readable from the <span className="font-serif-i italic text-accent-green">driver's seat</span>.
+            Status visible from the <span className="font-serif-i italic text-accent-green">driver's seat</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Enclosure-exterior LED indicators were designed to communicate system state without requiring the operator
-                to stop, dismount, or look at a screen. Color assignments were validated through structured field testing
-                with workers, who matched LED states to intended meanings before any color was finalized.
+                Exterior LED indicators on the sensor kit communicate system state without requiring the operator to
+                stop or dismount. Color assignments were validated with field workers before finalization.
               </p>
             </div>
           </div>
@@ -256,7 +235,7 @@ function FarmAppPage() {
             {[
               { color: "bg-accent-green", label: "Green solid", desc: "Active data collection." },
               { color: "bg-yellow-400", label: "Yellow solid", desc: "Processing." },
-              { color: "bg-yellow-400 opacity-60", label: "Yellow flashing", desc: "Transitional state, not collecting, not in error." },
+              { color: "bg-yellow-400 opacity-60", label: "Yellow flashing", desc: "Transitional, not collecting, not in error." },
               { color: "bg-red-500", label: "Red flashing", desc: "Error requiring attention." },
               { color: "bg-blue-500", label: "Blue flashing / solid", desc: "Flashing on boot, solid when ready." },
             ].map((s) => (
@@ -275,26 +254,15 @@ function FarmAppPage() {
       {/* 7. Closing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <div className="grid gap-14 md:grid-cols-12 items-center">
-            <div className="md:col-span-5">
-              <img
-                src="/moss-farm-map.jpg"
-                alt="Old inventory sheets on office computer"
-                className="w-full border border-rule block"
-              />
-            </div>
-            <div className="md:col-span-7">
-              <SectionLabel dot="green">result</SectionLabel>
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Technology that <span className="font-serif-i italic text-accent-green">disappears into the workflow</span>.
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                The objective was not to add a screen to a farmer's day. It was to remove a clipboard, a data re-entry
-                step, and an unnecessary office communication. Every interface decision, tablet selection, LED color,
-                button placement, and cable choice, traced directly back to a field observation or interview finding.
-              </p>
-            </div>
-          </div>
+          <SectionLabel dot="green">outcome</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
+            Remove the clipboard, <span className="font-serif-i italic text-accent-green">not add a screen</span>.
+          </h2>
+          <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
+            Every decision, tablet selection, LED color, button placement, cable choice, traced back to a field
+            observation or interview finding. The goal was to make the technology disappear into an existing workflow,
+            not add to it.
+          </p>
         </Container>
       </section>
     </main>

@@ -44,7 +44,7 @@ function PMAPage() {
               PMA<span className="text-accent-green">.</span>
             </h1>
             <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-              Building the next generation of product thinkers.
+              President, Product Management Academy at CMU.
             </p>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
               President of CMU's Product Management Academy, a two-semester program training 60+ students per year in
@@ -65,7 +65,7 @@ function PMAPage() {
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Not a bootcamp. <span className="font-serif-i italic text-accent-green">An industry-focused pipeline.</span>
+                How the <span className="font-serif-i italic text-accent-green">program works</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 PMA evolved from a skills workshop into a structured two-semester program. The first semester builds
@@ -94,7 +94,7 @@ function PMAPage() {
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-7">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Real companies. <span className="font-serif-i italic text-accent-green">Real critique.</span>
+                Project 1: <span className="font-serif-i italic text-accent-green">Industry presentations.</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Members apply the CIRCLES framework to solve genuine product pain points for companies including Tesla,
@@ -119,7 +119,7 @@ function PMAPage() {
         <Container>
           <SectionLabel dot="orange">project 2 · company partnership</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            20 members. One startup. <span className="font-serif-i italic text-accent-green">Real deliverables.</span>
+            Project 2: <span className="font-serif-i italic text-accent-green">Company partnership.</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -145,7 +145,7 @@ function PMAPage() {
           <div className="grid gap-12 md:grid-cols-12 items-start">
             <div className="md:col-span-7">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Learning from people who've <span className="font-serif-i italic text-accent-green">actually shipped</span>.
+                <span className="font-serif-i italic text-accent-green">Speaker series.</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Each semester includes a speaker series bringing in PMs from Big Tech and startups to share how their
@@ -169,7 +169,7 @@ function PMAPage() {
         <Container>
           <SectionLabel dot="rose">running the org</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            10 execs. <span className="font-serif-i italic text-accent-green">One playbook.</span>
+            Running <span className="font-serif-i italic text-accent-green">the org.</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -207,7 +207,7 @@ function PMAPage() {
             <div className="md:col-span-6">
               <SectionLabel dot="green">where it's going</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                From a semester course to a <span className="font-serif-i italic text-accent-green">year-round community</span>.
+                What <span className="font-serif-i italic text-accent-green">comes next.</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 The longer-term vision for PMA is a continuous professional pipeline: foundational skills in the fall,

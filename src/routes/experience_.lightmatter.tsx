@@ -45,7 +45,7 @@ function LightmatterPage() {
                 Lightmatter<span className="text-accent-orange">.</span>
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
-                Building the infrastructure behind the infrastructure.
+                Technical Program Management Intern at Lightmatter.
               </p>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
                 Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones,
@@ -74,7 +74,7 @@ function LightmatterPage() {
           <div className="grid gap-12">
             <div className="max-w-2xl">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Photonic computing for <span className="font-serif-i italic text-accent-orange">AI data centers</span>.
+                What <span className="font-serif-i italic text-accent-orange">Lightmatter builds</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
@@ -95,7 +95,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="orange">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Build an org-wide <span className="font-serif-i italic text-accent-orange">program playbook</span>.
+            Defining product lifecycle <span className="font-serif-i italic text-accent-orange">milestones</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -129,7 +129,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Author hardware <span className="font-serif-i italic text-accent-orange">validation criteria</span>.
+            Authoring engineering <span className="font-serif-i italic text-accent-orange">validation criteria</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -157,7 +157,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Automate documentation <span className="font-serif-i italic text-accent-orange">as code</span>.
+            Building a <span className="font-serif-i italic text-accent-orange">documentation pipeline</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -208,7 +208,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="orange">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Internship <span className="font-serif-i italic text-accent-orange">goals</span>.
+            30-60-90 <span className="font-serif-i italic text-accent-orange">goals</span>.
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -247,7 +247,7 @@ function LightmatterPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Three systems built to <span className="font-serif-i italic text-accent-orange">scale with the org</span>.
+                What the <span className="font-serif-i italic text-accent-orange">summer was</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
                 Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc
