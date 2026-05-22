@@ -31,6 +31,7 @@ const entries = [
     when: "Summer 2025",
     desc: "Optimized CI/CD pipelines and deployment automation for program managers at a photonic computing startup.",
     tint: "hover:bg-accent-rose/10",
+    href: "/experience/lightmatter",
   },
   {
     role: "President, PM Club",
