@@ -93,12 +93,10 @@ function ExperiencePage() {
                 <>
                   <div className="col-span-12 md:col-span-5">
                     <p className="font-display text-xl md:text-2xl">{entry.role}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                      {entry.desc}
-                      {"coming" in entry && entry.coming && (
-                        <span className="ml-1 font-semibold text-foreground"> In the works.</span>
-                      )}
-                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
+                    {"coming" in entry && entry.coming && (
+                      <p className="mt-1 text-sm font-semibold text-foreground">In the works.</p>
+                    )}
                   </div>
                   <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
                     <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
