@@ -29,16 +29,11 @@ function EarlyWorksPage() {
       {/* Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="rose">High School · 2022</SectionLabel>
+          <SectionLabel dot="blue">High School · 2022</SectionLabel>
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              Early Works<span className="text-accent-rose">.</span>
+              Early Works<span className="text-accent-blue">.</span>
             </h1>
-            <p className="mt-8 text-lg leading-relaxed text-foreground">
-              Two experiments built before any internship, any lab, any ECE coursework. IB Extended Essays — original
-              research questions, hand-built apparatus, real data. The first time a physics question had to be answered
-              from scratch.
-            </p>
           </div>
         </Container>
       </section>
@@ -46,10 +41,10 @@ function EarlyWorksPage() {
       {/* Experiment 1: Eddy Current Braking */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">experiment 01 · eddy current braking</SectionLabel>
+          <SectionLabel dot="blue">experiment 01 · eddy current braking</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Eddy Current <span className="font-serif-i italic text-accent-rose">Braking System</span>.
+              Eddy Current <span className="font-serif-i italic text-accent-blue">Braking System</span>.
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               How does the air gap between a permanent magnet and a rotating aluminum disk affect braking time?
@@ -79,7 +74,7 @@ function EarlyWorksPage() {
               properly account for.
             </p>
 
-            <div className="mt-8 border-l-2 border-accent-rose pl-5">
+            <div className="mt-8 border-l-2 border-accent-blue pl-5">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
                 Braking time varies with the inverse square of magnetic field intensity. Reducing the air gap by half
                 does not halve the braking time. It reduces it by a factor of four.
@@ -89,7 +84,7 @@ function EarlyWorksPage() {
             <div className="mt-8">
               <a
                 href="#"
-                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-rose transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Download PDF ↗
               </a>
@@ -101,10 +96,10 @@ function EarlyWorksPage() {
       {/* Experiment 2: Cathode Ray Tube */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">experiment 02 · cathode ray tube deflection</SectionLabel>
+          <SectionLabel dot="blue">experiment 02 · cathode ray tube deflection</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Cathode Ray Tube <span className="font-serif-i italic text-accent-rose">Deflection</span>.
+              Cathode Ray Tube <span className="font-serif-i italic text-accent-blue">Deflection</span>.
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               What is the relationship between accelerating voltage and the deflection of an electron beam?
@@ -129,7 +124,7 @@ function EarlyWorksPage() {
               observed residual deflection closely enough to identify it as the dominant source of error.
             </p>
 
-            <div className="mt-8 border-l-2 border-accent-rose pl-5">
+            <div className="mt-8 border-l-2 border-accent-blue pl-5">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
                 Deflection is inversely proportional to accelerating voltage and proportional to deflecting voltage.
                 A 5.1% systematic error, fully explained.
@@ -139,7 +134,7 @@ function EarlyWorksPage() {
             <div className="mt-8">
               <a
                 href="#"
-                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-rose transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Download PDF ↗
               </a>
@@ -151,7 +146,7 @@ function EarlyWorksPage() {
       {/* Closing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">closing</SectionLabel>
+          <SectionLabel dot="blue">closing</SectionLabel>
           <div className="max-w-2xl">
             <p className="text-base leading-relaxed text-foreground md:text-lg">
               Both experiments were finished before knowing what an ECE degree looked like. The instinct was the same

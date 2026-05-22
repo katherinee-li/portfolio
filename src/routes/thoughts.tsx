@@ -25,19 +25,49 @@ function ThoughtsPage() {
             Things I've <span className="font-serif-i italic text-accent-orange">written</span>.
           </h1>
           <ul className="mt-12">
-            <li>
-              <Link
-                to="/thoughts/early-works"
-                className="group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 hover:bg-accent-rose/10 md:py-7"
-              >
-                <div className="col-span-12 md:col-span-8">
-                  <p className="font-display text-xl md:text-2xl">Early Works</p>
-                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">Two physics experiments built from scratch in high school. IB Extended Essays on eddy current braking and CRT deflection.</p>
-                </div>
-                <span className="col-span-10 font-serif-i text-lg text-accent-rose md:col-span-3">High School · 2022</span>
-                <ArrowUpRight className="col-span-2 md:col-span-1 h-4 w-4 text-ink-soft transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent-rose justify-self-end" />
-              </Link>
-            </li>
+            {[
+              {
+                to: "/thoughts/early-works" as const,
+                title: "Early Works",
+                desc: "Two physics experiments built from scratch in high school. IB Extended Essays on eddy current braking and CRT deflection.",
+                label: "High School · 2022",
+                color: "hover:bg-accent-blue/10",
+                labelColor: "text-accent-blue",
+                arrowColor: "group-hover:text-accent-blue",
+              },
+              {
+                to: "/thoughts/learning-to-take-up-space" as const,
+                title: "Learning to take up space.",
+                desc: "On taekwondo, noise, and learning to claim space.",
+                label: "Personal · 2022",
+                color: "hover:bg-accent-orange/10",
+                labelColor: "text-accent-orange",
+                arrowColor: "group-hover:text-accent-orange",
+              },
+              {
+                to: "/thoughts/magic-in-the-mundane" as const,
+                title: "Magic in the mundane.",
+                desc: "On teaching physics to kids, finding magic in ordinary things, and co-founding STEMbox.",
+                label: "Personal · 2022",
+                color: "hover:bg-accent-orange/10",
+                labelColor: "text-accent-orange",
+                arrowColor: "group-hover:text-accent-orange",
+              },
+            ].map((entry) => (
+              <li key={entry.to}>
+                <Link
+                  to={entry.to}
+                  className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.color} md:py-7`}
+                >
+                  <div className="col-span-12 md:col-span-8">
+                    <p className="font-display text-xl md:text-2xl">{entry.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
+                  </div>
+                  <span className={`col-span-10 font-serif-i text-lg md:col-span-3 ${entry.labelColor}`}>{entry.label}</span>
+                  <ArrowUpRight className={`col-span-2 md:col-span-1 h-4 w-4 text-ink-soft transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 justify-self-end ${entry.arrowColor}`} />
+                </Link>
+              </li>
+            ))}
           </ul>
         </Container>
       </section>

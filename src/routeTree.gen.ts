@@ -17,6 +17,8 @@ import { Route as WorkPulseRouteImport } from './routes/work_.pulse'
 import { Route as ExperienceLightmatterRouteImport } from './routes/experience_.lightmatter'
 import { Route as ExperiencePMARouteImport } from './routes/experience_.pma'
 import { Route as ThoughtsEarlyWorksRouteImport } from './routes/thoughts_.early-works'
+import { Route as ThoughtsLearningToTakeUpSpaceRouteImport } from './routes/thoughts_.learning-to-take-up-space'
+import { Route as ThoughtsMagicInTheMundaneRouteImport } from './routes/thoughts_.magic-in-the-mundane'
 
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
@@ -58,6 +60,16 @@ const ThoughtsEarlyWorksRoute = ThoughtsEarlyWorksRouteImport.update({
   path: '/thoughts/early-works',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ThoughtsLearningToTakeUpSpaceRoute = ThoughtsLearningToTakeUpSpaceRouteImport.update({
+  id: '/thoughts_/learning-to-take-up-space',
+  path: '/thoughts/learning-to-take-up-space',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThoughtsMagicInTheMundaneRoute = ThoughtsMagicInTheMundaneRouteImport.update({
+  id: '/thoughts_/magic-in-the-mundane',
+  path: '/thoughts/magic-in-the-mundane',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +80,8 @@ export interface FileRoutesByFullPath {
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
   '/experience/pma': typeof ExperiencePMARoute
   '/thoughts/early-works': typeof ThoughtsEarlyWorksRoute
+  '/thoughts/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
+  '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +92,8 @@ export interface FileRoutesByTo {
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
   '/experience/pma': typeof ExperiencePMARoute
   '/thoughts/early-works': typeof ThoughtsEarlyWorksRoute
+  '/thoughts/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
+  '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,13 +105,15 @@ export interface FileRoutesById {
   '/experience_/lightmatter': typeof ExperienceLightmatterRoute
   '/experience_/pma': typeof ExperiencePMARoute
   '/thoughts_/early-works': typeof ThoughtsEarlyWorksRoute
+  '/thoughts_/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
+  '/thoughts_/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works'
+  fullPaths: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works' | '/thoughts/learning-to-take-up-space' | '/thoughts/magic-in-the-mundane'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works'
-  id: '__root__' | '/' | '/experience' | '/thoughts' | '/work' | '/work_/pulse' | '/experience_/lightmatter' | '/experience_/pma' | '/thoughts_/early-works'
+  to: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works' | '/thoughts/learning-to-take-up-space' | '/thoughts/magic-in-the-mundane'
+  id: '__root__' | '/' | '/experience' | '/thoughts' | '/work' | '/work_/pulse' | '/experience_/lightmatter' | '/experience_/pma' | '/thoughts_/early-works' | '/thoughts_/learning-to-take-up-space' | '/thoughts_/magic-in-the-mundane'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -107,7 +125,10 @@ export interface RootRouteChildren {
   ExperienceLightmatterRoute: typeof ExperienceLightmatterRoute
   ExperiencePMARoute: typeof ExperiencePMARoute
   ThoughtsEarlyWorksRoute: typeof ThoughtsEarlyWorksRoute
+  ThoughtsLearningToTakeUpSpaceRoute: typeof ThoughtsLearningToTakeUpSpaceRoute
+  ThoughtsMagicInTheMundaneRoute: typeof ThoughtsMagicInTheMundaneRoute
 }
+
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
@@ -167,6 +188,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThoughtsEarlyWorksRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/thoughts_/learning-to-take-up-space': {
+      id: '/thoughts_/learning-to-take-up-space'
+      path: '/thoughts/learning-to-take-up-space'
+      fullPath: '/thoughts/learning-to-take-up-space'
+      preLoaderRoute: typeof ThoughtsLearningToTakeUpSpaceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thoughts_/magic-in-the-mundane': {
+      id: '/thoughts_/magic-in-the-mundane'
+      path: '/thoughts/magic-in-the-mundane'
+      fullPath: '/thoughts/magic-in-the-mundane'
+      preLoaderRoute: typeof ThoughtsMagicInTheMundaneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -179,6 +214,8 @@ const rootRouteChildren: RootRouteChildren = {
   ExperienceLightmatterRoute: ExperienceLightmatterRoute,
   ExperiencePMARoute: ExperiencePMARoute,
   ThoughtsEarlyWorksRoute: ThoughtsEarlyWorksRoute,
+  ThoughtsLearningToTakeUpSpaceRoute: ThoughtsLearningToTakeUpSpaceRoute,
+  ThoughtsMagicInTheMundaneRoute: ThoughtsMagicInTheMundaneRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
