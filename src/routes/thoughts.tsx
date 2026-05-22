@@ -37,7 +37,7 @@ function ThoughtsPage() {
               },
               {
                 to: "/thoughts/learning-to-take-up-space" as const,
-                title: "Learning to take up space.",
+                title: "Learning to take up space",
                 desc: "On taekwondo, noise, and learning to claim space.",
                 label: "Personal · 2022",
                 color: "hover:bg-accent-orange/10",
@@ -46,7 +46,7 @@ function ThoughtsPage() {
               },
               {
                 to: "/thoughts/magic-in-the-mundane" as const,
-                title: "Magic in the mundane.",
+                title: "Magic in the mundane",
                 desc: "On teaching physics to kids, finding magic in ordinary things, and co-founding STEMbox.",
                 label: "Personal · 2022",
                 color: "hover:bg-accent-orange/10",
