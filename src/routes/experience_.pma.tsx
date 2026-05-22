@@ -112,8 +112,8 @@ function PMAPage() {
           <div className="mt-10">
             <iframe
               src="/pma-industry-presentation.pdf"
-              className="w-full rounded-2xl border border-rule"
-              style={{ height: "340px" }}
+              className="w-full max-w-2xl rounded-2xl border border-rule"
+              style={{ height: "520px" }}
               title="Industry Presentation Assignment"
             />
           </div>
@@ -144,8 +144,8 @@ function PMAPage() {
           <div className="mt-10">
             <iframe
               src="/pma-perflection.pdf"
-              className="w-full rounded-2xl border border-rule"
-              style={{ height: "340px" }}
+              className="w-full max-w-2xl rounded-2xl border border-rule"
+              style={{ height: "520px" }}
               title="PMA x Perflection AI Project Documentation"
             />
           </div>
@@ -202,8 +202,8 @@ function PMAPage() {
           <div className="mt-10">
             <iframe
               src="/pma-developing-product.pdf"
-              className="w-full rounded-2xl border border-rule"
-              style={{ height: "340px" }}
+              className="w-full max-w-2xl rounded-2xl border border-rule"
+              style={{ height: "520px" }}
               title="Developing a New Product — curriculum slides"
             />
           </div>
