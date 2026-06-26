@@ -40,11 +40,11 @@ function STEMboxPage() {
                 STEMbox<span className="text-accent-green">.</span>
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Hands-on science, delivered to your door.
+                Hands-on science experiments delivered.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
                 Co-founded a non-profit delivering hands-on STEM experiment kits to elementary students across the Greater
-                Vancouver Area. Three years, 400+ students, 12+ schools.
+                Vancouver Area. In three years, reached 400+ students across 12+ schools.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
                 Co-Founder · Greater Vancouver Area · 2020 — 2023
@@ -64,12 +64,9 @@ function STEMboxPage() {
       {/* 2. Problem */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">problem</SectionLabel>
+          <SectionLabel dot="rose" size="base">problem</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Elementary science became <span className="font-serif-i italic text-accent-green">worksheets and videos</span>.
-              </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 When schools closed in 2020, hands-on science education stopped. Elementary students in the Greater
                 Vancouver Area had no way to run real experiments or experience science as something physical. Worksheets
@@ -85,10 +82,7 @@ function STEMboxPage() {
       {/* 3. The Kit */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="green">the product</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Every student. Every material. <span className="font-serif-i italic text-accent-green">By name.</span>
-          </h2>
+          <SectionLabel dot="green" size="base">solution</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-lg leading-relaxed text-foreground">
@@ -123,10 +117,7 @@ function STEMboxPage() {
       {/* 4. Curriculum */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="green">curriculum · 12+ lessons</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Designed, written, and <span className="font-serif-i italic text-accent-green">taught from scratch</span>.
-          </h2>
+          <SectionLabel dot="green" size="base">curriculum · 12+ lessons</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-lg leading-relaxed text-foreground">
@@ -152,10 +143,7 @@ function STEMboxPage() {
       {/* 5. Scale */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">impact</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Three years. <span className="font-serif-i italic text-accent-green">400+ students. 12 schools.</span>
-          </h2>
+          <SectionLabel dot="orange" size="base">impact</SectionLabel>
           <p className="mb-10 text-lg leading-relaxed text-foreground max-w-2xl">
             What began as a direct response to pandemic learning loss grew into a three-year program with school
             partnerships across the region. Kits were assembled by hand, logistics were managed independently, and
@@ -181,7 +169,7 @@ function STEMboxPage() {
       {/* 6. Press */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">recognition</SectionLabel>
+          <SectionLabel dot="rose" size="base">recognition</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
@@ -205,31 +193,6 @@ function STEMboxPage() {
         </Container>
       </section>
 
-      {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <div className="grid gap-14 md:grid-cols-12 items-center">
-            <div className="md:col-span-5">
-              <img
-                src="/stembox-class.jpg"
-                alt="STEMbox students in virtual class"
-                className="w-full rounded-xl border border-rule block"
-              />
-            </div>
-            <div className="md:col-span-7">
-              <SectionLabel dot="green">conviction</SectionLabel>
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Science is something <span className="font-serif-i italic text-accent-green">you do</span>.
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-foreground max-w-xl">
-                STEMbox was built on one conviction: a student who has extracted DNA from a strawberry or built a working
-                electromagnet understands science differently than one who has only read about it. The kits were the
-                product. The curiosity was the point.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
     </main>
   );
 }

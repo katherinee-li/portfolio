@@ -175,19 +175,9 @@ function MossPage() {
             </div>
             <div className="md:col-span-5 flex flex-col gap-6">
               <div>
-                <img
-                  src="/IMG_2925.jpg"
-                  alt="Wiring map before PCB consolidation"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule"
-                />
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Component wiring map before PCB consolidation</p>
               </div>
               <div>
-                <img
-                  src="/IMG_2926.jpg"
-                  alt="Mid-fidelity cardboard prototype showing component layout"
-                  className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule"
-                />
                 <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Mid-fidelity cardboard prototype: component placement validation</p>
               </div>
             </div>

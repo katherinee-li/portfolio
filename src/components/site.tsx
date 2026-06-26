@@ -59,10 +59,11 @@ export function Marquee() {
   );
 }
 
-export function SectionLabel({ children, dot = "orange" }: { children: ReactNode; dot?: "orange" | "green" | "rose" | "blue" }) {
+export function SectionLabel({ children, dot = "orange", size = "sm" }: { children: ReactNode; dot?: "orange" | "green" | "rose" | "blue"; size?: "sm" | "base" | "lg" }) {
   const dotClass = dot === "green" ? "bg-accent-green" : dot === "rose" ? "bg-accent-rose" : dot === "blue" ? "bg-accent-blue" : "bg-accent-orange";
+  const sizeClass = size === "lg" ? "text-lg" : size === "base" ? "text-base" : "text-sm";
   return (
-    <p className="mb-10 flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-ink-soft">
+    <p className={`mb-10 flex items-center gap-3 ${sizeClass} uppercase tracking-[0.18em] text-ink-soft`}>
       <span className={`inline-block h-2 w-2 rounded-full ${dotClass}`} />
       {children}
     </p>
