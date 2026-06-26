@@ -65,17 +65,13 @@ function STEMboxPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="rose" size="base">problem</SectionLabel>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="mt-6 text-lg leading-relaxed text-foreground">
-                When schools closed in 2020, hands-on science education stopped. Elementary students in the Greater
-                Vancouver Area had no way to run real experiments or experience science as something physical. Worksheets
-                replaced labs. Videos replaced demonstrations. STEMbox was co-founded to close that gap: designing,
-                assembling, and delivering physical experiment kits directly to students, paired with live virtual
-                instruction.
-              </p>
-            </div>
-          </div>
+          <p className="text-lg leading-relaxed text-foreground">
+            When schools closed in 2020, hands-on science education stopped. Elementary students in the Greater
+            Vancouver Area had no way to run real experiments or experience science as something physical. Worksheets
+            replaced labs. Videos replaced demonstrations. STEMbox was co-founded to close that gap: designing,
+            assembling, and delivering physical experiment kits directly to students, paired with live virtual
+            instruction.
+          </p>
         </Container>
       </section>
 
@@ -83,8 +79,8 @@ function STEMboxPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green" size="base">solution</SectionLabel>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
+          <div className="grid gap-10 md:grid-cols-12 items-start">
+            <div className="md:col-span-6">
               <p className="text-lg leading-relaxed text-foreground">
                 Each STEMbox kit was built around a single experiment. Materials were individually sourced, portioned,
                 and packed for each student: DNA extraction, electromagnets, buoyancy testing, volcano chemistry, UV
@@ -92,23 +88,23 @@ function STEMboxPage() {
                 labeled with a student's name, assembled in a garage, and distributed to partner schools across Vancouver.
               </p>
             </div>
-          </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <div className="w-full max-w-[340px]">
-              <img
-                src="/stembox-assembly.jpg"
-                alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
-                className="w-full rounded-xl border border-rule object-cover aspect-[4/3]"
-              />
-              <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
-            </div>
-            <div className="w-full max-w-[340px]">
-              <img
-                src="/stembox-boxes.jpg"
-                alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
-                className="w-full rounded-xl border border-rule object-cover aspect-[4/3]"
-              />
-              <Caption>Finished boxes stacked in the garage, each labeled with a student name.</Caption>
+            <div className="md:col-span-6 flex flex-col gap-6">
+              <div>
+                <img
+                  src="/stembox-assembly.jpg"
+                  alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
+                  className="w-full rounded-xl border border-rule object-cover aspect-[4/3]"
+                />
+                <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
+              </div>
+              <div>
+                <img
+                  src="/stembox-boxes.jpg"
+                  alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
+                  className="w-full rounded-xl border border-rule object-cover aspect-[4/3]"
+                />
+                <Caption>Finished boxes stacked in the garage, each labeled with a student name.</Caption>
+              </div>
             </div>
           </div>
         </Container>
@@ -118,8 +114,8 @@ function STEMboxPage() {
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green" size="base">curriculum · 12+ lessons</SectionLabel>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
+          <div className="grid gap-10 md:grid-cols-12 items-start">
+            <div className="md:col-span-6">
               <p className="text-lg leading-relaxed text-foreground">
                 Every lesson was created and delivered live, covering physics, chemistry, biology, and engineering for
                 grades 1 through 7. Topics included buoyancy, electromagnets, DNA structure, osmosis, Cartesian divers,
@@ -128,14 +124,14 @@ function STEMboxPage() {
                 young students engaged across a screen required deliberate design.
               </p>
             </div>
-          </div>
-          <div className="mt-10">
-            <img
-              src="/stembox-lessons.jpg"
-              alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
-              className="w-full max-w-[500px] mx-auto block rounded-xl border border-rule"
-            />
-            <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
+            <div className="md:col-span-6">
+              <img
+                src="/stembox-lessons.jpg"
+                alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
+                className="w-full rounded-xl border border-rule"
+              />
+              <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
+            </div>
           </div>
         </Container>
       </section>
