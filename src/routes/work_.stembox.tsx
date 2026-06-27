@@ -89,7 +89,7 @@ function STEMboxPage() {
               </p>
             </div>
             <div className="md:col-span-6 flex flex-col gap-6">
-              <div>
+              <div className="max-w-[260px]">
                 <img
                   src="/stembox-assembly.jpg"
                   alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
@@ -97,7 +97,7 @@ function STEMboxPage() {
                 />
                 <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
               </div>
-              <div>
+              <div className="max-w-[260px]">
                 <img
                   src="/stembox-boxes.jpg"
                   alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
