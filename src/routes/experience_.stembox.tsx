@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { Container, Nav, SectionLabel } from "@/components/site";
 
-export const Route = createFileRoute("/work_/stembox")({
+export const Route = createFileRoute("/experience_/stembox")({
   head: () => ({
     meta: [
       { title: "STEMbox — Hands-On Science Kits" },

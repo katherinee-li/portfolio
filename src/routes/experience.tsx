@@ -68,7 +68,7 @@ const entries = [
     org: "STEMbox",
     logo: "/logo-stembox.png",
     when: "2020 — 2023",
-    href: "/work/stembox",
+    href: "/experience/stembox",
     desc: "Co-founded a non-profit teaching hands-on STEM to 400+ students across 12 schools in Vancouver. Ran for three years.",
     tint: "hover:bg-accent-rose/10",
   },
