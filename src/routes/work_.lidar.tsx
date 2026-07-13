@@ -1,6 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { createFileRoute } from "@tanstack/react-router";
+import { BackLink, Caption, Container, PageShell, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/work_/lidar")({
   head: () => ({
@@ -14,21 +13,10 @@ export const Route = createFileRoute("/work_/lidar")({
   component: LidarPage,
 });
 
-function Caption({ children }: { children: React.ReactNode }) {
-  return <p className="mt-3 text-base leading-relaxed text-foreground text-center">{children}</p>;
-}
-
 function LidarPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
-
-      <Container className="pt-4">
-        <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" />
-          back to work
-        </Link>
-      </Container>
+    <PageShell>
+      <BackLink to="/work" label="back to work" />
 
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
@@ -198,6 +186,6 @@ function LidarPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }

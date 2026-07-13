@@ -1,6 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { createFileRoute } from "@tanstack/react-router";
+import { BackLink, Container, PageShell, SectionLabel, Stat } from "@/components/site";
 
 export const Route = createFileRoute("/experience_/lightmatter")({
   head: () => ({
@@ -14,26 +13,10 @@ export const Route = createFileRoute("/experience_/lightmatter")({
   component: LightmatterPage,
 });
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="border-l-2 border-accent-blue pl-4">
-      <p className="font-display text-2xl text-foreground">{value}</p>
-      <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{label}</p>
-    </div>
-  );
-}
-
 function LightmatterPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
-
-      <Container className="pt-4">
-        <Link to="/experience" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" />
-          back to experience
-        </Link>
-      </Container>
+    <PageShell>
+      <BackLink to="/experience" label="back to experience" />
 
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
@@ -117,9 +100,9 @@ function LightmatterPage() {
             </div>
           </div>
           <div className="mt-10 flex flex-wrap gap-8">
-            <Stat value="55+" label="lifecycle milestones defined" />
-            <Stat value="~300" label="person org aligned" />
-            <Stat value="2 tracks" label="hardware and software timelines reconciled" />
+            <Stat value="55+" label="lifecycle milestones defined" accent="blue" />
+            <Stat value="~300" label="person org aligned" accent="blue" />
+            <Stat value="2 tracks" label="hardware and software timelines reconciled" accent="blue" />
           </div>
         </Container>
       </section>
@@ -145,9 +128,9 @@ function LightmatterPage() {
             </div>
           </div>
           <div className="mt-10 flex flex-wrap gap-8">
-            <Stat value="40+" label="validation criteria authored" />
-            <Stat value="FIT" label="evaluations against market standards" />
-            <Stat value="Unblocked" label="large-scale AI data center deployment" />
+            <Stat value="40+" label="validation criteria authored" accent="blue" />
+            <Stat value="FIT" label="evaluations against market standards" accent="blue" />
+            <Stat value="Unblocked" label="large-scale AI data center deployment" accent="blue" />
           </div>
         </Container>
       </section>
@@ -196,9 +179,9 @@ function LightmatterPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-8">
-            <Stat value="65%" label="reduction in update cycle time" />
-            <Stat value="8→3 min" label="test suite runtime" />
-            <Stat value="30+" label="program and product managers served" />
+            <Stat value="65%" label="reduction in update cycle time" accent="blue" />
+            <Stat value="8→3 min" label="test suite runtime" accent="blue" />
+            <Stat value="30+" label="program and product managers served" accent="blue" />
           </div>
         </Container>
       </section>
@@ -304,6 +287,6 @@ function LightmatterPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }
