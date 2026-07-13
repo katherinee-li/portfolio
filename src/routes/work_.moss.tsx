@@ -1,6 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { createFileRoute } from "@tanstack/react-router";
+import { BackLink, Container, PageShell, SectionLabel, Stat } from "@/components/site";
 import farmSensorKit from "@/assets/farm-sensor-kit.png";
 
 export const Route = createFileRoute("/work_/moss")({
@@ -17,15 +16,8 @@ export const Route = createFileRoute("/work_/moss")({
 
 function MossPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
-
-      <Container className="pt-4">
-        <Link to="/work" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" />
-          back to work
-        </Link>
-      </Container>
+    <PageShell>
+      <BackLink to="/work" label="back to work" />
 
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
@@ -80,10 +72,7 @@ function MossPage() {
               { value: "20%", label: "reduction in sensor failure rates" },
               { value: "2–10M", label: "trees per farm" },
             ].map((s) => (
-              <div key={s.label} className="border-l-2 border-accent-green pl-4">
-                <p className="font-display text-2xl text-foreground">{s.value}</p>
-                <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{s.label}</p>
-              </div>
+              <Stat key={s.label} value={s.value} label={s.label} accent="green" />
             ))}
           </div>
         </Container>
@@ -248,6 +237,6 @@ function MossPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }
