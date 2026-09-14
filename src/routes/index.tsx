@@ -42,9 +42,12 @@ function Hero() {
             </h1>
 
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
-              I build across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
+              I build and deploy systems across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
               <span style={{ color: "#1e3a8a" }}>software</span>, and{" "}
-              <span style={{ color: "#1e3a8a" }}>AI</span> to create reliable products people enjoy using.
+              <span style={{ color: "#1e3a8a" }}>AI</span>.
+            </p>
+            <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
+              I like taking ambiguous technical problems from prototype to reliable product.
             </p>
           </div>
 
@@ -52,8 +55,9 @@ function Hero() {
             <p className="invisible font-serif-i text-2xl md:text-4xl mb-4">Hi, I'm</p>
             <h1 className="invisible mt-12 font-display text-[24vw] leading-[0.88] md:text-[14rem]" aria-hidden>k</h1>
             <div className="mt-72 text-sm leading-relaxed text-ink-soft">
-              <p className="text-foreground">ECE Senior @ Carnegie Mellon</p>
-              <p>Prev Lightmatter</p>
+              <p className="text-foreground">Engineer + Builder</p>
+              <p>ECE @ Carnegie Mellon</p>
+              <p>Robotics · Systems · AI</p>
             </div>
           </div>
         </div>
@@ -61,6 +65,21 @@ function Hero() {
     </section>
   );
 }
+
+const skills = [
+  {
+    label: "Engineering",
+    items: ["Python", "C++", "JavaScript/TypeScript", "SQL", "React", "Node.js", "REST APIs", "WebSockets"],
+  },
+  {
+    label: "Systems + Robotics",
+    items: ["ROS", "ESP32", "Linux", "Docker", "GPS/LiDAR/IMU", "I2C/SPI/UART"],
+  },
+  {
+    label: "Product",
+    items: ["Customer Discovery", "User Research", "Roadmapping", "PRDs"],
+  },
+];
 
 function About() {
   return (
@@ -70,10 +89,13 @@ function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="font-serif-i text-3xl leading-snug md:text-5xl">
-              I like sitting in the middle of hard conversations about <span className="text-accent-orange">trade-offs</span>, <span className="text-accent-orange">merit</span>, and <span className="text-accent-orange">who a product is really for</span>.
+              I like building systems where <span className="text-accent-orange">software</span> has to interact with <span className="text-accent-orange">the real world</span>.
             </p>
             <p className="mt-10 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              I work across <span className="text-accent-green">technical PM</span>, <span className="text-accent-green">software</span>, and <span className="text-accent-green">hardware</span>, translating complex systems between engineering, business, and end users. I've built agricultural sensor kits at Moss, optimized CI/CD pipelines and deployment automation for program managers at Lightmatter.
+              My work has spanned <span className="text-accent-green">robotics</span>, <span className="text-accent-green">embedded hardware</span>, <span className="text-accent-green">backend systems</span>, and <span className="text-accent-green">developer tooling</span> — from sensor kits deployed on farms to autonomous search-and-rescue robots.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
+              I'm especially interested in problems where the technical and product questions are tightly coupled: figuring out what needs to be built, getting it working in a messy environment, and learning from how people actually use it.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               Outside class I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
@@ -89,13 +111,18 @@ function About() {
               <div className="my-6 h-px bg-rule" />
 
               <p className="text-xs uppercase tracking-[0.22em] text-ink-soft">Skills</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {["User Research", "Customer Discovery", "Roadmapping", "PRDs", "A/B Testing", "Agile/Scrum", "Python", "React", "SQL", "JavaScript", "API Design", "Figma", "Jira", "Sparring"].map((t) => (
-                  <span key={t} className="rounded-full border border-rule px-3 py-1 text-xs text-ink-soft">
-                    {t}
-                  </span>
-                ))}
-              </div>
+              {skills.map((group) => (
+                <div key={group.label} className="mt-4">
+                  <p className="text-xs font-semibold text-foreground">{group.label}</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {group.items.map((t) => (
+                      <span key={t} className="rounded-full border border-rule px-3 py-1 text-xs text-ink-soft">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
 
               <video
                 src="/videos/katherine.mp4"

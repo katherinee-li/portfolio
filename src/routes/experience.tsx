@@ -20,25 +20,16 @@ const entries = [
     org: "Lightmatter",
     logo: "/logo-lightmatter.png",
     when: "Summer 2025",
-    desc: "Optimized CI/CD pipelines and deployment automation for program managers at a photonic computing startup.",
+    desc: "Built CI/CD and Python tooling used by 30+ technical program managers to automate validation and deployment workflows.",
     tint: "hover:bg-accent-rose/10",
     href: "/experience/lightmatter",
-  },
-  {
-    role: "President, PM Club",
-    org: "CMUBTG",
-    logo: "/logo-cmu.png",
-    when: "2024 — Now",
-    desc: "Running a 100-person PM accelerator: organizing workshops, recruiting programming, and mentoring.",
-    tint: "hover:bg-accent-green/10",
-    href: "/experience/pma",
   },
   {
     role: "Engineering Intern",
     org: "moss",
     logo: "/logo-moss.png",
     when: "Summer 2024",
-    desc: "Built the sensor kit hardware and tablet HCI for autonomous agricultural tree inventory.",
+    desc: "Built and field-tested sensing hardware and software for autonomous agricultural inventory.",
     tint: "hover:bg-accent-green/10",
     links: [
       { label: "Farm Sensor Kit", href: "/work/moss" },
@@ -50,9 +41,21 @@ const entries = [
     org: "CMU Biorobotics",
     logo: "/logo-biorobotics.jpg",
     when: "2023 — 2024",
-    desc: "Data visualization and operator control GUIs for a fleet of autonomous search and rescue robots.",
+    desc: "Built ROS/C++ operator and validation tooling for autonomous robots operating in GPS-denied environments.",
     tint: "hover:bg-accent-orange/10",
     href: "/work/lidar",
+  },
+] as const;
+
+const leadership = [
+  {
+    role: "President",
+    org: "CMU Product Management Academy",
+    logo: "/logo-cmu.png",
+    when: "2024 — Now",
+    desc: "Running a 100-person PM accelerator: organizing workshops, recruiting programming, and mentoring.",
+    tint: "hover:bg-accent-green/10",
+    href: "/experience/pma",
   },
   {
     role: "Co-founder",
@@ -65,6 +68,8 @@ const entries = [
   },
 ] as const;
 
+type Entry = (typeof entries)[number] | (typeof leadership)[number];
+
 function ExperiencePage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
@@ -75,60 +80,70 @@ function ExperiencePage() {
           <h1 className="mb-12 font-display text-5xl leading-[0.95] md:text-7xl">
             Where I've <span className="font-serif-i italic text-accent-orange">been</span>.
           </h1>
-          <ul>
-            {entries.map((entry) => {
-              const hasDropdown = "links" in entry;
-
-              const rowContent = (
-                <>
-                  <div className="col-span-12 md:col-span-5">
-                    <p className="font-display text-xl md:text-2xl">{entry.role}</p>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
-                  </div>
-                  <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
-                    <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
-                    {entry.org}
-                  </span>
-                  <span className="col-span-5 text-right text-sm text-ink-soft md:col-span-3">{entry.when}</span>
-                </>
-              );
-
-              if (hasDropdown) {
-                return (
-                  <li key={entry.role + entry.when} className="group relative border-b border-rule">
-                    <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}>
-                      {rowContent}
-                    </div>
-                    <div className="absolute -left-6 -right-6 md:-left-10 md:-right-10 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
-                      {entry.links.map((link) => (
-                        <Link
-                          key={link.href}
-                          to={link.href}
-                          className="flex items-center justify-between px-6 py-4 text-sm transition-colors hover:bg-accent-orange/10 hover:text-accent-orange"
-                        >
-                          <span>{link.label}</span>
-                          <ArrowUpRight className="h-4 w-4" />
-                        </Link>
-                      ))}
-                    </div>
-                  </li>
-                );
-              }
-
-              return (
-                <li key={entry.role + entry.when}>
-                  <Link
-                    to={entry.href}
-                    className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
-                  >
-                    {rowContent}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <EntryList items={entries} />
+          <div className="mt-16">
+            <SectionLabel dot="green">leadership</SectionLabel>
+            <EntryList items={leadership} />
+          </div>
         </Container>
       </section>
     </main>
+  );
+}
+
+function EntryList({ items }: { items: readonly Entry[] }) {
+  return (
+    <ul>
+      {items.map((entry) => {
+        const hasDropdown = "links" in entry;
+
+        const rowContent = (
+          <>
+            <div className="col-span-12 md:col-span-5">
+              <p className="font-display text-xl md:text-2xl">{entry.role}</p>
+              <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
+            </div>
+            <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
+              <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
+              {entry.org}
+            </span>
+            <span className="col-span-5 text-right text-sm text-ink-soft md:col-span-3">{entry.when}</span>
+          </>
+        );
+
+        if (hasDropdown) {
+          return (
+            <li key={entry.role + entry.when} className="group relative border-b border-rule">
+              <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}>
+                {rowContent}
+              </div>
+              <div className="absolute -left-6 -right-6 md:-left-10 md:-right-10 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
+                {entry.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    className="flex items-center justify-between px-6 py-4 text-sm transition-colors hover:bg-accent-orange/10 hover:text-accent-orange"
+                  >
+                    <span>{link.label}</span>
+                    <ArrowUpRight className="h-4 w-4" />
+                  </Link>
+                ))}
+              </div>
+            </li>
+          );
+        }
+
+        return (
+          <li key={entry.role + entry.when}>
+            <Link
+              to={entry.href}
+              className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
+            >
+              {rowContent}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }

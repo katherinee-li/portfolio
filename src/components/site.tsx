@@ -111,10 +111,46 @@ export function Footer() {
 
 
 export const projects = [
-  { title: "Farm Sensor Kit", kind: "Moss · Internship", year: "2024", tint: "from-accent-green/30 to-accent-orange/15", image: farmSensorKit, href: "/work/moss" },
-  { title: "Proximity-Based Social Navigation", kind: "ECE Capstone", year: "2026", tint: "from-accent-orange/30 to-accent-rose/20", image: proximityDevice, href: "/work/pulse" },
-  { title: "Farm Inventory App", kind: "Moss · Internship", year: "2024", tint: "from-accent-rose/25 to-accent-cream/15", image: "/moss-tablet.jpg", href: "/work/farm-app" },
-  { title: "GUI for Search and Rescue Robots", kind: "Biorobotics Lab", year: "2024", tint: "from-accent-orange/25 to-accent-green/20", image: "/mmpug-rc2.jpg", href: "/work/lidar" },
+  {
+    title: "Proximity-Based Social Navigation",
+    kind: "ECE Capstone",
+    year: "2026",
+    tint: "from-accent-orange/30 to-accent-rose/20",
+    image: proximityDevice,
+    href: "/work/pulse",
+    domains: ["Embedded", "Backend", "Realtime Systems"],
+    stack: ["ESP32", "Node.js", "WebSockets"],
+  },
+  {
+    title: "Farm Sensor Kit",
+    kind: "Moss · Internship",
+    year: "2024",
+    tint: "from-accent-green/30 to-accent-orange/15",
+    image: farmSensorKit,
+    href: "/work/moss",
+    domains: ["Hardware", "Field Deployment", "Sensors"],
+    stack: ["GPS", "LiDAR", "IMU", "PCB"],
+  },
+  {
+    title: "GUI for Search and Rescue Robots",
+    kind: "Biorobotics Lab",
+    year: "2024",
+    tint: "from-accent-orange/25 to-accent-green/20",
+    image: "/mmpug-rc2.jpg",
+    href: "/work/lidar",
+    domains: ["Robotics", "Operator Tools"],
+    stack: ["C++", "ROS", "SLAM"],
+  },
+  {
+    title: "Farm Inventory App",
+    kind: "Moss · Internship",
+    year: "2024",
+    tint: "from-accent-rose/25 to-accent-cream/15",
+    image: "/moss-tablet.jpg",
+    href: "/work/farm-app",
+    domains: ["Field Tooling", "HCI"],
+    stack: ["Tablet UI", "Sensor Integration"],
+  },
 ];
 
 export const thoughts = [
@@ -125,7 +161,7 @@ export const thoughts = [
 
 export const work = [
   { role: "Technical PM Intern", org: "Lightmatter", when: "Summer 2025" },
-  { role: "President, PM Club", org: "CMU", when: "2024 — Now" },
   { role: "Engineering Intern", org: "Moss", when: "Summer 2024" },
   { role: "Robot Exploration Researcher", org: "CMU Biorobotics", when: "2023 — 2024" },
+  { role: "President, PM Club", org: "CMU", when: "2024 — Now" },
 ];

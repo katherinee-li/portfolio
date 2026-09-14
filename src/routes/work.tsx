@@ -55,7 +55,13 @@ function WorkPage() {
                       className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[360px] flex-1" : i === 3 ? "max-h-[320px]" : "max-h-64"}`}
                     />
                   )}
-                  <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
+                  <div>
+                    <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
+                    <p className="mt-3 text-xs uppercase tracking-[0.18em] text-foreground">
+                      {p.domains.join(" · ")}
+                    </p>
+                    <p className="mt-1 text-xs tracking-[0.06em] text-ink-soft">{p.stack.join(" · ")}</p>
+                  </div>
                 </div>
               </Tag>
               );

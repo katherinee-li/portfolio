@@ -40,8 +40,11 @@ function MossPage() {
                 Electrical system for an agricultural robotics sensor kit.
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
-                Built the version 2.0 electrical system for the moss sensor kit, an ATV-mounted device that
-                autonomizes tree inventory across farms managing 2 to 10 million trees.
+                Built the electrical system for an ATV-mounted sensing platform deployed on commercial tree farms
+                managing millions of trees.
+              </p>
+              <p className="mt-4 max-w-md font-mono text-xs leading-relaxed text-ink-soft md:text-sm">
+                GPS + LiDAR + IMU → compute → field-ready enclosure → customer deployment
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 Engineering Intern · Moss · Summer 2024

@@ -58,6 +58,15 @@ function PulsePage() {
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
                 A dedicated, single-purpose device for spontaneous human connection.
               </p>
+              <div className="mt-8 rounded-2xl border border-rule p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">What I built</p>
+                <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-foreground">
+                  <li>ESP32 firmware + sensor pipeline</li>
+                  <li>Node.js/WebSocket backend</li>
+                  <li>Device-to-device synchronization</li>
+                  <li>Integration + system testing</li>
+                </ul>
+              </div>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 CMU ECE · 18-500 · Spring 2026
               </p>
