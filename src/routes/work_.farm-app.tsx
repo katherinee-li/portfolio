@@ -78,7 +78,7 @@ function FigureRow({ figures }: { figures: { src: string; caption: string }[] })
 
 function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[]; dot: "green" | "orange" | "rose" }) {
   const accent =
-    dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-rose";
+    dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-orange";
   return (
     <div className="mt-8 border-t border-rule">
       {rows.map((r) => (
@@ -324,7 +324,7 @@ function FarmAppPage() {
           </p>
           <PairTable rows={scaling} dot="rose" />
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            <span className="text-xs uppercase tracking-[0.22em] text-accent-rose">result</span>
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">result</span>
             <br />
             Reduced estimated assembly time from roughly two weeks to three days.
           </p>
