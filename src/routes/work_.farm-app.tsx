@@ -5,9 +5,9 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/farm-app")({
   head: () => ({
     meta: [
-      { title: "Field Deployment · Moss" },
+      { title: "Autonomous Tree Inventory System · Moss" },
       { name: "description", content: "Turning an autonomous tree-inventory prototype into a system farmers could independently operate." },
-      { property: "og:title", content: "Field Deployment · Moss" },
+      { property: "og:title", content: "Autonomous Tree Inventory System · Moss" },
       { property: "og:description", content: "Turning an autonomous tree-inventory prototype into a system farmers could independently operate." },
     ],
   }),
@@ -103,7 +103,7 @@ function FarmAppPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Field Deployment
+                Autonomous Tree Inventory System
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
                 Turning an autonomous tree-inventory prototype into a system farmers could independently operate

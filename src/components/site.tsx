@@ -104,7 +104,7 @@ export function Footer() {
 
 export const projects = [
   {
-    title: "Field Deployment",
+    title: "Autonomous Tree Inventory System",
     kind: "Moss · Engineering",
     year: "2024",
     tint: "from-accent-green/30 to-accent-orange/15",
