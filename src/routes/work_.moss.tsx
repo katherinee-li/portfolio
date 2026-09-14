@@ -37,7 +37,7 @@ function MossPage() {
                 Sensor Kit
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Electrical system for an agricultural robotics sensor kit.
+                Electrical system for an agricultural robotics sensor kit
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
                 Built the electrical system for an ATV-mounted sensing platform that automates tree inventory across
@@ -68,7 +68,7 @@ function MossPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                The problem with <span className="font-serif-i italic text-accent-green">manual forestry</span>.
+                The problem with <span className="font-serif-i italic text-accent-green">manual forestry</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Commercial tree farms inventory millions of trees to understand what they can sell each season. The
@@ -100,7 +100,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            How the system <span className="font-serif-i italic text-accent-green">is organized</span>.
+            How the system <span className="font-serif-i italic text-accent-green">is organized</span>
           </h2>
           <p className="mb-10 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
             The sensor kit combines GPS, LiDAR, IMU sensing, compute, power management, networking, and thermal
@@ -133,7 +133,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="orange">serviceability</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Modular <span className="font-serif-i italic text-accent-green">by design</span>.
+            Modular <span className="font-serif-i italic text-accent-green">by design</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -164,7 +164,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="rose">manufacturing scalability</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Designed to scale beyond <span className="font-serif-i italic text-accent-green">one kit per week</span>.
+            Designed to scale beyond <span className="font-serif-i italic text-accent-green">one kit per week</span>
           </h2>
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -197,7 +197,7 @@ function MossPage() {
         <Container>
           <SectionLabel dot="orange">hardware testing</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            IP67 across <span className="font-serif-i italic text-accent-green">every component</span>.
+            IP67 across <span className="font-serif-i italic text-accent-green">every component</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -244,7 +244,7 @@ function MossPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="green">outcome</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What <span className="font-serif-i italic text-accent-green">changed</span>.
+                What <span className="font-serif-i italic text-accent-green">changed</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
                 The redesigned system provided a repeatable hardware platform that could be assembled, serviced, and

@@ -36,7 +36,7 @@ function FarmAppPage() {
                 Farm Inventory
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Tablet application for agricultural inventory collection.
+                Tablet application for agricultural inventory collection
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
                 Built the field interface for Moss's agricultural sensing system, designed for operators collecting
@@ -63,7 +63,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="green">field discovery · Oregon</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            A week in the <span className="font-serif-i italic text-accent-green">field first</span>.
+            A week in the <span className="font-serif-i italic text-accent-green">field first</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -91,7 +91,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="rose">user research · 3 roles · 8 interviews</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Three roles, three different <span className="font-serif-i italic text-accent-green">needs</span>.
+            Three roles, three different <span className="font-serif-i italic text-accent-green">needs</span>
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -133,7 +133,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="orange">hardware selection</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Why standard tablets <span className="font-serif-i italic text-accent-green">did not work</span>.
+            Why standard tablets <span className="font-serif-i italic text-accent-green">did not work</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-6">
@@ -176,7 +176,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="green">tablet application</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Six functions. <span className="font-serif-i italic text-accent-green">Nothing extra.</span>
+            Six functions, <span className="font-serif-i italic text-accent-green">nothing extra</span>
           </h2>
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-5">
@@ -221,7 +221,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="orange">status indication</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Status visible from the <span className="font-serif-i italic text-accent-green">driver's seat</span>.
+            Status visible from the <span className="font-serif-i italic text-accent-green">driver's seat</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -256,7 +256,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="green">outcome</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-            Remove the clipboard, <span className="font-serif-i italic text-accent-green">not add a screen</span>.
+            Remove the clipboard, <span className="font-serif-i italic text-accent-green">not add a screen</span>
           </h2>
           <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
             The final interface replaced much of the paper-based workflow without forcing workers to constantly

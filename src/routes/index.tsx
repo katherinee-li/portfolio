@@ -86,7 +86,7 @@ function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="font-serif-i text-3xl leading-snug md:text-5xl">
-              I like working on problems that sit between <span className="text-accent-orange">software</span> and <span className="text-accent-orange">the physical world</span>.
+              I like working on problems that sit between <span className="text-accent-orange">software</span> and <span className="text-accent-orange">the physical world</span>
             </p>
             <p className="mt-10 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               I've built sensing systems for commercial farms, autonomy tools for search-and-rescue robots, embedded social devices, and developer tooling for photonic computing infrastructure.

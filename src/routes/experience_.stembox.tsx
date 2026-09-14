@@ -40,7 +40,7 @@ function STEMboxPage() {
                 STEMbox
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Hands-on science experiments delivered.
+                Hands-on science experiments delivered
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
                 Co-founded a non-profit delivering hands-on STEM experiment kits to elementary students across the Greater
@@ -169,7 +169,7 @@ function STEMboxPage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Featured in the <span className="font-serif-i italic text-accent-green">Peace Arch News</span>.
+                Featured in the <span className="font-serif-i italic text-accent-green">Peace Arch News</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 The program was recognized for its impact on students and families across the Semiahoo Secondary
