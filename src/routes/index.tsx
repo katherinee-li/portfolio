@@ -92,10 +92,10 @@ function About() {
               I've built sensing systems for commercial farms, autonomy tools for search-and-rescue robots, embedded social devices, and developer tooling for photonic computing infrastructure.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              I'm most interested in work where I can move between understanding the problem, building the system, deploying it, and figuring out why it breaks.
+              Most recently, I'll be working on model evaluations and API integrations across different environments and hardware at General Intuition.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Outside class I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
+              Outside of work, I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
             </p>
           </div>
           <aside className="md:col-span-4">
