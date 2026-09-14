@@ -96,7 +96,7 @@ function PulsePage() {
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Smartphones engineer <span className="font-serif-i italic text-accent-orange">engagement</span>, not connection
+                Smartphones engineer <span className="text-accent-orange">engagement</span>, not connection
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Meeting up with someone nearby still usually starts with a phone: send a message, share a location,
@@ -126,7 +126,7 @@ function PulsePage() {
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            System <span className="font-serif-i italic text-accent-orange">architecture</span>: device · firmware · server
+            System <span className="text-accent-orange">architecture</span>: device · firmware · server
           </h2>
           <img
             src={pulsePipeline}
@@ -153,13 +153,13 @@ function PulsePage() {
         <Container>
           <SectionLabel dot="orange">firmware & state machine</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Sensor-to-display <span className="font-serif-i italic text-accent-orange">pipeline</span>, 200ms budget
+            Sensor-to-display <span className="text-accent-orange">pipeline</span>, 200ms budget
           </h2>
           <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto block" />
 
           {/* Pipeline budget — centered */}
           <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
+            <p className="leading-relaxed text-foreground" style={{ fontSize: "22px" }}>
               The end-to-end pipeline runs inside a single 200ms budget, from accelerometer sample to rendered arrow on the
               opposite device.
             </p>
@@ -210,7 +210,7 @@ function PulsePage() {
         <Container>
           <SectionLabel dot="green">UI walkthrough</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
-            UI flow: idle <span className="font-serif-i italic text-accent-orange">→ request → navigate → meetup</span>
+            UI flow: idle <span className="text-accent-orange">→ request → navigate → meetup</span>
           </h2>
           <img
             src="/pulse-meetup-flow.jpg"
@@ -243,7 +243,7 @@ function PulsePage() {
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
-            Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>
+            Targets vs. <span className="text-accent-orange">measured results</span>
           </h2>
           <img
             src="/pulse-validation.jpg"
@@ -264,7 +264,7 @@ function PulsePage() {
         <Container>
           <SectionLabel dot="orange">risk mitigations</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Failure modes and <span className="font-serif-i italic text-accent-orange">mitigations</span>
+            Failure modes and <span className="text-accent-orange">mitigations</span>
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -295,7 +295,7 @@ function PulsePage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">final iteration</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                A compass that <span className="font-serif-i italic text-accent-orange">asks to be put down</span>
+                A compass that <span className="text-accent-orange">asks to be put down</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
                 The final prototype supported real-time meetup and navigation across four physical devices, with

@@ -22,7 +22,7 @@ function WorkPage() {
         <Container>
           <SectionLabel dot="orange">selected work</SectionLabel>
           <h1 className="mb-8 font-display text-5xl leading-[0.95] md:text-7xl">
-            Things I've <span className="font-serif-i italic text-accent-orange">built</span>
+            Things I've <span className="text-accent-orange">built</span>
           </h1>
           <div className="grid gap-6 md:grid-cols-12">
             {projects.map((p, i) => {

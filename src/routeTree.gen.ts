@@ -21,7 +21,6 @@ import { Route as ThoughtsLearningToTakeUpSpaceRouteImport } from './routes/thou
 import { Route as ThoughtsMagicInTheMundaneRouteImport } from './routes/thoughts_.magic-in-the-mundane'
 import { Route as WorkFarmAppRouteImport } from './routes/work_.farm-app'
 import { Route as WorkLidarRouteImport } from './routes/work_.lidar'
-import { Route as WorkMossRouteImport } from './routes/work_.moss'
 import { Route as WorkPulseRouteImport } from './routes/work_.pulse'
 
 const IndexRoute = IndexRouteImport.update({
@@ -86,11 +85,6 @@ const WorkLidarRoute = WorkLidarRouteImport.update({
   path: '/work/lidar',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkMossRoute = WorkMossRouteImport.update({
-  id: '/work_/moss',
-  path: '/work/moss',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WorkPulseRoute = WorkPulseRouteImport.update({
   id: '/work_/pulse',
   path: '/work/pulse',
@@ -110,7 +104,6 @@ export interface FileRoutesByFullPath {
   '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
   '/work/farm-app': typeof WorkFarmAppRoute
   '/work/lidar': typeof WorkLidarRoute
-  '/work/moss': typeof WorkMossRoute
   '/work/pulse': typeof WorkPulseRoute
 }
 export interface FileRoutesByTo {
@@ -126,7 +119,6 @@ export interface FileRoutesByTo {
   '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
   '/work/farm-app': typeof WorkFarmAppRoute
   '/work/lidar': typeof WorkLidarRoute
-  '/work/moss': typeof WorkMossRoute
   '/work/pulse': typeof WorkPulseRoute
 }
 export interface FileRoutesById {
@@ -143,7 +135,6 @@ export interface FileRoutesById {
   '/thoughts_/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
   '/work_/farm-app': typeof WorkFarmAppRoute
   '/work_/lidar': typeof WorkLidarRoute
-  '/work_/moss': typeof WorkMossRoute
   '/work_/pulse': typeof WorkPulseRoute
 }
 export interface FileRouteTypes {
@@ -161,7 +152,6 @@ export interface FileRouteTypes {
     | '/thoughts/magic-in-the-mundane'
     | '/work/farm-app'
     | '/work/lidar'
-    | '/work/moss'
     | '/work/pulse'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -177,7 +167,6 @@ export interface FileRouteTypes {
     | '/thoughts/magic-in-the-mundane'
     | '/work/farm-app'
     | '/work/lidar'
-    | '/work/moss'
     | '/work/pulse'
   id:
     | '__root__'
@@ -193,7 +182,6 @@ export interface FileRouteTypes {
     | '/thoughts_/magic-in-the-mundane'
     | '/work_/farm-app'
     | '/work_/lidar'
-    | '/work_/moss'
     | '/work_/pulse'
   fileRoutesById: FileRoutesById
 }
@@ -210,7 +198,6 @@ export interface RootRouteChildren {
   ThoughtsMagicInTheMundaneRoute: typeof ThoughtsMagicInTheMundaneRoute
   WorkFarmAppRoute: typeof WorkFarmAppRoute
   WorkLidarRoute: typeof WorkLidarRoute
-  WorkMossRoute: typeof WorkMossRoute
   WorkPulseRoute: typeof WorkPulseRoute
 }
 
@@ -300,13 +287,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkLidarRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work_/moss': {
-      id: '/work_/moss'
-      path: '/work/moss'
-      fullPath: '/work/moss'
-      preLoaderRoute: typeof WorkMossRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/work_/pulse': {
       id: '/work_/pulse'
       path: '/work/pulse'
@@ -330,7 +310,6 @@ const rootRouteChildren: RootRouteChildren = {
   ThoughtsMagicInTheMundaneRoute: ThoughtsMagicInTheMundaneRoute,
   WorkFarmAppRoute: WorkFarmAppRoute,
   WorkLidarRoute: WorkLidarRoute,
-  WorkMossRoute: WorkMossRoute,
   WorkPulseRoute: WorkPulseRoute,
 }
 export const routeTree = rootRouteImport

@@ -33,6 +33,21 @@ const deployment = [
   },
 ];
 
+const scaling = [
+  {
+    insight: "Knowledge existed only in my head. Another engineer couldn't easily build the system.",
+    solution: "Documentation: wiring schematics, block diagrams, connector maps, build manuals, and BOMs.",
+  },
+  {
+    insight: "Building each unit took nearly two weeks.",
+    solution: "Backplanes that consolidate wiring and simplify assembly.",
+  },
+  {
+    insight: "Assembly required extensive manual wiring.",
+    solution: "Standardized connectors, pre-crimped cables, and repeatable assembly procedures.",
+  },
+];
+
 const adoption = [
   {
     insight: "Failure is expensive. One mistake could waste an entire day of work.",
@@ -48,8 +63,9 @@ const adoption = [
   },
 ];
 
-function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[]; dot: "green" | "orange" }) {
-  const accent = dot === "green" ? "text-accent-green" : "text-accent-orange";
+function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[]; dot: "green" | "orange" | "rose" }) {
+  const accent =
+    dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-rose";
   return (
     <div className="mt-10 border-t border-rule">
       {rows.map((r) => (
@@ -121,7 +137,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="rose">background</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Inventory was still <span className="font-serif-i italic text-accent-green">manual</span>
+            Inventory was still <span className="text-accent-green">manual</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -164,7 +180,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="orange">scope</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Prototype to <span className="font-serif-i italic text-accent-green">pilot-ready system</span>
+            Prototype to <span className="text-accent-green">pilot-ready system</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-2">
             <div className="rounded-2xl border border-rule p-6">
@@ -201,7 +217,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="green">deliverable 01 · deployment</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-            A prototype farmers could <span className="font-serif-i italic text-accent-green">actually use</span>
+            A prototype farmers could <span className="text-accent-green">actually use</span>
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
             I spent time on farms in Oregon watching how inventory was collected and how the resulting data moved
@@ -222,7 +238,7 @@ function FarmAppPage() {
         <Container>
           <SectionLabel dot="orange">deliverable 02 · adoption</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-            A system farmers could <span className="font-serif-i italic text-accent-green">trust in the field</span>
+            A system farmers could <span className="text-accent-green">trust in the field</span>
           </h2>
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
             Operators work outdoors, wear gloves, and rarely stop the ATV to interact with software. They needed to
@@ -245,12 +261,75 @@ function FarmAppPage() {
         </Container>
       </section>
 
-      {/* 6. Lessons learned */}
+      {/* 6. Sensor kit architecture */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="green">the sensor kit</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            Four subsystems, <span className="text-accent-green">one enclosure</span>
+          </h2>
+          <img
+            src="/moss-architecture.jpg"
+            alt="Subsystem block diagram of the sensor kit"
+            className="w-full max-w-[900px] mx-auto block mb-10"
+          />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { zone: "Sensing", desc: "LiDAR, cameras, GPS, and IMU." },
+              { zone: "Compute", desc: "Processes and records incoming sensor data." },
+              { zone: "Power", desc: "Battery management and power distribution." },
+              { zone: "Networking", desc: "Communication between internal components and the operator interface." },
+            ].map((z) => (
+              <div key={z.zone} className="border-l-2 border-accent-green pl-4">
+                <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">{z.zone}</p>
+                <p className="text-base leading-relaxed text-foreground">{z.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                I reorganized the internal hardware around modular backplanes and fixed component positions, so a
+                battery, sensor, or subsystem could be replaced in the field without rewiring the enclosure.
+              </p>
+            </div>
+            <div className="md:col-span-5">
+              <img
+                src="/IMG_2924.jpg"
+                alt="Interior wall mounting and detachable backplane"
+                className="w-full max-w-[300px] rounded-2xl border border-rule block"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 7. Deliverable 3 — scaling */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="rose">deliverable 03 · scaling</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+            From one build to <span className="text-accent-green">eight pilots</span>
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            The largest scaling constraint was assembly. Instead of treating every sensor kit like a new prototype,
+            the redesigned system followed a consistent build process another engineer could follow.
+          </p>
+          <PairTable rows={scaling} dot="rose" />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-rose">result</span>
+            <br />
+            Reduced estimated assembly time from roughly two weeks to three days.
+          </p>
+        </Container>
+      </section>
+
+      {/* 8. Lessons learned */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">lessons learned</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-            Bring customers in <span className="font-serif-i italic text-accent-green">earlier</span>
+            Bring customers in <span className="text-accent-green">earlier</span>
           </h2>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             {[

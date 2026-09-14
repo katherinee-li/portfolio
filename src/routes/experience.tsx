@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 import { Container, Nav, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/experience")({
@@ -38,10 +37,7 @@ const entries = [
     when: "2024",
     desc: "Built hardware and software for an agricultural sensing platform deployed on commercial tree farms. Worked across GPS, LiDAR, IMU sensing, electrical design, field software, and customer deployment.",
     tint: "hover:bg-accent-green/10",
-    links: [
-      { label: "Sensor Kit", href: "/work/moss" },
-      { label: "Field Deployment", href: "/work/farm-app" },
-    ],
+    href: "/work/farm-app",
   },
   {
     role: "Robotics Researcher",
@@ -85,7 +81,7 @@ function ExperiencePage() {
         <Container>
           <SectionLabel dot="orange">experience</SectionLabel>
           <h1 className="mb-12 font-display text-5xl leading-[0.95] md:text-7xl">
-            Where I've <span className="font-serif-i italic text-accent-orange">been</span>
+            Where I've <span className="text-accent-orange">been</span>
           </h1>
 
           <EntryList items={entries} />
@@ -103,7 +99,6 @@ function EntryList({ items }: { items: readonly Entry[] }) {
   return (
     <ul>
       {items.map((entry) => {
-        const hasDropdown = "links" in entry;
         const logo = "logo" in entry ? entry.logo : null;
 
         const rowContent = (
@@ -119,28 +114,6 @@ function EntryList({ items }: { items: readonly Entry[] }) {
             <span className="col-span-5 text-right text-sm text-ink-soft md:col-span-3">{entry.when}</span>
           </>
         );
-
-        if (hasDropdown) {
-          return (
-            <li key={entry.role + entry.when} className="group relative border-b border-rule">
-              <div className={`grid grid-cols-12 items-baseline gap-4 py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}>
-                {rowContent}
-              </div>
-              <div className="absolute -left-6 -right-6 md:-left-10 md:-right-10 top-full z-10 hidden overflow-hidden rounded-b-xl border border-t-0 border-rule bg-background shadow-lg group-hover:block">
-                {entry.links.map((link) => (
-                  <Link
-                    key={link.href}
-                    to={link.href}
-                    className="flex items-center justify-between px-6 py-4 text-sm transition-colors hover:bg-accent-orange/10 hover:text-accent-orange"
-                  >
-                    <span>{link.label}</span>
-                    <ArrowUpRight className="h-4 w-4" />
-                  </Link>
-                ))}
-              </div>
-            </li>
-          );
-        }
 
         if (!("href" in entry)) {
           return (

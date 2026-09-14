@@ -22,7 +22,7 @@ function ThoughtsPage() {
         <Container>
           <SectionLabel dot="rose">writing</SectionLabel>
           <h1 className="font-display text-5xl leading-[0.95] md:text-7xl">
-            Things I've <span className="font-serif-i italic text-accent-orange">written</span>
+            Things I've <span className="text-accent-orange">written</span>
           </h1>
           <ul className="mt-12">
             {[

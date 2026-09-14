@@ -74,7 +74,7 @@ function LightmatterPage() {
           <div className="grid gap-12">
             <div className="max-w-2xl">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                What <span className="font-serif-i italic text-accent-blue">Lightmatter builds</span>
+                What <span className="text-accent-blue">Lightmatter builds</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
@@ -95,7 +95,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="blue">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Defining product lifecycle <span className="font-serif-i italic text-accent-blue">milestones</span>
+            Defining product lifecycle <span className="text-accent-blue">milestones</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -129,7 +129,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Authoring engineering <span className="font-serif-i italic text-accent-blue">validation criteria</span>
+            Authoring engineering <span className="text-accent-blue">validation criteria</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -157,7 +157,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Building a <span className="font-serif-i italic text-accent-blue">documentation pipeline</span>
+            Building a <span className="text-accent-blue">documentation pipeline</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -208,7 +208,7 @@ function LightmatterPage() {
         <Container>
           <SectionLabel dot="blue">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            30-60-90 <span className="font-serif-i italic text-accent-blue">goals</span>
+            30-60-90 <span className="text-accent-blue">goals</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -247,7 +247,7 @@ function LightmatterPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="blue">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What the <span className="font-serif-i italic text-accent-blue">summer was</span>
+                What the <span className="text-accent-blue">summer was</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
                 Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc

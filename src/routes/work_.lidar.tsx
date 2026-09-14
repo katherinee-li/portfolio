@@ -98,7 +98,7 @@ function LidarPage() {
         <Container>
           <SectionLabel dot="green">contributions</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Two GUI tools for <span className="font-serif-i italic text-accent-orange">data validation and operator control</span>
+            Two GUI tools for <span className="text-accent-orange">data validation and operator control</span>
           </h2>
 
           {/* Video Replay GUI */}
@@ -146,7 +146,7 @@ function LidarPage() {
         <Container>
           <SectionLabel dot="orange">system · MMPUG</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Sliding-mode autonomy across <span className="font-serif-i italic text-accent-orange">four control levels</span>
+            Sliding-mode autonomy across <span className="text-accent-orange">four control levels</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
@@ -189,7 +189,7 @@ function LidarPage() {
         <Container>
           <SectionLabel dot="green">calibration &amp; testing</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Faster setup, <span className="font-serif-i italic text-accent-orange">measured behavior</span>
+            Faster setup, <span className="text-accent-orange">measured behavior</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-2">
             <div>
@@ -224,7 +224,7 @@ function LidarPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">outcome</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Full autonomy hierarchy, <span className="font-serif-i italic text-accent-orange">accessible in the field</span>
+                Full autonomy hierarchy, <span className="text-accent-orange">accessible in the field</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground max-w-lg">
                 The tooling reduced setup time, made robot behavior easier to inspect, and gave operators clearer

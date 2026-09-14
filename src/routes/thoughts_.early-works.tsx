@@ -44,7 +44,7 @@ function EarlyWorksPage() {
           <SectionLabel dot="blue">experiment 01 · eddy current braking</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Eddy Current <span className="font-serif-i italic text-accent-blue">Braking System</span>
+              Eddy Current <span className="text-accent-blue">Braking System</span>
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               How does the air gap between a permanent magnet and a rotating aluminum disk affect braking time?
@@ -83,7 +83,7 @@ function EarlyWorksPage() {
           <SectionLabel dot="blue">experiment 02 · cathode ray tube deflection</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Cathode Ray Tube <span className="font-serif-i italic text-accent-blue">Deflection</span>
+              Cathode Ray Tube <span className="text-accent-blue">Deflection</span>
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               What is the relationship between accelerating voltage and the deflection of an electron beam?
