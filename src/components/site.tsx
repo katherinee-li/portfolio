@@ -110,7 +110,7 @@ export const projects = [
     tint: "from-accent-green/30 to-accent-orange/15",
     image: farmSensorKit,
     href: "/work/moss",
-    desc: "Built the electrical system for an ATV-mounted sensing platform used to automate inventory across commercial tree farms.",
+    desc: "Turned a one-off sensing prototype into a repeatable field system, redesigned around reliability, serviceability, and repeatable assembly.",
   },
   {
     title: "Pulse",
@@ -122,13 +122,13 @@ export const projects = [
     desc: "Built an embedded device for finding and navigating toward nearby friends using GNSS, IMU sensing, and real-time device communication.",
   },
   {
-    title: "Farm Inventory",
+    title: "Field Deployment",
     kind: "Moss · Engineering",
     year: "2024",
     tint: "from-accent-rose/25 to-accent-cream/15",
     image: "/moss-tablet.jpg",
     href: "/work/farm-app",
-    desc: "Built the field interface for an agricultural sensing system designed around workers operating ATVs in rain, direct sunlight, and gloves.",
+    desc: "Turned an autonomous tree-inventory prototype into a system farmers could independently operate from an ATV.",
   },
   {
     title: "MMPUG",

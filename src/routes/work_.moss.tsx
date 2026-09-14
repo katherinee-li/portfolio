@@ -7,9 +7,9 @@ export const Route = createFileRoute("/work_/moss")({
   head: () => ({
     meta: [
       { title: "Sensor Kit · Moss" },
-      { name: "description", content: "Built the version 2.0 electrical system for the moss sensor kit, an ATV-mounted device that autonomizes tree inventory across farms managing 2 to 10 million trees." },
+      { name: "description", content: "Turning a one-off sensing prototype into a repeatable field system." },
       { property: "og:title", content: "Sensor Kit · Moss" },
-      { property: "og:description", content: "Electrical system for an agricultural robotics sensor kit." },
+      { property: "og:description", content: "Turning a one-off sensing prototype into a repeatable field system." },
     ],
   }),
   component: MossPage,
@@ -30,21 +30,22 @@ function MossPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="green">Engineering · Summer 2024</SectionLabel>
+          <SectionLabel dot="green">Hardware Systems · Summer 2024</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 Sensor Kit
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Electrical system for an agricultural robotics sensor kit
+                Turning a one-off sensing prototype into a repeatable field system
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
-                Built the electrical system for an ATV-mounted sensing platform that automates tree inventory across
-                commercial farms managing millions of trees.
+                Moss's sensor kit combined LiDAR, cameras, GPS, and IMU sensing to automate tree inventory from an
+                ATV.
               </p>
-              <p className="mt-4 max-w-md font-mono text-xs leading-relaxed text-ink-soft md:text-sm">
-                GPS + LiDAR + IMU → compute → field-ready enclosure → customer deployment
+              <p className="mt-6 max-w-md text-lg leading-relaxed text-foreground">
+                I redesigned the hardware around field reliability, serviceability, and repeatable assembly so the
+                company could move from one prototype toward eight pilot systems.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 Engineering Intern · Moss · Summer 2024
@@ -64,31 +65,31 @@ function MossPage() {
       {/* 2. Problem */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">problem</SectionLabel>
+          <SectionLabel dot="rose">the problem</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                The problem with <span className="font-serif-i italic text-accent-green">manual forestry</span>
+                A prototype isn't a <span className="font-serif-i italic text-accent-green">deployable system</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Commercial tree farms inventory millions of trees to understand what they can sell each season. The
-                existing process required crews to walk rows, measure trees manually, and record results on paper — a
-                complete inventory could take three people nearly two months. Moss was building a system that could
-                collect the same data while a worker drove through the field on an ATV. My job was to redesign the
-                electrical system for the second-generation sensor kit and make it reliable enough for repeated field
-                deployment.
+                The existing sensor kit worked, but it was still a one-off engineering build. It was difficult to
+                repair, extensively hand-wired, and dependent on knowledge that wasn't documented anywhere.
               </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                That was manageable for one prototype. It wouldn't work for eight customer pilots.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">The goal was to make the system:</p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-8">
             {[
-              { value: "16%", label: "improvement in positional accuracy" },
-              { value: "20%", label: "reduction in sensor failures" },
-              { value: "2–10M", label: "trees per customer farm" },
-            ].map((s) => (
-              <div key={s.label} className="border-l-2 border-accent-green pl-4">
-                <p className="font-display text-2xl text-foreground">{s.value}</p>
-                <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{s.label}</p>
+              "reliable outdoors",
+              "easy to service",
+              "repeatable to assemble",
+              "understandable by another engineer",
+            ].map((g) => (
+              <div key={g} className="border-l-2 border-accent-green pl-4">
+                <p className="text-base leading-relaxed text-foreground">{g}</p>
               </div>
             ))}
           </div>
@@ -100,24 +101,22 @@ function MossPage() {
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            How the system <span className="font-serif-i italic text-accent-green">is organized</span>
+            System <span className="font-serif-i italic text-accent-green">architecture</span>
           </h2>
-          <p className="mb-10 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
-            The sensor kit combines GPS, LiDAR, IMU sensing, compute, power management, networking, and thermal
-            control inside a single weatherproof enclosure. Internal architecture is split across three functional
-            areas. All components are wall-mounted to interior enclosure walls and carry IP67 ratings, verified
-            through in-house water testing.
+          <p className="mb-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            The sensor kit combined several subsystems inside one enclosure.
           </p>
           <img
             src="/moss-architecture.jpg"
-            alt="Three-panel subsystem block diagram: Sensing & Alignment, Core Processing, Power & Telemetry Hub"
+            alt="Subsystem block diagram of the sensor kit"
             className="w-full max-w-[900px] mx-auto block mb-10"
           />
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { zone: "Sensing & synchronization", desc: "GPS, LiDAR, IMU, and time-synchronized sensor inputs." },
-              { zone: "Compute", desc: "Processes incoming sensor data and manages collection." },
-              { zone: "Power & telemetry", desc: "Battery management, power distribution, thermal control, and system status." },
+              { zone: "Sensing", desc: "LiDAR, cameras, GPS, and IMU." },
+              { zone: "Compute", desc: "Processes and records incoming sensor data." },
+              { zone: "Power", desc: "Battery management and power distribution." },
+              { zone: "Networking", desc: "Communication between internal components and the operator interface." },
             ].map((z) => (
               <div key={z.zone} className="border-l-2 border-accent-green pl-4">
                 <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">{z.zone}</p>
@@ -125,6 +124,10 @@ function MossPage() {
               </div>
             ))}
           </div>
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            The physical layout had to support those systems while surviving heat, rain, dust, and continuous ATV
+            vibration.
+          </p>
         </Container>
       </section>
 
@@ -133,19 +136,30 @@ function MossPage() {
         <Container>
           <SectionLabel dot="orange">serviceability</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Modular <span className="font-serif-i italic text-accent-green">by design</span>
+            Modular <span className="font-serif-i italic text-accent-green">hardware</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                All components mount to detachable backplanes organized by functional zone. The primary backplate
-                connects to the full power distribution system via a custom Molex connector, allowing the battery
-                and any backplane-mounted component to be swapped in the field without rewiring the main enclosure.
+                The first system had grown organically as the prototype evolved. I reorganized the internal hardware
+                around modular backplanes and fixed component locations.
               </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">Each component received:</p>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "a defined mounting position",
+                  "a dedicated connection path",
+                  "documented wiring",
+                  "accessible replacement points",
+                ].map((item) => (
+                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The design came out of an external engineering review: every component required a dedicated mount, a
-                heat sink path, and a fixed position against the enclosure wall. Floating wires and adhesive mounts
-                were eliminated entirely.
+                Standardized connectors allowed individual components or backplanes to be replaced without rewiring
+                the entire enclosure.
               </p>
             </div>
             <div className="md:col-span-5">
@@ -159,65 +173,30 @@ function MossPage() {
         </Container>
       </section>
 
-      {/* 5. Scalability */}
+      {/* 5. Field testing */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">manufacturing scalability</SectionLabel>
+          <SectionLabel dot="orange">field testing</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Designed to scale beyond <span className="font-serif-i italic text-accent-green">one kit per week</span>
-          </h2>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Version 1 was fully hand-wired. One kit took one week to produce, which meant scaling to 10 farms
-                would require 10 weeks of bench wiring with no consistency between units. The solution was two-part:
-                custom PCBs were designed for the time-synchronization subsystem, replacing individual wire runs
-                with a single board, and backplanes were standardized with modular connectors to reduce assembly to
-                a mount-and-connect operation.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                A full power budget was mapped per operating state — OFF, IDLE, ACTIVE, COLLECTING — to validate
-                battery capacity and regulation design across worst-case field sessions.
-              </p>
-            </div>
-            <div className="md:col-span-5 flex flex-col gap-6">
-              <div>
-                <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Component wiring map before PCB consolidation</p>
-              </div>
-              <div>
-                <p className="mt-2 text-xs uppercase tracking-[0.18em] text-foreground">Mid-fidelity cardboard prototype: component placement validation</p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 6. Hardware Testing */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="orange">hardware testing</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            IP67 across <span className="font-serif-i italic text-accent-green">every component</span>
+            Built for outdoor <span className="font-serif-i italic text-accent-green">deployment</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Every component was sourced to meet IP, shock, temperature, and humidity thresholds. No exceptions
-                were made for availability.
+                Every component had to work under agricultural field conditions. The design accounted for:
               </p>
-              <div className="mt-8 rounded-2xl border border-rule p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-accent-green mb-4">Enclosure protection</p>
-                <div className="grid grid-cols-2 gap-4 font-mono text-sm">
-                  <div>
-                    <p className="text-foreground/60">Target spec</p>
-                    <p className="mt-1 text-foreground">Survive standard Oregon agricultural rainfall</p>
-                  </div>
-                  <div>
-                    <p className="text-foreground/60">Tested spec</p>
-                    <p className="mt-1 text-foreground">4-hour validation against high-pressure water jets and simulated flooding</p>
-                  </div>
-                </div>
-              </div>
+              <ul className="mt-4 space-y-3">
+                {["ingress protection", "temperature", "vibration", "humidity", "mounting stability"].map((item) => (
+                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                We tested the sealed enclosure against water exposure and evaluated the hardware directly during
+                Oregon field deployments. The resulting field system used IP67 connectors, rugged mounting, and
+                vibration-resistant wiring.
+              </p>
             </div>
             <div className="md:col-span-5">
               <img
@@ -230,7 +209,71 @@ function MossPage() {
         </Container>
       </section>
 
-      {/* 7. Closing */}
+      {/* 6. Scaling */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="rose">scaling</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            From one build to <span className="font-serif-i italic text-accent-green">eight pilots</span>
+          </h2>
+          <div className="grid gap-12 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                The largest scaling constraint was assembly. Building a sensor kit required extensive manual wiring
+                and took nearly two weeks per unit.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                I created the engineering package another person would need to reproduce the system:
+              </p>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "wiring schematics",
+                  "system block diagrams",
+                  "connector maps",
+                  "build manuals",
+                  "bills of materials",
+                ].map((item) => (
+                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                I also redesigned repeated wiring around backplanes, standardized connectors, pre-crimped cables, and
+                repeatable assembly procedures.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 7. Manufacturing */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="green">manufacturing</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            Simplifying <span className="font-serif-i italic text-accent-green">assembly</span>
+          </h2>
+          <div className="grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-8">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                Instead of treating every sensor kit like a new prototype, the redesigned system followed a
+                consistent build process.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                Backplanes consolidated wiring. Standard connectors reduced manual termination. Documented cable runs
+                and component positions removed decisions from assembly.
+              </p>
+              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+                The result was a system another engineer could build without relying on knowledge that only existed
+                in my head.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 8. Result */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
@@ -242,15 +285,17 @@ function MossPage() {
               />
             </div>
             <div className="md:col-span-7">
-              <SectionLabel dot="green">outcome</SectionLabel>
+              <SectionLabel dot="green">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What <span className="font-serif-i italic text-accent-green">changed</span>
+                ~2 weeks → <span className="font-serif-i italic text-accent-green">~3 days</span>
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                The redesigned system provided a repeatable hardware platform that could be assembled, serviced, and
-                deployed across multiple farms. Instead of sending a crew through every row with paper and calipers,
-                an operator could mount the system to an ATV, drive the field, and upload inventory data at the end of
-                the day.
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground md:text-lg">
+                The redesigned hardware and build process reduced estimated sensor-kit assembly time from roughly two
+                weeks to three days.
+              </p>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground md:text-lg">
+                More importantly, the system went from a one-off prototype to a repeatable platform that could
+                support multiple customer pilots.
               </p>
             </div>
           </div>

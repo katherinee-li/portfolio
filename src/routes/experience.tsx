@@ -40,7 +40,7 @@ const entries = [
     tint: "hover:bg-accent-green/10",
     links: [
       { label: "Sensor Kit", href: "/work/moss" },
-      { label: "Farm Inventory", href: "/work/farm-app" },
+      { label: "Field Deployment", href: "/work/farm-app" },
     ],
   },
   {
