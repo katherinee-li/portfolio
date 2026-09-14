@@ -5,14 +5,97 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/farm-app")({
   head: () => ({
     meta: [
-      { title: "Farm Inventory · Moss" },
-      { name: "description", content: "Tablet application for agricultural inventory collection, designed for field workers wearing gloves in direct sunlight." },
-      { property: "og:title", content: "Farm Inventory · Moss" },
-      { property: "og:description", content: "Tablet application for agricultural inventory collection, designed for field workers wearing gloves in direct sunlight." },
+      { title: "Autonomous Tree Inventory System · Moss" },
+      { name: "description", content: "Turning an autonomous tree-inventory prototype into a system farmers could independently operate." },
+      { property: "og:title", content: "Autonomous Tree Inventory System · Moss" },
+      { property: "og:description", content: "Turning an autonomous tree-inventory prototype into a system farmers could independently operate." },
     ],
   }),
   component: FarmAppPage,
 });
+
+const deployment = [
+  {
+    insight: "Farms are organized by farm → section → block → row, and tree varieties frequently change.",
+    solution: "Operators can note variety changes during collection and edit them afterwards.",
+  },
+  {
+    insight: "Sales relies on an existing ERP system. It is slow, but essential.",
+    solution: "CSV exports and inventory tables aggregated by variety.",
+  },
+  {
+    insight: "Sales teams need accurate count, height, and caliper data for forecasting.",
+    solution: "Table view with customizable columns.",
+  },
+  {
+    insight: "Farm managers care about patterns: irrigation, pests, damage.",
+    solution: "Interactive maps and filters by variety, block, row, height, and caliper.",
+  },
+];
+
+const scaling = [
+  {
+    insight: "Knowledge existed only in my head. Another engineer couldn't easily build the system.",
+    solution: "Documentation: wiring schematics, block diagrams, connector maps, build manuals, and BOMs.",
+  },
+  {
+    insight: "Building each unit took nearly two weeks.",
+    solution: "Backplanes that consolidate wiring and simplify assembly.",
+  },
+  {
+    insight: "Assembly required extensive manual wiring.",
+    solution: "Standardized connectors, pre-crimped cables, and repeatable assembly procedures.",
+  },
+];
+
+const adoption = [
+  {
+    insight: "Failure is expensive. One mistake could waste an entire day of work.",
+    solution: "Visible system feedback through LEDs, tablet status, progress, battery, speed, and maps.",
+  },
+  {
+    insight: "Operators didn't know what the system was doing.",
+    solution: "Operator guide for the sensor kit in English and Spanish.",
+  },
+  {
+    insight: "Hardware wasn't built for the field. Heat, dust, rain, and vibration were everyday realities.",
+    solution: "IP67 connectors, sunlight-tested tablets, rugged mounting, retractable Ethernet, and vibration-resistant wiring.",
+  },
+];
+
+function FigureRow({ figures }: { figures: { src: string; caption: string }[] }) {
+  return (
+    <div className="mt-10 grid gap-6 md:grid-cols-2">
+      {figures.map((f) => (
+        <figure key={f.src}>
+          <img src={f.src} alt="" className="aspect-[16/10] w-full rounded-2xl border border-rule object-cover" />
+          <figcaption className="mt-3 text-sm leading-relaxed text-ink-soft">{f.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[]; dot: "green" | "orange" | "rose" }) {
+  const accent =
+    dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-orange";
+  return (
+    <div className="mt-8 border-t border-rule">
+      {rows.map((r) => (
+        <div key={r.insight} className="grid gap-2 border-b border-rule py-4 md:grid-cols-2 md:gap-12">
+          <div>
+            <p className={`mb-1 text-xs uppercase tracking-[0.18em] ${accent}`}>insight</p>
+            <p className="text-base leading-relaxed text-foreground">{r.insight}</p>
+          </div>
+          <div>
+            <p className={`mb-1 text-xs uppercase tracking-[0.18em] ${accent}`}>solution</p>
+            <p className="text-base leading-relaxed text-foreground">{r.solution}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 function FarmAppPage() {
   return (
@@ -29,240 +112,252 @@ function FarmAppPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="green">App Design · Summer 2024</SectionLabel>
-          <div className="grid gap-12 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-5">
+          <SectionLabel dot="green">Engineering · Summer 2024</SectionLabel>
+          <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Farm Inventory<span className="text-accent-green">.</span>
+                Autonomous Tree Inventory System
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Tablet application for agricultural inventory collection.
+                Turning an autonomous tree-inventory prototype into a system farmers could independently operate
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
-                Designed the tablet application and field interface for the moss sensor kit. Built around one
-                constraint: field workers wear gloves, work in direct sunlight, and do not stop moving to interact
-                with software.
+                Moss had a working perception prototype: LiDAR, cameras, GPS, and IMU could scan 10–50 trees per
+                second at 97% accuracy. But the system still ran from developer laptops and wasn't ready for farmers
+                to use themselves.
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-foreground">
+                I worked with growers and field workers to turn that prototype into a deployable system that fit their
+                existing workflows and could operate reliably from an ATV.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Engineering Intern · Moss · Summer 2024
+                Product Engineering Intern · Moss · Summer 2024
               </p>
             </div>
-            <div className="md:col-span-7 flex items-start justify-center">
-              <img
-                src="/moss-tablet.jpg"
-                alt="Farm inventory tablet application showing active collection session"
-                className="w-full max-w-[560px] object-contain"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 2. Field Discovery */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="green">field discovery · Oregon</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            A week in the <span className="font-serif-i italic text-accent-green">field first</span>.
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Before any interface decisions, a week-long deployment to Oregon farms established what field workers
-                actually needed. The manual inventory process was observed firsthand. Existing field tools were tested
-                for brightness, button usability with gloves, and general ergonomics. Color-signal testing with field
-                workers mapped LED states to intuitive meaning before any color was finalized.
-              </p>
-            </div>
-          </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <div className="w-full max-w-[340px]">
-              <img src="/moss-atv-rows.jpg" alt="ATV in tree rows at Oregon farm" className="w-full aspect-[4/3] object-cover" />
-            </div>
-            <div className="w-full max-w-[340px]">
-              <img src="/moss-caliper.jpg" alt="Manual caliper measurement in the field" className="w-full aspect-[4/3] object-cover" />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 3. User Research */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="rose">user research · 3 roles · 8 interviews</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Three roles, three different <span className="font-serif-i italic text-accent-green">needs</span>.
-          </h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                role: "Inventory Manager",
-                summary: "Owns the data.",
-                body: "Needs live counts, percentage-of-take metrics, and mass updates without row-by-row entry. Recounts the same rows up to six times per season when issues arise.",
-              },
-              {
-                role: "Field Supervisor",
-                summary: "Dispatches crews from paper lists.",
-                body: "Needs farm, section, block, row in that order, with deadline and operator tracked per mission.",
-              },
-              {
-                role: "Field Worker",
-                summary: "Checks the screen only when something is wrong.",
-                body: "Operates in gloves on an ATV. Needs current speed, rows remaining, and time to completion. Nothing else.",
-              },
-            ].map((r) => (
-              <div key={r.role} className="rounded-2xl border border-rule p-6">
-                <span className="text-xs uppercase tracking-[0.22em] text-accent-green">{r.role}</span>
-                <p className="mt-2 font-display text-xl">{r.summary}</p>
-                <p className="mt-3 text-base leading-relaxed text-foreground">{r.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <img
-              src="/moss-inventory-screen.jpg"
-              alt="Existing paper-based inventory system on office computer"
-              className="w-full max-w-[500px] mx-auto block rounded-2xl border border-rule"
-            />
-          </div>
-        </Container>
-      </section>
-
-      {/* 4. Tablet Hardware Selection */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="orange">hardware selection</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Why standard tablets <span className="font-serif-i italic text-accent-green">did not work</span>.
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-6">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Consumer tablets were disqualified on three counts: touchscreens fail with gloves, displays wash out
-                in direct sun, and IP ratings are insufficient for field conditions. Candidates were evaluated on
-                physical button availability, brightness under direct sunlight, IP67 rating, and ATV mounting
-                compatibility. The selected tablet connects to the sensor kit via a tethered cable, a deliberate
-                choice based on field worker preference for wired over wireless during active sessions.
-              </p>
-              <div className="mt-10">
-                <img
-                  src="/tablet-candidates.jpg"
-                  alt="Tablet candidates evaluated for field use"
-                  className="w-full max-w-[480px] rounded-2xl border border-rule"
-                />
-              </div>
-            </div>
-            <div className="md:col-span-5 md:col-start-8">
-              <dl className="space-y-5">
-                {[
-                  { k: "Physical buttons", v: "Required for gloved operation without touchscreen dependency." },
-                  { k: "Display brightness", v: "Validated against direct Oregon summer sun conditions." },
-                  { k: "IP67 rating", v: "Sealed charging port, independently verified." },
-                  { k: "Wired connection", v: "Tethered cable to sensor kit, field worker preference over wireless." },
-                ].map((m) => (
-                  <div key={m.k} className="border-b border-rule pb-5">
-                    <dt className="text-xs uppercase tracking-[0.18em] text-accent-green mb-1">{m.k}</dt>
-                    <dd className="text-base leading-relaxed text-foreground">{m.v}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 5. Application Design */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="green">tablet application</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Six functions. <span className="font-serif-i italic text-accent-green">Nothing extra.</span>
-          </h2>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-5">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The application covers exactly what a field worker needs during a collection session.
-              </p>
-              <ol className="mt-8 space-y-4">
-                {[
-                  "Start and stop data collection",
-                  "Enter field information: farm, section, block, row",
-                  "Monitor sensor kit battery level in real time",
-                  "View active errors from the sensor kit",
-                  "Follow the row-by-row mission timeline",
-                  "Manually log individual plant records",
-                ].map((item, i) => (
-                  <li key={i} className="flex gap-4">
-                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-rule font-mono text-xs text-foreground">
-                      {i + 1}
-                    </span>
-                    <p className="text-base leading-relaxed text-foreground">{item}</p>
-                  </li>
-                ))}
-              </ol>
-              <p className="mt-8 text-base leading-relaxed text-foreground">
-                All critical actions work without removing gloves. Error states surface in plain language, not codes.
-                Large tap targets and physical button shortcuts throughout.
-              </p>
-            </div>
-            <div className="md:col-span-7 flex flex-col gap-6">
               <img
                 src="/moss-tablet.jpg"
-                alt="Active collection screen showing current speed, location, row progress, and session timer"
-                className="w-full rounded-2xl border border-rule"
+                alt=""
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* 6. LED System */}
-      <section className="border-t border-rule py-24 md:py-32">
+      {/* 2. Background */}
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
-          <SectionLabel dot="orange">status indication</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Status visible from the <span className="font-serif-i italic text-accent-green">driver's seat</span>.
+          <SectionLabel dot="rose">background</SectionLabel>
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Inventory was still <span className="text-accent-green">manual</span>
           </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Exterior LED indicators on the sensor kit communicate system state without requiring the operator to
-                stop or dismount. Color assignments were validated with field workers before finalization.
-              </p>
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-base leading-relaxed text-foreground md:text-lg">
+              Tree farmers struggle to maintain accurate inventory. The manual process left little traceability
+              when numbers were wrong.
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+              At J. Frank Schmidt & Son Co., one of the largest tree nurseries in the U.S., crews measured trees
+              with calipers, recorded counts on tally sheets, and later re-entered the data into existing software.
+            </p>
           </div>
-          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { color: "bg-accent-green", label: "Green solid", desc: "Active data collection." },
-              { color: "bg-yellow-400", label: "Yellow solid", desc: "Processing." },
-              { color: "bg-yellow-400 opacity-60", label: "Yellow flashing", desc: "Transitional, not collecting, not in error." },
-              { color: "bg-red-500", label: "Red flashing", desc: "Error requiring attention." },
-              { color: "bg-blue-500", label: "Blue flashing / solid", desc: "Flashing on boot, solid when ready." },
+              { value: "2M", label: "trees" },
+              { value: "3,000", label: "acres" },
+              { value: "2", label: "people" },
+              { value: "3", label: "months" },
             ].map((s) => (
-              <div key={s.label} className="flex items-start gap-4 rounded-2xl border border-rule p-5">
-                <div className={`mt-1 h-4 w-4 shrink-0 rounded-full ${s.color}`} />
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">{s.label}</p>
-                  <p className="text-base leading-relaxed text-foreground">{s.desc}</p>
-                </div>
+              <div key={s.label} className="border-l-2 border-accent-green pl-4">
+                <p className="font-display text-2xl text-foreground">{s.value}</p>
+                <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{s.label}</p>
               </div>
             ))}
+          </div>
+          <FigureRow
+            figures={[
+              { src: "/moss-caliper.jpg", caption: "Manual caliper measurement in the field" },
+              { src: "/moss-inventory-screen.jpg", caption: "Office re-entry of handwritten inventory data" },
+            ]}
+          />
+        </Container>
+      </section>
+
+      {/* 3. Current vs target */}
+      <section className="border-t border-rule py-14 md:py-20">
+        <Container>
+          <SectionLabel dot="orange">scope</SectionLabel>
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Prototype to <span className="text-accent-green">pilot-ready system</span>
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2">
+            <div className="rounded-2xl border border-rule p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">current system · June 2024</p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "Standalone sensor kit prototype integrating LiDAR, cameras, GPS, and IMU",
+                  "Scans 10–50 trees per second at 97% accuracy",
+                  "Controlled through developer laptops",
+                ].map((item) => (
+                  <li key={item} className="text-base leading-relaxed text-foreground">{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-rule p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent-green">target system · August 2024</p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "Deployable sensor kit ready for field use",
+                  "Interface that lets farmers and workers collect data themselves",
+                  "Collected data integrates into their current workflows",
+                  "Scalable to support eight pilot programs",
+                ].map((item) => (
+                  <li key={item} className="text-base leading-relaxed text-foreground">{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      {/* 4. Deliverable 1 */}
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
-          <SectionLabel dot="green">outcome</SectionLabel>
-          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-            Remove the clipboard, <span className="font-serif-i italic text-accent-green">not add a screen</span>.
+          <SectionLabel dot="green">deliverable 01 · deployment</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+            A prototype farmers could <span className="text-accent-green">actually use</span>
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
-            Every decision, tablet selection, LED color, button placement, cable choice, traced back to a field
-            observation or interview finding. The goal was to make the technology disappear into an existing workflow,
-            not add to it.
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            I spent time on farms in Oregon watching how inventory was collected and how the resulting data moved
+            through the organization. Instead of replacing the systems they already relied on, we designed around
+            them.
           </p>
+          <PairTable rows={deployment} dot="green" />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-green">result</span>
+            <br />
+            Farmers could independently collect inventory data and integrate it into their existing workflow.
+          </p>
+        </Container>
+      </section>
+
+      {/* 5. Deliverable 2 */}
+      <section className="border-t border-rule py-14 md:py-20">
+        <Container>
+          <SectionLabel dot="orange">deliverable 02 · adoption</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+            A system farmers could <span className="text-accent-green">trust in the field</span>
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            Operators work outdoors, wear gloves, and rarely stop the ATV to interact with software. They needed to
+            know what the system was doing without opening developer tools or reading internal error codes.
+          </p>
+          <PairTable rows={adoption} dot="orange" />
+          <FigureRow
+            figures={[
+              { src: "/tablet-candidates.jpg", caption: "Tablets and controllers evaluated for field use" },
+              { src: "/IMG_2927.jpg", caption: "Dunk-testing the sealed enclosure" },
+            ]}
+          />
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">result</span>
+            <br />
+            A sensor kit farmers could deploy independently during the Oregon field pilot.
+          </p>
+        </Container>
+      </section>
+
+      {/* 6. Sensor kit architecture */}
+      <section className="border-t border-rule py-14 md:py-20">
+        <Container>
+          <SectionLabel dot="green">the sensor kit</SectionLabel>
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Four subsystems, <span className="text-accent-green">one enclosure</span>
+          </h2>
+          <img
+            src="/moss-architecture.jpg"
+            alt="Subsystem block diagram of the sensor kit"
+            className="mb-10 block max-h-[24rem] w-full rounded-2xl border border-rule object-contain"
+          />
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              { zone: "Sensing", desc: "LiDAR, cameras, GPS, and IMU." },
+              { zone: "Compute", desc: "Processes and records incoming sensor data." },
+              { zone: "Power", desc: "Battery management and power distribution." },
+              { zone: "Networking", desc: "Communication between internal components and the operator interface." },
+            ].map((z) => (
+              <div key={z.zone} className="border-l-2 border-accent-green pl-4">
+                <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">{z.zone}</p>
+                <p className="text-base leading-relaxed text-foreground">{z.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 grid items-center gap-10 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
+                I reorganized the internal hardware around modular backplanes and fixed component positions, so a
+                battery, sensor, or subsystem could be replaced in the field without rewiring the enclosure.
+              </p>
+            </div>
+            <div className="md:col-span-5">
+              <img
+                src="/IMG_2924.jpg"
+                alt=""
+                className="block aspect-[16/10] w-full rounded-2xl border border-rule object-cover"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 7. Deliverable 3 — scaling */}
+      <section className="border-t border-rule py-14 md:py-20">
+        <Container>
+          <SectionLabel dot="rose">deliverable 03 · scaling</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+            From one build to <span className="text-accent-green">eight pilots</span>
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            The largest scaling constraint was assembly. Instead of treating every sensor kit like a new prototype,
+            the redesigned system followed a consistent build process another engineer could follow.
+          </p>
+          <PairTable rows={scaling} dot="rose" />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">result</span>
+            <br />
+            Reduced estimated assembly time from roughly two weeks to three days.
+          </p>
+        </Container>
+      </section>
+
+      {/* 8. Lessons learned */}
+      <section className="border-t border-rule py-14 md:py-20">
+        <Container>
+          <SectionLabel dot="green">lessons learned</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
+            Bring customers in <span className="text-accent-green">earlier</span>
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {[
+              "Waiting too long to involve customers led us to make assumptions about their workflow and needs.",
+              "Involving customers in the design process built trust, ownership, and ultimately adoption.",
+            ].map((l, i) => (
+              <div key={l} className="flex gap-4 rounded-2xl border border-rule p-6">
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-rule font-mono text-xs text-foreground">
+                  {i + 1}
+                </span>
+                <p className="text-base leading-relaxed text-foreground">{l}</p>
+              </div>
+            ))}
+          </div>
+          <blockquote className="mt-10 max-w-2xl border-l-2 border-accent-green pl-6">
+            <p className="font-serif-i text-xl leading-snug text-foreground md:text-2xl">
+              "The biggest detractors were like the best… they don't want change. But if you could satisfy them, they
+              were your biggest proponent out there telling everyone else."
+            </p>
+            <footer className="mt-4 text-xs uppercase tracking-[0.22em] text-ink-soft">Trent · Farm Owner</footer>
+          </blockquote>
         </Container>
       </section>
     </main>

@@ -9,25 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WorkRouteImport } from './routes/work'
-import { Route as ThoughtsRouteImport } from './routes/thoughts'
-import { Route as ExperienceRouteImport } from './routes/experience'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WorkPulseRouteImport } from './routes/work_.pulse'
+import { Route as ExperienceRouteImport } from './routes/experience'
+import { Route as ThoughtsRouteImport } from './routes/thoughts'
+import { Route as WorkRouteImport } from './routes/work'
 import { Route as ExperienceLightmatterRouteImport } from './routes/experience_.lightmatter'
-import { Route as ExperiencePMARouteImport } from './routes/experience_.pma'
+import { Route as ExperiencePmaRouteImport } from './routes/experience_.pma'
+import { Route as ExperienceStemboxRouteImport } from './routes/experience_.stembox'
 import { Route as ThoughtsEarlyWorksRouteImport } from './routes/thoughts_.early-works'
 import { Route as ThoughtsLearningToTakeUpSpaceRouteImport } from './routes/thoughts_.learning-to-take-up-space'
 import { Route as ThoughtsMagicInTheMundaneRouteImport } from './routes/thoughts_.magic-in-the-mundane'
+import { Route as WorkFarmAppRouteImport } from './routes/work_.farm-app'
+import { Route as WorkLidarRouteImport } from './routes/work_.lidar'
+import { Route as WorkPulseRouteImport } from './routes/work_.pulse'
 
-const WorkRoute = WorkRouteImport.update({
-  id: '/work',
-  path: '/work',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ThoughtsRoute = ThoughtsRouteImport.update({
-  id: '/thoughts',
-  path: '/thoughts',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExperienceRoute = ExperienceRouteImport.update({
@@ -35,14 +33,14 @@ const ExperienceRoute = ExperienceRouteImport.update({
   path: '/experience',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ThoughtsRoute = ThoughtsRouteImport.update({
+  id: '/thoughts',
+  path: '/thoughts',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkPulseRoute = WorkPulseRouteImport.update({
-  id: '/work_/pulse',
-  path: '/work/pulse',
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ExperienceLightmatterRoute = ExperienceLightmatterRouteImport.update({
@@ -50,9 +48,14 @@ const ExperienceLightmatterRoute = ExperienceLightmatterRouteImport.update({
   path: '/experience/lightmatter',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ExperiencePMARoute = ExperiencePMARouteImport.update({
+const ExperiencePmaRoute = ExperiencePmaRouteImport.update({
   id: '/experience_/pma',
   path: '/experience/pma',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceStemboxRoute = ExperienceStemboxRouteImport.update({
+  id: '/experience_/stembox',
+  path: '/experience/stembox',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ThoughtsEarlyWorksRoute = ThoughtsEarlyWorksRouteImport.update({
@@ -60,14 +63,31 @@ const ThoughtsEarlyWorksRoute = ThoughtsEarlyWorksRouteImport.update({
   path: '/thoughts/early-works',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ThoughtsLearningToTakeUpSpaceRoute = ThoughtsLearningToTakeUpSpaceRouteImport.update({
-  id: '/thoughts_/learning-to-take-up-space',
-  path: '/thoughts/learning-to-take-up-space',
+const ThoughtsLearningToTakeUpSpaceRoute =
+  ThoughtsLearningToTakeUpSpaceRouteImport.update({
+    id: '/thoughts_/learning-to-take-up-space',
+    path: '/thoughts/learning-to-take-up-space',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ThoughtsMagicInTheMundaneRoute =
+  ThoughtsMagicInTheMundaneRouteImport.update({
+    id: '/thoughts_/magic-in-the-mundane',
+    path: '/thoughts/magic-in-the-mundane',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const WorkFarmAppRoute = WorkFarmAppRouteImport.update({
+  id: '/work_/farm-app',
+  path: '/work/farm-app',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ThoughtsMagicInTheMundaneRoute = ThoughtsMagicInTheMundaneRouteImport.update({
-  id: '/thoughts_/magic-in-the-mundane',
-  path: '/thoughts/magic-in-the-mundane',
+const WorkLidarRoute = WorkLidarRouteImport.update({
+  id: '/work_/lidar',
+  path: '/work/lidar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkPulseRoute = WorkPulseRouteImport.update({
+  id: '/work_/pulse',
+  path: '/work/pulse',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -76,24 +96,30 @@ export interface FileRoutesByFullPath {
   '/experience': typeof ExperienceRoute
   '/thoughts': typeof ThoughtsRoute
   '/work': typeof WorkRoute
-  '/work/pulse': typeof WorkPulseRoute
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
-  '/experience/pma': typeof ExperiencePMARoute
+  '/experience/pma': typeof ExperiencePmaRoute
+  '/experience/stembox': typeof ExperienceStemboxRoute
   '/thoughts/early-works': typeof ThoughtsEarlyWorksRoute
   '/thoughts/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
   '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
+  '/work/farm-app': typeof WorkFarmAppRoute
+  '/work/lidar': typeof WorkLidarRoute
+  '/work/pulse': typeof WorkPulseRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/experience': typeof ExperienceRoute
   '/thoughts': typeof ThoughtsRoute
   '/work': typeof WorkRoute
-  '/work/pulse': typeof WorkPulseRoute
   '/experience/lightmatter': typeof ExperienceLightmatterRoute
-  '/experience/pma': typeof ExperiencePMARoute
+  '/experience/pma': typeof ExperiencePmaRoute
+  '/experience/stembox': typeof ExperienceStemboxRoute
   '/thoughts/early-works': typeof ThoughtsEarlyWorksRoute
   '/thoughts/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
   '/thoughts/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
+  '/work/farm-app': typeof WorkFarmAppRoute
+  '/work/lidar': typeof WorkLidarRoute
+  '/work/pulse': typeof WorkPulseRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -101,19 +127,62 @@ export interface FileRoutesById {
   '/experience': typeof ExperienceRoute
   '/thoughts': typeof ThoughtsRoute
   '/work': typeof WorkRoute
-  '/work_/pulse': typeof WorkPulseRoute
   '/experience_/lightmatter': typeof ExperienceLightmatterRoute
-  '/experience_/pma': typeof ExperiencePMARoute
+  '/experience_/pma': typeof ExperiencePmaRoute
+  '/experience_/stembox': typeof ExperienceStemboxRoute
   '/thoughts_/early-works': typeof ThoughtsEarlyWorksRoute
   '/thoughts_/learning-to-take-up-space': typeof ThoughtsLearningToTakeUpSpaceRoute
   '/thoughts_/magic-in-the-mundane': typeof ThoughtsMagicInTheMundaneRoute
+  '/work_/farm-app': typeof WorkFarmAppRoute
+  '/work_/lidar': typeof WorkLidarRoute
+  '/work_/pulse': typeof WorkPulseRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works' | '/thoughts/learning-to-take-up-space' | '/thoughts/magic-in-the-mundane'
+  fullPaths:
+    | '/'
+    | '/experience'
+    | '/thoughts'
+    | '/work'
+    | '/experience/lightmatter'
+    | '/experience/pma'
+    | '/experience/stembox'
+    | '/thoughts/early-works'
+    | '/thoughts/learning-to-take-up-space'
+    | '/thoughts/magic-in-the-mundane'
+    | '/work/farm-app'
+    | '/work/lidar'
+    | '/work/pulse'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/experience' | '/thoughts' | '/work' | '/work/pulse' | '/experience/lightmatter' | '/experience/pma' | '/thoughts/early-works' | '/thoughts/learning-to-take-up-space' | '/thoughts/magic-in-the-mundane'
-  id: '__root__' | '/' | '/experience' | '/thoughts' | '/work' | '/work_/pulse' | '/experience_/lightmatter' | '/experience_/pma' | '/thoughts_/early-works' | '/thoughts_/learning-to-take-up-space' | '/thoughts_/magic-in-the-mundane'
+  to:
+    | '/'
+    | '/experience'
+    | '/thoughts'
+    | '/work'
+    | '/experience/lightmatter'
+    | '/experience/pma'
+    | '/experience/stembox'
+    | '/thoughts/early-works'
+    | '/thoughts/learning-to-take-up-space'
+    | '/thoughts/magic-in-the-mundane'
+    | '/work/farm-app'
+    | '/work/lidar'
+    | '/work/pulse'
+  id:
+    | '__root__'
+    | '/'
+    | '/experience'
+    | '/thoughts'
+    | '/work'
+    | '/experience_/lightmatter'
+    | '/experience_/pma'
+    | '/experience_/stembox'
+    | '/thoughts_/early-works'
+    | '/thoughts_/learning-to-take-up-space'
+    | '/thoughts_/magic-in-the-mundane'
+    | '/work_/farm-app'
+    | '/work_/lidar'
+    | '/work_/pulse'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -121,29 +190,24 @@ export interface RootRouteChildren {
   ExperienceRoute: typeof ExperienceRoute
   ThoughtsRoute: typeof ThoughtsRoute
   WorkRoute: typeof WorkRoute
-  WorkPulseRoute: typeof WorkPulseRoute
   ExperienceLightmatterRoute: typeof ExperienceLightmatterRoute
-  ExperiencePMARoute: typeof ExperiencePMARoute
+  ExperiencePmaRoute: typeof ExperiencePmaRoute
+  ExperienceStemboxRoute: typeof ExperienceStemboxRoute
   ThoughtsEarlyWorksRoute: typeof ThoughtsEarlyWorksRoute
   ThoughtsLearningToTakeUpSpaceRoute: typeof ThoughtsLearningToTakeUpSpaceRoute
   ThoughtsMagicInTheMundaneRoute: typeof ThoughtsMagicInTheMundaneRoute
+  WorkFarmAppRoute: typeof WorkFarmAppRoute
+  WorkLidarRoute: typeof WorkLidarRoute
+  WorkPulseRoute: typeof WorkPulseRoute
 }
-
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/work': {
-      id: '/work'
-      path: '/work'
-      fullPath: '/work'
-      preLoaderRoute: typeof WorkRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/thoughts': {
-      id: '/thoughts'
-      path: '/thoughts'
-      fullPath: '/thoughts'
-      preLoaderRoute: typeof ThoughtsRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experience': {
@@ -153,18 +217,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExperienceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/thoughts': {
+      id: '/thoughts'
+      path: '/thoughts'
+      fullPath: '/thoughts'
+      preLoaderRoute: typeof ThoughtsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work_/pulse': {
-      id: '/work_/pulse'
-      path: '/work/pulse'
-      fullPath: '/work/pulse'
-      preLoaderRoute: typeof WorkPulseRouteImport
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/experience_/lightmatter': {
@@ -178,7 +242,14 @@ declare module '@tanstack/react-router' {
       id: '/experience_/pma'
       path: '/experience/pma'
       fullPath: '/experience/pma'
-      preLoaderRoute: typeof ExperiencePMARouteImport
+      preLoaderRoute: typeof ExperiencePmaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience_/stembox': {
+      id: '/experience_/stembox'
+      path: '/experience/stembox'
+      fullPath: '/experience/stembox'
+      preLoaderRoute: typeof ExperienceStemboxRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/thoughts_/early-works': {
@@ -202,6 +273,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThoughtsMagicInTheMundaneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work_/farm-app': {
+      id: '/work_/farm-app'
+      path: '/work/farm-app'
+      fullPath: '/work/farm-app'
+      preLoaderRoute: typeof WorkFarmAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work_/lidar': {
+      id: '/work_/lidar'
+      path: '/work/lidar'
+      fullPath: '/work/lidar'
+      preLoaderRoute: typeof WorkLidarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work_/pulse': {
+      id: '/work_/pulse'
+      path: '/work/pulse'
+      fullPath: '/work/pulse'
+      preLoaderRoute: typeof WorkPulseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -210,12 +302,15 @@ const rootRouteChildren: RootRouteChildren = {
   ExperienceRoute: ExperienceRoute,
   ThoughtsRoute: ThoughtsRoute,
   WorkRoute: WorkRoute,
-  WorkPulseRoute: WorkPulseRoute,
   ExperienceLightmatterRoute: ExperienceLightmatterRoute,
-  ExperiencePMARoute: ExperiencePMARoute,
+  ExperiencePmaRoute: ExperiencePmaRoute,
+  ExperienceStemboxRoute: ExperienceStemboxRoute,
   ThoughtsEarlyWorksRoute: ThoughtsEarlyWorksRoute,
   ThoughtsLearningToTakeUpSpaceRoute: ThoughtsLearningToTakeUpSpaceRoute,
   ThoughtsMagicInTheMundaneRoute: ThoughtsMagicInTheMundaneRoute,
+  WorkFarmAppRoute: WorkFarmAppRoute,
+  WorkLidarRoute: WorkLidarRoute,
+  WorkPulseRoute: WorkPulseRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -42,10 +42,10 @@ function LightmatterPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Lightmatter<span className="text-accent-blue">.</span>
+                Lightmatter
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-blue md:text-2xl">
-                Technical Program Management Intern at Lightmatter.
+                Technical Program Management Intern at Lightmatter
               </p>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
                 Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones,
@@ -56,46 +56,23 @@ function LightmatterPage() {
                 Technical Program Management Intern · Mountain View, CA · Summer 2025
               </p>
             </div>
-            <div className="md:col-span-5 flex justify-center md:justify-end items-start">
+            <div className="md:col-span-5">
               <img
                 src="/lightmatter-rack.jpg"
                 alt="Lightmatter photonic computing rack showing Passage and Guide modules with fiber optic interconnects"
-                className="w-full max-w-[420px] object-contain rounded-2xl border border-rule"
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* 2. Context */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="blue">the company</SectionLabel>
-          <div className="grid gap-12">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                What <span className="font-serif-i italic text-accent-blue">Lightmatter builds</span>.
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
-                of copper. At a $4.4B valuation and ~300 people, the company was at the inflection point between
-                startup speed and enterprise rigor, scaling programs and processes without losing the ability to ship.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-foreground md:text-lg">
-                The TPM role sat at that intersection: owning cross-functional alignment across engineering, hardware,
-                and product teams simultaneously building toward large-scale data center deployment.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* 3. Work 1: Product Lifecycle */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Defining product lifecycle <span className="font-serif-i italic text-accent-blue">milestones</span>.
+            Defining product lifecycle <span className="text-accent-blue">milestones</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -116,7 +93,7 @@ function LightmatterPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="55+" label="lifecycle milestones defined" />
             <Stat value="~300" label="person org aligned" />
             <Stat value="2 tracks" label="hardware and software timelines reconciled" />
@@ -125,11 +102,11 @@ function LightmatterPage() {
       </section>
 
       {/* 4. Work 2: Validation Criteria */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Authoring engineering <span className="font-serif-i italic text-accent-blue">validation criteria</span>.
+            Authoring engineering <span className="text-accent-blue">validation criteria</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -144,7 +121,7 @@ function LightmatterPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="40+" label="validation criteria authored" />
             <Stat value="FIT" label="evaluations against market standards" />
             <Stat value="Unblocked" label="large-scale AI data center deployment" />
@@ -153,11 +130,11 @@ function LightmatterPage() {
       </section>
 
       {/* 5. Work 3: CI/CD Documentation Pipeline */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            Building a <span className="font-serif-i italic text-accent-blue">documentation pipeline</span>.
+            Building a <span className="text-accent-blue">documentation pipeline</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
@@ -195,7 +172,7 @@ function LightmatterPage() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="65%" label="reduction in update cycle time" />
             <Stat value="8→3 min" label="test suite runtime" />
             <Stat value="30+" label="program and product managers served" />
@@ -203,58 +180,15 @@ function LightmatterPage() {
         </Container>
       </section>
 
-      {/* 6. Goals & Growth */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="blue">internship goals</SectionLabel>
-          <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            30-60-90 <span className="font-serif-i italic text-accent-blue">goals</span>.
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The internship was structured around three pillars. Ownership: building something real, not shadowing.
-                Technical fluency: learning to speak the language of hardware and software engineering teams well
-                enough to be genuinely useful, not just present. Iteration and influence: learning to form opinionated
-                conclusions from incomplete information, identify bottlenecks, and communicate findings to people at
-                every level of the org.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The playbook, validation criteria, and CI/CD pipeline were each outputs of those three goals running
-                in parallel.
-              </p>
-            </div>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              { label: "Ownership", desc: "Building something real: three shipped deliverables with measurable org impact, not shadow work." },
-              { label: "Technical Fluency", desc: "Learning to speak hardware and software engineering well enough to be useful to both, not just present in the room." },
-              { label: "Cross-Functional Influence", desc: "Forming opinionated conclusions from incomplete information and communicating findings across every level of the org." },
-            ].map((p) => (
-              <div key={p.label} className="rounded-2xl border border-rule p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-accent-blue mb-3">{p.label}</p>
-                <p className="text-base leading-relaxed text-foreground">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-start">
             <div className="md:col-span-7">
               <SectionLabel dot="blue">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What the <span className="font-serif-i italic text-accent-blue">summer was</span>.
+                From the <span className="text-accent-blue">team</span>
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc
-                coordination breaks down, small enough that the right system could still be designed from scratch.
-                The summer was spent building those systems: for milestones, for validation, and for documentation.
-                Each one designed to scale with the org rather than constrain it.
-              </p>
               <div className="mt-10 flex flex-col gap-6">
                 {[
                   {
@@ -281,22 +215,17 @@ function LightmatterPage() {
                 ))}
               </div>
             </div>
-            <div className="md:col-span-5 flex flex-col gap-6">
+            <div className="md:col-span-5 flex flex-col gap-4 md:mt-[4.5rem]">
               <img
                 src="/lightmatter-team.jpg"
                 alt="Lightmatter intern cohort group photo"
-                className="w-full rounded-2xl border border-rule block"
-              />
-              <img
-                src="/lightmatter-intern-card.jpg"
-                alt="Lightmatter intern feature card"
-                className="w-full rounded-2xl border border-rule block"
+                className="block aspect-[4/3] w-full rounded-2xl border border-rule object-cover"
               />
               <a
                 href="https://www.linkedin.com/pulse/lightmatter-2025-internship-program-angela-bertolini-she-her--wt0lc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Lightmatter 2025 Internship Program ↗
               </a>

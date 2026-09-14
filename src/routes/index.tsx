@@ -37,14 +37,14 @@ function Hero() {
               Hi, I'm
             </p>
 
-            <h1 className="mt-12 font-display text-[24vw] leading-[0.88] tracking-tight text-accent-cream md:text-[14rem]">
+            <h1 className="mt-10 font-display text-[24vw] leading-[0.88] tracking-tight text-accent-cream md:text-[14rem]">
               <span className="font-serif-i italic text-accent-orange">katherine</span>
             </h1>
 
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
               I build across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
-              <span style={{ color: "#1e3a8a" }}>software</span>, and{" "}
-              <span style={{ color: "#1e3a8a" }}>AI</span> to create reliable products people enjoy using.
+              <span style={{ color: "#1e3a8a" }}>robotics</span>, and{" "}
+              <span style={{ color: "#1e3a8a" }}>software</span> to create systems that are useful and reliable
             </p>
           </div>
 
@@ -52,9 +52,9 @@ function Hero() {
             <p className="invisible font-serif-i text-2xl md:text-4xl mb-4">Hi, I'm</p>
             <h1 className="invisible mt-12 font-display text-[24vw] leading-[0.88] md:text-[14rem]" aria-hidden>k</h1>
             <div className="mt-72 text-sm leading-relaxed text-ink-soft">
-              <p className="text-foreground">ECE Senior @ Carnegie Mellon</p>
-              <p>Incoming PM @ Coinbase</p>
-              <p>Prev Lightmatter</p>
+              <p className="text-foreground">ECE @ Carnegie Mellon</p>
+              <p>Evaluations @ General Intuition</p>
+              <p>Previously Lightmatter</p>
             </div>
           </div>
         </div>
@@ -62,6 +62,21 @@ function Hero() {
     </section>
   );
 }
+
+const skills = [
+  {
+    label: "Software",
+    items: ["Python", "C++", "TypeScript", "React", "Node.js", "SQL"],
+  },
+  {
+    label: "Systems & Robotics",
+    items: ["ROS", "ESP32", "Linux", "Docker", "LiDAR", "GPS / IMU"],
+  },
+  {
+    label: "Product",
+    items: ["Customer Discovery", "User Research", "PRDs"],
+  },
+];
 
 function About() {
   return (
@@ -71,32 +86,40 @@ function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="font-serif-i text-3xl leading-snug md:text-5xl">
-              I like sitting in the middle of hard conversations about <span className="text-accent-orange">trade-offs</span>, <span className="text-accent-orange">merit</span>, and <span className="text-accent-orange">who a product is really for</span>.
+              I like working on problems that sit between <span className="text-accent-orange">software</span> and <span className="text-accent-orange">the physical world</span>
             </p>
             <p className="mt-10 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              I work across <span className="text-accent-green">technical PM</span>, <span className="text-accent-green">software</span>, and <span className="text-accent-green">hardware</span>, translating complex systems between engineering, business, and end users. I've built agricultural sensor kits at Moss, optimized CI/CD pipelines and deployment automation for program managers at Lightmatter, and will be scaling product systems at Coinbase this summer.
+              I've built sensing systems for commercial farms, autonomy tools for search-and-rescue robots, embedded social devices, and developer tooling for photonic computing infrastructure.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Outside class I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
+              Most recently, I'll be working on model evaluations and API integrations across different robotic embodiments and environments at General Intuition.
+            </p>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
+              Outside of work, I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
             </p>
           </div>
           <aside className="md:col-span-4">
             <div className="rounded-2xl border border-rule p-6">
               <p className="text-xs uppercase tracking-[0.22em] text-ink-soft">Education</p>
-              <p className="mt-4 font-display text-2xl">Carnegie Mellon</p>
-              <p className="mt-1 text-sm text-ink-soft">B.S. ECE</p>
+              <p className="mt-4 font-display text-2xl">Carnegie Mellon University</p>
+              <p className="mt-1 text-sm text-ink-soft">B.S. Electrical &amp; Computer Engineering</p>
               <p className="text-sm text-ink-soft">Program GPA 3.74</p>
 
               <div className="my-6 h-px bg-rule" />
 
               <p className="text-xs uppercase tracking-[0.22em] text-ink-soft">Skills</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {["User Research", "Customer Discovery", "Roadmapping", "PRDs", "A/B Testing", "Agile/Scrum", "Python", "React", "SQL", "JavaScript", "API Design", "Figma", "Jira", "Sparring"].map((t) => (
-                  <span key={t} className="rounded-full border border-rule px-3 py-1 text-xs text-ink-soft">
-                    {t}
-                  </span>
-                ))}
-              </div>
+              {skills.map((group) => (
+                <div key={group.label} className="mt-4">
+                  <p className="text-xs font-semibold text-foreground">{group.label}</p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {group.items.map((t) => (
+                      <span key={t} className="rounded-full border border-rule px-3 py-1 text-xs text-ink-soft">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
 
               <video
                 src="/videos/katherine.mp4"

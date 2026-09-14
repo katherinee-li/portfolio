@@ -5,9 +5,9 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/lidar")({
   head: () => ({
     meta: [
-      { title: "MMPUG — GUI for Search and Rescue Robots" },
+      { title: "Search-and-Rescue Vehicles · MMPUG" },
       { name: "description", content: "Data visualization GUI and live video feedback system for autonomous search and rescue robots." },
-      { property: "og:title", content: "MMPUG — GUI for Search and Rescue Robots" },
+      { property: "og:title", content: "Search-and-Rescue Vehicles · MMPUG" },
       { property: "og:description", content: "GUI tools for a fleet of autonomous search and rescue robots operating in GPS-denied environments." },
     ],
   }),
@@ -37,24 +37,34 @@ function LidarPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                MMPUG<span className="text-accent-orange">.</span>
+                Search-and-Rescue Vehicles
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
-                GUI tools for autonomous search and rescue robot fleets.
+                GUI tools for autonomous search and rescue robot fleets
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
-                Data visualization GUI and live video feedback system for a fleet of autonomous search and rescue robots
-                operating in GPS-denied, communication-degraded environments.
+                Built visualization, calibration, and operator-control tools for autonomous search-and-rescue robots
+                operating in GPS-denied environments.
               </p>
+              <div className="mt-8 max-w-md rounded-2xl border border-rule p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">What I built</p>
+                <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-foreground">
+                  <li>C++/ROS autonomous behaviors</li>
+                  <li>Robot operator controls</li>
+                  <li>Sensor-data replay tooling</li>
+                  <li>Multi-camera visualization</li>
+                  <li>AprilTag-based map calibration</li>
+                </ul>
+              </div>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Robot Exploration Researcher · Jan 2024
+                Robotics Researcher · CMU Biorobotics Lab · 2023–2024
               </p>
             </div>
-            <div className="md:col-span-5 flex items-start justify-center">
+            <div className="md:col-span-5">
               <img
                 src="/mmpug-rc2.jpg"
                 alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-                className="w-full max-w-[420px] object-contain"
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -62,13 +72,13 @@ function LidarPage() {
       </section>
 
       {/* 2. Problem */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">problem</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                No structured way to review and replay.
+                No structured way to review and replay
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 The CMU Biorobotics Lab operates a heterogeneous fleet of autonomous robots, wheeled and legged,
@@ -84,11 +94,11 @@ function LidarPage() {
       </section>
 
       {/* 3. What Was Built */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">contributions</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Two GUI tools for <span className="font-serif-i italic text-accent-orange">data validation and operator control</span>.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Two GUI tools for <span className="text-accent-orange">data validation and operator control</span>
           </h2>
 
           {/* Video Replay GUI */}
@@ -105,7 +115,7 @@ function LidarPage() {
               <img
                 src="/mmpug-replay.jpg"
                 alt="Multi-camera replay grid showing RC3 fisheye feeds across three simultaneous viewpoints"
-                className="w-full max-w-[560px] mx-auto block rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain block w-full rounded-xl border border-rule"
               />
               <Caption>Multi-camera replay grid: RC3 fisheye feeds across three simultaneous viewpoints, victim circled in center frame.</Caption>
             </div>
@@ -124,75 +134,59 @@ function LidarPage() {
               <img
                 src="/mmpug-dual-screen.jpg"
                 alt="Full operator setup with RViz 3D LiDAR map and control panel side by side"
-                className="w-full rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-xl border border-rule"
               />
             </div>
           </div>
         </Container>
       </section>
 
-      {/* 4. System Context */}
-      <section className="border-t border-rule py-24 md:py-32">
+      {/* 4b. Calibration + testing */}
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
-          <SectionLabel dot="orange">system · MMPUG</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Sliding-mode autonomy across <span className="font-serif-i italic text-accent-orange">four control levels</span>.
+          <SectionLabel dot="green">calibration &amp; testing</SectionLabel>
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Faster setup, <span className="text-accent-orange">measured behavior</span>
           </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
+          <div className="grid gap-10 md:grid-cols-2">
+            <div>
               <p className="text-lg leading-relaxed text-foreground">
-                The broader MMPUG system operates on a principle of sliding-mode autonomy: operators can blend human
-                control with machine precision at any point in a mission. Four levels: Full Manual for direct
-                teleoperation, Smart Joystick for assisted navigation around obstacles, Waypoint Mode for autonomous path
-                planning to a goal, and Exploration Mode for fully autonomous unknown-area mapping. The GUI contributions
-                sit at the operator layer, making this control hierarchy accessible and error-resistant in high-stress
-                field conditions.
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground">
-                The system also supports heterogeneous convoy operations. A wheeled robot maps a staircase, shares the
-                location across the network, and a legged Spot robot is tasked to navigate there autonomously.
-                Communication-degraded environments are handled via a peel-off maneuver, where trailing robots stop and
-                act as static relay nodes to extend network range.
+                Before deployment, robots had to agree on a shared map frame, and the existing process required several
+                minutes of manual alignment. I implemented an AprilTag-based calibration workflow that automatically
+                aligned maps across robots, reducing setup from roughly four minutes to one.
               </p>
             </div>
-            <div className="md:col-span-5">
-              <div className="grid gap-4">
-                {[
-                  { mode: "Full Manual", desc: "Direct teleoperation by operator." },
-                  { mode: "Smart Joystick", desc: "Assisted navigation around obstacles." },
-                  { mode: "Waypoint Mode", desc: "Autonomous path planning to a goal." },
-                  { mode: "Exploration Mode", desc: "Fully autonomous unknown-area mapping." },
-                ].map((m) => (
-                  <div key={m.mode} className="border-l-2 border-accent-orange pl-4">
-                    <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">{m.mode}</p>
-                    <p className="text-base leading-relaxed text-foreground">{m.desc}</p>
-                  </div>
-                ))}
-              </div>
+            <div>
+              <p className="text-lg leading-relaxed text-foreground">
+                I developed and tested autonomous behaviors across more than 100 simulation runs before deployment,
+                evaluated against defined success conditions: goal completion, collision avoidance, localization
+                stability, and recovery behavior. The resulting changes improved task success by roughly 25%.
+              </p>
             </div>
           </div>
         </Container>
       </section>
 
       {/* 5. Impact */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
                 src="/mmpug-fleet.jpg"
                 alt="MMPUG heterogeneous robot fleet: wheeled RC robots and legged Spot robots"
-                className="w-full border border-rule block rounded-xl"
+                className="max-h-[26rem] object-contain w-full border border-rule block rounded-xl"
               />
             </div>
             <div className="md:col-span-7">
               <SectionLabel dot="orange">outcome</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                Full autonomy hierarchy, <span className="font-serif-i italic text-accent-orange">accessible in the field</span>.
+                Full autonomy hierarchy, <span className="text-accent-orange">accessible in the field</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground max-w-lg">
-                The control panel GUI made the full autonomy hierarchy accessible in high-stress field conditions, with
-                state-aware controls and persistent per-robot status panels.
+                The tooling reduced setup time, made robot behavior easier to inspect, and gave operators clearer
+                control over a fleet with multiple levels of autonomy. More importantly, it gave researchers faster
+                feedback when autonomous systems behaved differently from what they expected.
               </p>
             </div>
           </div>

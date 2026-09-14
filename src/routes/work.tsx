@@ -22,7 +22,7 @@ function WorkPage() {
         <Container>
           <SectionLabel dot="orange">selected work</SectionLabel>
           <h1 className="mb-8 font-display text-5xl leading-[0.95] md:text-7xl">
-            Things I've <span className="font-serif-i italic text-accent-orange">built</span>.
+            Things I've <span className="text-accent-orange">built</span>
           </h1>
           <div className="grid gap-6 md:grid-cols-12">
             {projects.map((p, i) => {
@@ -55,7 +55,10 @@ function WorkPage() {
                       className={`mx-auto w-auto object-contain ${i === 0 ? "max-h-[360px] flex-1" : i === 3 ? "max-h-[320px]" : "max-h-64"}`}
                     />
                   )}
-                  <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
+                  <div>
+                    <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
+                    <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground">{p.desc}</p>
+                  </div>
                 </div>
               </Tag>
               );

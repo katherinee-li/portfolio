@@ -9,9 +9,9 @@ import pulsePipeline from "@/assets/pulse-architecture.jpg";
 export const Route = createFileRoute("/work_/pulse")({
   head: () => ({
     meta: [
-      { title: "Pulse — The Compass That Connects" },
+      { title: "Proximity Navigation Device · Pulse" },
       { name: "description", content: "A dedicated, single-purpose device for spontaneous human connection. CMU ECE Capstone." },
-      { property: "og:title", content: "Pulse — The Compass That Connects" },
+      { property: "og:title", content: "Proximity Navigation Device · Pulse" },
       { property: "og:description", content: "A dedicated, single-purpose device for spontaneous human connection." },
     ],
   }),
@@ -50,23 +50,39 @@ function PulsePage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Pulse<span className="text-accent-orange">.</span>
+                Proximity Navigation Device
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
-                Proximity-based social navigation device.
+                Proximity-based social navigation device
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
-                A dedicated, single-purpose device for spontaneous human connection.
+                Built a handheld device that detects nearby friends and provides real-time directional navigation
+                using GNSS, IMU sensing, and device-to-device communication.
               </p>
+              <div className="mt-8 rounded-2xl border border-rule p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">What I built</p>
+                <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-foreground">
+                  <li>ESP32-C5 firmware</li>
+                  <li>GNSS and IMU processing</li>
+                  <li>Node.js backend services</li>
+                  <li>WebSocket communication</li>
+                  <li>Device state management</li>
+                  <li>Integration and system testing</li>
+                </ul>
+                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                  The final system connected four physical devices through a shared backend with real-time location
+                  updates.
+                </p>
+              </div>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 CMU ECE · 18-500 · Spring 2026
               </p>
             </div>
-            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-10">
+            <div className="md:col-span-6">
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
-                className="w-full max-w-[380px] object-contain object-top"
+                className="max-h-[26rem] w-full rounded-2xl object-contain object-top"
               />
             </div>
           </div>
@@ -74,17 +90,19 @@ function PulsePage() {
       </section>
 
       {/* 2. Problem + Requirements */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">problem & requirements</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Smartphones engineer <span className="font-serif-i italic text-accent-orange">engagement</span>, not connection.
+                Smartphones engineer <span className="text-accent-orange">engagement</span>, not connection
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The friction of opening an app, typing, coordinating, it kills spontaneity. Pulse removes that surface area
-                entirely, then has to earn its place against the phone with measurable engineering targets.
+                Meeting up with someone nearby still usually starts with a phone: send a message, share a location,
+                check a map, and keep looking at the screen. We wanted to see whether a dedicated device could make
+                that interaction simpler. Pulse detects nearby friends, lets you request a meetup, and points you
+                toward them with a live directional arrow.
               </p>
             </div>
           </div>
@@ -93,7 +111,7 @@ function PulsePage() {
             <img
               src={pulseRequirements}
               alt="Use-case to design requirements table"
-              className="w-full max-w-[720px] mx-auto block"
+              className="max-h-[26rem] object-contain block w-full"
             />
             <Caption>
               Four use-case requirements mapped to engineering specs with explicit justification, the traceability matrix
@@ -104,16 +122,16 @@ function PulsePage() {
       </section>
 
       {/* 3. System Architecture */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            System <span className="font-serif-i italic text-accent-orange">architecture</span>: device · firmware · server.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            System <span className="text-accent-orange">architecture</span>: device · firmware · server
           </h2>
           <img
             src={pulsePipeline}
             alt="Full system architecture diagram"
-            className="w-full max-w-[820px] mx-auto block"
+            className="max-h-[26rem] object-contain block w-full"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -131,17 +149,17 @@ function PulsePage() {
       </section>
 
       {/* 4. Firmware & State Machine */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">firmware & state machine</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Sensor-to-display <span className="font-serif-i italic text-accent-orange">pipeline</span>, 200ms budget.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Sensor-to-display <span className="text-accent-orange">pipeline</span>, 200ms budget
           </h2>
-          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto block" />
+          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="max-h-[26rem] object-contain block w-full" />
 
           {/* Pipeline budget — centered */}
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="font-serif-i italic text-foreground leading-relaxed" style={{ fontSize: "22px" }}>
+          <div className="mt-10 max-w-2xl mx-auto text-center">
+            <p className="leading-relaxed text-foreground" style={{ fontSize: "22px" }}>
               The end-to-end pipeline runs inside a single 200ms budget, from accelerometer sample to rendered arrow on the
               opposite device.
             </p>
@@ -170,7 +188,7 @@ function PulsePage() {
               <img
                 src="/pulse-state-machine.jpg"
                 alt="State machine with per-state current draw"
-                className="w-full border border-rule block"
+                className="max-h-[26rem] object-contain w-full border border-rule block"
               />
             </div>
             <div className="rounded-2xl border border-rule p-6">
@@ -188,18 +206,18 @@ function PulsePage() {
       </section>
 
       {/* 5. UI Walkthrough */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">UI walkthrough</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
-            UI flow: idle <span className="font-serif-i italic text-accent-orange">→ request → navigate → meetup</span>.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl text-center">
+            UI flow: idle <span className="text-accent-orange">→ request → navigate → meetup</span>
           </h2>
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="w-full max-w-[820px] mx-auto border border-rule block mb-10"
+            className="max-h-[26rem] object-contain mb-10 block w-full rounded-2xl border border-rule"
           />
-          <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[820px] mx-auto">
+          <div className="grid grid-cols-3 gap-4 md:grid-cols-5">
             {[
               { src: "/pulse-screen-welcome.jpg", label: "Welcome" },
               { src: "/pulse-screen-send-request.jpg", label: "Send request" },
@@ -221,36 +239,38 @@ function PulsePage() {
       </section>
 
       {/* 6. Testing & Validation */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
-            Targets vs. <span className="font-serif-i italic text-accent-orange">measured results</span>.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl text-center">
+            Targets vs. <span className="text-accent-orange">measured results</span>
           </h2>
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
-            className="w-full max-w-[820px] mx-auto block"
+            className="max-h-[26rem] object-contain block w-full"
           />
           <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
-            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
-            landed at ~140ms against a 200ms target.
+            More than 40 unit, integration, and end-to-end tests across sensors, firmware, REST/WebSocket services,
+            and the database, plus validation across 50+ multi-device scenarios covering latency, positioning
+            accuracy, connection recovery, battery life, and complete meetup flows. Every spec passed; navigation
+            update latency landed at ~140 ms against a 200 ms target.
           </p>
         </Container>
       </section>
 
       {/* 7. Risk Mitigations */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">risk mitigations</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Failure modes and <span className="font-serif-i italic text-accent-orange">mitigations</span>.
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
+            Failure modes and <span className="text-accent-orange">mitigations</span>
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { risk: "GPS occlusion", fix: "PDR fusion bridges signal gaps; Kalman weighting drops GNSS as HDOP rises." },
-              { risk: "Connection loss", fix: "Reconnect flow with state replay; in-flight meetups survive transient drops." },
-              { risk: "Power budget", fix: "IDLE state aggressively reclaimed by the state machine to extend session life." },
+              { risk: "GNSS loss", fix: "IMU-based dead reckoning bridges short gaps while GNSS accuracy is degraded." },
+              { risk: "Connection loss", fix: "Devices reconnect and recover the active meetup state instead of restarting the interaction." },
+              { risk: "Power consumption", fix: "Firmware returns devices to lower-power states when active navigation is unnecessary." },
             ].map((r) => (
               <div key={r.risk} className="rounded-2xl border border-rule p-6">
                 <p className="font-display text-xl">{r.risk}</p>
@@ -262,25 +282,25 @@ function PulsePage() {
       </section>
 
       {/* 8. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
                 src="/pulse-device-final.jpg"
                 alt="Pulse device displaying ARE YOU STILL THERE? idle prompt"
-                className="w-full border border-rule block"
+                className="max-h-[26rem] object-contain w-full border border-rule block"
               />
             </div>
             <div className="md:col-span-7">
               <SectionLabel dot="orange">final iteration</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                A compass that <span className="font-serif-i italic text-accent-orange">asks to be put down</span>.
+                A compass that <span className="text-accent-orange">asks to be put down</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                Pulse is a device with a single job, and a screen that quietly bows out when that job is done.
-                It earns its place in your pocket by refusing to compete for your attention, and then disappears
-                until the next time a friend is nearby.
+                The final prototype supported real-time meetup and navigation across four physical devices, with
+                roughly 140 ms synchronization latency and all major engineering requirements passing validation.
+                The goal was simple: help two people find each other, then get out of the way.
               </p>
             </div>
           </div>

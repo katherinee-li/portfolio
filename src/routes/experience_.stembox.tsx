@@ -37,10 +37,10 @@ function STEMboxPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="green">Non-Profit · 2020 — 2023</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                STEMbox<span className="text-accent-green">.</span>
+                STEMbox
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-                Hands-on science experiments delivered.
+                Hands-on science experiments delivered
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
                 Co-founded a non-profit delivering hands-on STEM experiment kits to elementary students across the Greater
@@ -50,11 +50,11 @@ function STEMboxPage() {
                 Co-Founder · Greater Vancouver Area · 2020 — 2023
               </p>
             </div>
-            <div className="md:col-span-5 flex items-start justify-center">
+            <div className="md:col-span-5">
               <img
                 src="/stembox-team.jpg"
                 alt="STEMbox team"
-                className="w-full max-w-[340px] object-contain rounded-xl"
+                className="max-h-[26rem] w-full rounded-xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ function STEMboxPage() {
       </section>
 
       {/* 2. Problem */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose" size="base">problem</SectionLabel>
           <p className="text-lg leading-relaxed text-foreground">
@@ -76,7 +76,7 @@ function STEMboxPage() {
       </section>
 
       {/* 3. The Kit */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green" size="base">solution</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -89,7 +89,7 @@ function STEMboxPage() {
               </p>
             </div>
             <div className="md:col-span-6 flex flex-col gap-6">
-              <div className="max-w-[340px]">
+              <div>
                 <img
                   src="/stembox-assembly.jpg"
                   alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
@@ -97,7 +97,7 @@ function STEMboxPage() {
                 />
                 <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
               </div>
-              <div className="max-w-[340px]">
+              <div>
                 <img
                   src="/stembox-boxes.jpg"
                   alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
@@ -111,7 +111,7 @@ function STEMboxPage() {
       </section>
 
       {/* 4. Curriculum */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green" size="base">curriculum · 12+ lessons</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -128,7 +128,7 @@ function STEMboxPage() {
               <img
                 src="/stembox-lessons.jpg"
                 alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
-                className="w-full rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-xl border border-rule"
               />
               <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
             </div>
@@ -137,7 +137,7 @@ function STEMboxPage() {
       </section>
 
       {/* 5. Scale */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange" size="base">impact</SectionLabel>
           <p className="mb-10 text-lg leading-relaxed text-foreground max-w-2xl">
@@ -163,13 +163,13 @@ function STEMboxPage() {
       </section>
 
       {/* 6. Press */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose" size="base">recognition</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Featured in the <span className="font-serif-i italic text-accent-green">Peace Arch News</span>.
+                Featured in the <span className="text-accent-green">Peace Arch News</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground">
                 The program was recognized for its impact on students and families across the Semiahoo Secondary

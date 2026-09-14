@@ -31,13 +31,13 @@ function MagicInTheMundanePage() {
           <SectionLabel dot="orange">Personal · 2022</SectionLabel>
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              Magic in the <span className="text-accent-orange">mundane</span>.
+              Magic in the <span className="text-accent-orange">mundane</span>
             </h1>
           </div>
         </Container>
       </section>
 
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="max-w-2xl space-y-6 text-base leading-relaxed text-foreground md:text-lg">
             <p>

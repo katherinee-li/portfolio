@@ -41,10 +41,10 @@ function PMAPage() {
           <SectionLabel dot="green">CMU · Product Management Academy · 2024 — Present</SectionLabel>
           <div className="md:col-span-7">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              PMA<span className="text-accent-green">.</span>
+              PMA
             </h1>
             <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
-              President, Product Management Academy at CMU.
+              President, Product Management Academy at CMU
             </p>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
               President of CMU's Product Management Academy, a two-semester program training 60+ students per year in
@@ -59,13 +59,13 @@ function PMAPage() {
       </section>
 
       {/* 2. Overview */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">the program</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-8">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                How the <span className="font-serif-i italic text-accent-green">program works</span>.
+                How the <span className="text-accent-green">program works</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 PMA evolved from a skills workshop into a structured two-semester program. The first semester builds
@@ -78,7 +78,7 @@ function PMAPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="60+" label="students trained per year" />
             <Stat value="2" label="company partnerships secured" />
           </div>
@@ -86,13 +86,13 @@ function PMAPage() {
       </section>
 
       {/* 3. Project 1: Industry Presentation */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">project 1 · industry presentation</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
             <div className="md:col-span-5">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Project 1: <span className="font-serif-i italic text-accent-green">Industry presentations.</span>
+                Project 1: <span className="text-accent-green">Industry presentations</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Members apply the CIRCLES framework to solve genuine product pain points for companies including Tesla,
@@ -103,13 +103,13 @@ function PMAPage() {
               <img
                 src="/pma-presentation.jpg"
                 alt="Students presenting an Xbox AI assistant redesign"
-                className="mt-8 w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain mt-8 w-full rounded-2xl border border-rule block"
               />
             </div>
             <div className="md:col-span-7">
               <iframe
                 src="/pma-industry-presentation.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="Industry Presentation Assignment"
               />
@@ -119,13 +119,13 @@ function PMAPage() {
       </section>
 
       {/* 4. Project 2: Company Partnership */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">project 2 · company partnership</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
             <div className="md:col-span-5">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Project 2: <span className="font-serif-i italic text-accent-green">Company partnership.</span>
+                Project 2: <span className="text-accent-green">Company partnership</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 PMA partnered with Perflection AI, a sports analysis startup, placing 20 members into active user
@@ -141,7 +141,7 @@ function PMAPage() {
             <div className="md:col-span-7">
               <iframe
                 src="/pma-perflection.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="PMA x Perflection AI Project Documentation"
               />
@@ -151,13 +151,13 @@ function PMAPage() {
       </section>
 
       {/* 5. Speaker Series */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">speaker series</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 items-start">
             <div className="md:col-span-7">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                <span className="font-serif-i italic text-accent-green">Speaker series.</span>
+                <span className="text-accent-green">Speaker series</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Each semester includes a speaker series bringing in PMs from Big Tech and startups to share how their
@@ -169,7 +169,7 @@ function PMAPage() {
               <img
                 src="/pma-speaker.jpg"
                 alt="Speaker session with Sofie Yang, Harvard MBA, former Uber PM and McKinsey consultant"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
             </div>
           </div>
@@ -177,13 +177,13 @@ function PMAPage() {
       </section>
 
       {/* 6. Operations */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">running the org</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
             <div className="md:col-span-5">
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                Running <span className="font-serif-i italic text-accent-green">the org.</span>
+                Running <span className="text-accent-green">the org</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 Leading PMA meant running weekly exec syncs, managing project oversight across 6 teams simultaneously,
@@ -199,7 +199,7 @@ function PMAPage() {
             <div className="md:col-span-7">
               <iframe
                 src="/pma-developing-product.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="Developing a New Product — curriculum slides"
               />
@@ -221,13 +221,13 @@ function PMAPage() {
       </section>
 
       {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-start">
             <div className="md:col-span-6">
               <SectionLabel dot="green">where it's going</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What <span className="font-serif-i italic text-accent-green">comes next.</span>
+                What <span className="text-accent-green">comes next</span>
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 The longer-term vision for PMA is a continuous professional pipeline: foundational skills in the fall,
@@ -239,7 +239,7 @@ function PMAPage() {
               <img
                 src="/pma-cohort.jpg"
                 alt="Fall 2025 PMA cohort welcome session, members holding name cards"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
             </div>
           </div>

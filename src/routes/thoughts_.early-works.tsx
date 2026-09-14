@@ -32,19 +32,19 @@ function EarlyWorksPage() {
           <SectionLabel dot="blue">High School · 2022</SectionLabel>
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              Early Works<span className="text-accent-blue">.</span>
+              Early Works
             </h1>
           </div>
         </Container>
       </section>
 
       {/* Experiment 1: Eddy Current Braking */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">experiment 01 · eddy current braking</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Eddy Current <span className="font-serif-i italic text-accent-blue">Braking System</span>.
+              Eddy Current <span className="text-accent-blue">Braking System</span>
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               How does the air gap between a permanent magnet and a rotating aluminum disk affect braking time?
@@ -78,12 +78,12 @@ function EarlyWorksPage() {
       </section>
 
       {/* Experiment 2: Cathode Ray Tube */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">experiment 02 · cathode ray tube deflection</SectionLabel>
           <div className="max-w-2xl">
             <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-              Cathode Ray Tube <span className="font-serif-i italic text-accent-blue">Deflection</span>.
+              Cathode Ray Tube <span className="text-accent-blue">Deflection</span>
             </h2>
             <p className="mt-6 font-serif-i text-lg leading-relaxed text-ink-soft md:text-xl">
               What is the relationship between accelerating voltage and the deflection of an electron beam?
