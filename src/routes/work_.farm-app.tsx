@@ -131,7 +131,7 @@ function FarmAppPage() {
                 existing workflows and could operate reliably from an ATV.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Engineering Intern · Moss · Summer 2024
+                Product Engineering Intern · Moss · Summer 2024
               </p>
             </div>
             <div className="md:col-span-6">

@@ -141,6 +141,6 @@ export const thoughts = [
 export const work = [
   { role: "Evaluations Intern", org: "General Intuition", when: "2026" },
   { role: "Technical Program / Product Intern", org: "Lightmatter", when: "2025" },
-  { role: "Engineering Intern", org: "Moss", when: "2024" },
+  { role: "Product Engineering Intern", org: "Moss", when: "2024" },
   { role: "Robotics Researcher", org: "CMU Biorobotics Lab", when: "2023–2024" },
 ];

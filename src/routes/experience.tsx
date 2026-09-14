@@ -32,7 +32,7 @@ const entries = [
     href: "/experience/lightmatter",
   },
   {
-    role: "Engineering Intern",
+    role: "Product Engineering Intern",
     org: "Moss · Pittsburgh",
     logo: "/logo-moss.png",
     when: "2024",
