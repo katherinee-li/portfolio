@@ -141,49 +141,6 @@ function LidarPage() {
         </Container>
       </section>
 
-      {/* 4. System Context */}
-      <section className="border-t border-rule py-14 md:py-20">
-        <Container>
-          <SectionLabel dot="orange">system · MMPUG</SectionLabel>
-          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
-            Sliding-mode autonomy across <span className="text-accent-orange">four control levels</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-lg leading-relaxed text-foreground">
-                The broader MMPUG system operates on a principle of sliding-mode autonomy: operators can blend human
-                control with machine precision at any point in a mission. Four levels: Full Manual for direct
-                teleoperation, Smart Joystick for assisted navigation around obstacles, Waypoint Mode for autonomous path
-                planning to a goal, and Exploration Mode for fully autonomous unknown-area mapping. The GUI contributions
-                sit at the operator layer, making this control hierarchy accessible and error-resistant in high-stress
-                field conditions.
-              </p>
-              <p className="mt-6 text-lg leading-relaxed text-foreground">
-                The system also supports heterogeneous convoy operations. A wheeled robot maps a staircase, shares the
-                location across the network, and a legged Spot robot is tasked to navigate there autonomously.
-                Communication-degraded environments are handled via a peel-off maneuver, where trailing robots stop and
-                act as static relay nodes to extend network range.
-              </p>
-            </div>
-            <div className="md:col-span-5">
-              <div className="grid gap-4">
-                {[
-                  { mode: "Full Manual", desc: "Direct teleoperation by operator." },
-                  { mode: "Smart Joystick", desc: "Assisted navigation around obstacles." },
-                  { mode: "Waypoint Mode", desc: "Autonomous path planning to a goal." },
-                  { mode: "Exploration Mode", desc: "Fully autonomous unknown-area mapping." },
-                ].map((m) => (
-                  <div key={m.mode} className="border-l-2 border-accent-orange pl-4">
-                    <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-1">{m.mode}</p>
-                    <p className="text-base leading-relaxed text-foreground">{m.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* 4b. Calibration + testing */}
       <section className="border-t border-rule py-14 md:py-20">
         <Container>
