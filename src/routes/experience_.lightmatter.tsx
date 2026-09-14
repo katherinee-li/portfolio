@@ -187,7 +187,7 @@ function LightmatterPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="blue">result</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
-                What the <span className="text-accent-blue">summer was</span>
+                From the <span className="text-accent-blue">team</span>
               </h2>
               <div className="mt-10 flex flex-col gap-6">
                 {[
@@ -215,17 +215,17 @@ function LightmatterPage() {
                 ))}
               </div>
             </div>
-            <div className="md:col-span-5 flex flex-col gap-6">
+            <div className="md:col-span-5 flex flex-col gap-4 md:mt-[4.5rem]">
               <img
                 src="/lightmatter-team.jpg"
                 alt="Lightmatter intern cohort group photo"
-                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
+                className="block aspect-[4/3] w-full rounded-2xl border border-rule object-cover"
               />
               <a
                 href="https://www.linkedin.com/pulse/lightmatter-2025-internship-program-angela-bertolini-she-her--wt0lc/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs uppercase tracking-[0.18em] text-ink-soft hover:text-accent-blue transition-colors"
               >
                 Lightmatter 2025 Internship Program ↗
               </a>
