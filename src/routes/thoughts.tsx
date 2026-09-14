@@ -24,9 +24,6 @@ function ThoughtsPage() {
           <h1 className="font-display text-5xl leading-[0.95] md:text-7xl">
             Things I've <span className="font-serif-i italic text-accent-orange">written</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-            A few things I've written about engineering, teaching, and things I care about.
-          </p>
           <ul className="mt-12">
             {[
               {
