@@ -92,7 +92,7 @@ function About() {
               I've built sensing systems for commercial farms, autonomy tools for search-and-rescue robots, embedded social devices, and developer tooling for photonic computing infrastructure.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Most recently, I'll be working on model evaluations and API integrations across different environments and hardware at General Intuition.
+              Most recently, I'll be working on model evaluations and API integrations across different robotic embodiments and environments at General Intuition.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
               Outside of work, I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
