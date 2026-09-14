@@ -15,6 +15,51 @@ export const Route = createFileRoute("/work_/moss")({
   component: MossPage,
 });
 
+const scaling = [
+  {
+    insight: "Knowledge existed only in my head. Another engineer couldn't easily build the system.",
+    solution: "Documentation: wiring schematics, block diagrams, connector maps, build manuals, and BOMs.",
+  },
+  {
+    insight: "Building each unit took nearly two weeks.",
+    solution: "Backplanes that consolidate wiring and simplify assembly.",
+  },
+  {
+    insight: "Assembly required extensive manual wiring.",
+    solution: "Standardized connectors, pre-crimped cables, and repeatable assembly procedures.",
+  },
+];
+
+const reliability = [
+  {
+    insight: "The enclosure had to survive heat, rain, dust, and continuous ATV vibration.",
+    solution: "Components selected against ingress protection, temperature, vibration, humidity, and mounting stability.",
+  },
+  {
+    insight: "Field repairs couldn't require rebuilding the enclosure.",
+    solution: "Modular backplanes, fixed component positions, documented wiring, and accessible replacement points.",
+  },
+];
+
+function PairTable({ rows, accent }: { rows: { insight: string; solution: string }[]; accent: string }) {
+  return (
+    <div className="mt-10 border-t border-rule">
+      {rows.map((r) => (
+        <div key={r.insight} className="grid gap-4 border-b border-rule py-6 md:grid-cols-2 md:gap-12">
+          <div>
+            <p className={`mb-2 text-xs uppercase tracking-[0.18em] ${accent}`}>insight</p>
+            <p className="text-base leading-relaxed text-foreground">{r.insight}</p>
+          </div>
+          <div>
+            <p className={`mb-2 text-xs uppercase tracking-[0.18em] ${accent}`}>solution</p>
+            <p className="text-base leading-relaxed text-foreground">{r.solution}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function MossPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
@@ -62,50 +107,84 @@ function MossPage() {
         </Container>
       </section>
 
-      {/* 2. Problem */}
+      {/* 2. Background */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="rose">the problem</SectionLabel>
+          <SectionLabel dot="rose">background</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            A prototype isn't a <span className="font-serif-i italic text-accent-green">deployable system</span>
+          </h2>
           <div className="grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                A prototype isn't a <span className="font-serif-i italic text-accent-green">deployable system</span>
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+              <p className="text-base leading-relaxed text-foreground md:text-lg">
                 The existing sensor kit worked, but it was still a one-off engineering build. It was difficult to
                 repair, extensively hand-wired, and dependent on knowledge that wasn't documented anywhere.
               </p>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
                 That was manageable for one prototype. It wouldn't work for eight customer pilots.
               </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">The goal was to make the system:</p>
             </div>
           </div>
-          <div className="mt-8 flex flex-wrap gap-8">
+          <div className="mt-10 flex flex-wrap gap-8">
             {[
-              "reliable outdoors",
-              "easy to service",
-              "repeatable to assemble",
-              "understandable by another engineer",
-            ].map((g) => (
-              <div key={g} className="border-l-2 border-accent-green pl-4">
-                <p className="text-base leading-relaxed text-foreground">{g}</p>
+              { value: "1", label: "hand-built prototype" },
+              { value: "8", label: "pilot systems planned" },
+              { value: "~2 wks", label: "assembly time per unit" },
+            ].map((s) => (
+              <div key={s.label} className="border-l-2 border-accent-green pl-4">
+                <p className="font-display text-2xl text-foreground">{s.value}</p>
+                <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{s.label}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* 3. System Architecture */}
+      {/* 3. Current vs target */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="orange">scope</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            One build to a <span className="font-serif-i italic text-accent-green">repeatable platform</span>
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2">
+            <div className="rounded-2xl border border-rule p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">current system · June 2024</p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "Hand-wired enclosure that grew as the prototype evolved",
+                  "Components mounted ad hoc, with no fixed positions",
+                  "Repairs required rewiring large parts of the kit",
+                  "No schematics, build manuals, or bills of materials",
+                ].map((item) => (
+                  <li key={item} className="text-base leading-relaxed text-foreground">{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-rule p-6">
+              <p className="text-xs uppercase tracking-[0.22em] text-accent-green">target system · August 2024</p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "Reliable outdoors",
+                  "Easy to service",
+                  "Repeatable to assemble",
+                  "Understandable by another engineer",
+                ].map((item) => (
+                  <li key={item} className="text-base leading-relaxed text-foreground">{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 4. System architecture */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            System <span className="font-serif-i italic text-accent-green">architecture</span>
+            Four subsystems, <span className="font-serif-i italic text-accent-green">one enclosure</span>
           </h2>
-          <p className="mb-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            The sensor kit combined several subsystems inside one enclosure.
-          </p>
           <img
             src="/moss-architecture.jpg"
             alt="Subsystem block diagram of the sensor kit"
@@ -124,156 +203,59 @@ function MossPage() {
               </div>
             ))}
           </div>
-          <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
-            The physical layout had to support those systems while surviving heat, rain, dust, and continuous ATV
-            vibration.
+        </Container>
+      </section>
+
+      {/* 5. Deliverable 1 — field reliability */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="orange">deliverable 01 · field reliability</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
+            Hardware built for <span className="font-serif-i italic text-accent-green">outdoor deployment</span>
+          </h2>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            Every component had to work under agricultural field conditions, and the kit had to be serviceable
+            between collection runs without an engineer present.
+          </p>
+          <PairTable rows={reliability} accent="text-accent-orange" />
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            <div className="w-full max-w-[340px]">
+              <img src="/IMG_2924.jpg" alt="Interior wall mounting and detachable backplane" className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule" />
+            </div>
+            <div className="w-full max-w-[340px]">
+              <img src="/IMG_2927.jpg" alt="Dunk-testing the sealed enclosure" className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule" />
+            </div>
+          </div>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">result</span>
+            <br />
+            A field system using IP67 connectors, rugged mounting, and vibration-resistant wiring, validated during
+            the Oregon deployments.
           </p>
         </Container>
       </section>
 
-      {/* 4. Serviceability */}
+      {/* 6. Deliverable 2 — scaling */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
-          <SectionLabel dot="orange">serviceability</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Modular <span className="font-serif-i italic text-accent-green">hardware</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The first system had grown organically as the prototype evolved. I reorganized the internal hardware
-                around modular backplanes and fixed component locations.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">Each component received:</p>
-              <ul className="mt-4 space-y-3">
-                {[
-                  "a defined mounting position",
-                  "a dedicated connection path",
-                  "documented wiring",
-                  "accessible replacement points",
-                ].map((item) => (
-                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Standardized connectors allowed individual components or backplanes to be replaced without rewiring
-                the entire enclosure.
-              </p>
-            </div>
-            <div className="md:col-span-5">
-              <img
-                src="/IMG_2924.jpg"
-                alt="Interior wall mounting and detachable backplane"
-                className="w-full max-w-[300px] rounded-2xl border border-rule block"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 5. Field testing */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="orange">field testing</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Built for outdoor <span className="font-serif-i italic text-accent-green">deployment</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Every component had to work under agricultural field conditions. The design accounted for:
-              </p>
-              <ul className="mt-4 space-y-3">
-                {["ingress protection", "temperature", "vibration", "humidity", "mounting stability"].map((item) => (
-                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                We tested the sealed enclosure against water exposure and evaluated the hardware directly during
-                Oregon field deployments. The resulting field system used IP67 connectors, rugged mounting, and
-                vibration-resistant wiring.
-              </p>
-            </div>
-            <div className="md:col-span-5">
-              <img
-                src="/IMG_2927.jpg"
-                alt="Waterproof testing, sensor kit over water tub"
-                className="w-full max-w-[300px] rounded-2xl border border-rule block"
-              />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 6. Scaling */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="rose">scaling</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <SectionLabel dot="green">deliverable 02 · scaling</SectionLabel>
+          <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
             From one build to <span className="font-serif-i italic text-accent-green">eight pilots</span>
           </h2>
-          <div className="grid gap-12 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The largest scaling constraint was assembly. Building a sensor kit required extensive manual wiring
-                and took nearly two weeks per unit.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                I created the engineering package another person would need to reproduce the system:
-              </p>
-              <ul className="mt-4 space-y-3">
-                {[
-                  "wiring schematics",
-                  "system block diagrams",
-                  "connector maps",
-                  "build manuals",
-                  "bills of materials",
-                ].map((item) => (
-                  <li key={item} className="border-l-2 border-accent-green pl-4 text-base leading-relaxed text-foreground">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                I also redesigned repeated wiring around backplanes, standardized connectors, pre-crimped cables, and
-                repeatable assembly procedures.
-              </p>
-            </div>
-          </div>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            The largest scaling constraint was assembly. Instead of treating every sensor kit like a new prototype,
+            the redesigned system followed a consistent build process another engineer could follow.
+          </p>
+          <PairTable rows={scaling} accent="text-accent-green" />
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+            <span className="text-xs uppercase tracking-[0.22em] text-accent-green">result</span>
+            <br />
+            Reduced estimated assembly time from roughly two weeks to three days.
+          </p>
         </Container>
       </section>
 
-      {/* 7. Manufacturing */}
-      <section className="border-t border-rule py-24 md:py-32">
-        <Container>
-          <SectionLabel dot="green">manufacturing</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
-            Simplifying <span className="font-serif-i italic text-accent-green">assembly</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Instead of treating every sensor kit like a new prototype, the redesigned system followed a
-                consistent build process.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Backplanes consolidated wiring. Standard connectors reduced manual termination. Documented cable runs
-                and component positions removed decisions from assembly.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The result was a system another engineer could build without relying on knowledge that only existed
-                in my head.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 8. Result */}
+      {/* 7. Lessons learned */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
@@ -285,18 +267,23 @@ function MossPage() {
               />
             </div>
             <div className="md:col-span-7">
-              <SectionLabel dot="green">result</SectionLabel>
+              <SectionLabel dot="green">lessons learned</SectionLabel>
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
                 ~2 weeks → <span className="font-serif-i italic text-accent-green">~3 days</span>
               </h2>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground md:text-lg">
-                The redesigned hardware and build process reduced estimated sensor-kit assembly time from roughly two
-                weeks to three days.
-              </p>
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-foreground md:text-lg">
-                More importantly, the system went from a one-off prototype to a repeatable platform that could
-                support multiple customer pilots.
-              </p>
+              <div className="mt-8 grid gap-6">
+                {[
+                  "Documentation was the deliverable. The system only scaled once someone else could build it without me.",
+                  "Designing for service and assembly early was cheaper than reworking a finished prototype.",
+                ].map((l, i) => (
+                  <div key={l} className="flex gap-4 rounded-2xl border border-rule p-6">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center border border-rule font-mono text-xs text-foreground">
+                      {i + 1}
+                    </span>
+                    <p className="text-base leading-relaxed text-foreground">{l}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
