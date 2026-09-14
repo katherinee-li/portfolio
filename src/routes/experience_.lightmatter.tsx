@@ -180,43 +180,6 @@ function LightmatterPage() {
         </Container>
       </section>
 
-      {/* 6. Goals & Growth */}
-      <section className="border-t border-rule py-14 md:py-20">
-        <Container>
-          <SectionLabel dot="blue">internship goals</SectionLabel>
-          <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
-            30-60-90 <span className="text-accent-blue">goals</span>
-          </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                The internship was structured around three pillars. Ownership: building something real, not shadowing.
-                Technical fluency: learning to speak the language of hardware and software engineering teams well
-                enough to be genuinely useful, not just present. Iteration and influence: learning to form opinionated
-                conclusions from incomplete information, identify bottlenecks, and communicate findings to people at
-                every level of the org.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The playbook, validation criteria, and CI/CD pipeline were each outputs of those three goals running
-                in parallel.
-              </p>
-            </div>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              { label: "Ownership", desc: "Building something real: three shipped deliverables with measurable org impact, not shadow work." },
-              { label: "Technical Fluency", desc: "Learning to speak hardware and software engineering well enough to be useful to both, not just present in the room." },
-              { label: "Cross-Functional Influence", desc: "Forming opinionated conclusions from incomplete information and communicating findings across every level of the org." },
-            ].map((p) => (
-              <div key={p.label} className="rounded-2xl border border-rule p-6">
-                <p className="text-xs uppercase tracking-[0.22em] text-accent-blue mb-3">{p.label}</p>
-                <p className="text-base leading-relaxed text-foreground">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* 7. Closing */}
       <section className="border-t border-rule py-14 md:py-20">
         <Container>
