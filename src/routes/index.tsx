@@ -42,8 +42,9 @@ function Hero() {
             </h1>
 
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
-              I build <span style={{ color: "#1e3a8a" }}>systems</span> that work in{" "}
-              <span style={{ color: "#1e3a8a" }}>the real world</span>.
+              I build across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
+              <span style={{ color: "#1e3a8a" }}>robotics</span>, and{" "}
+              <span style={{ color: "#1e3a8a" }}>software</span> to create products people enjoy using.
             </p>
             <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
               I work across software, hardware, and AI — from embedded devices and robotics to backend systems and
