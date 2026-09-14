@@ -141,9 +141,9 @@ function About() {
 }
 
 const explore = [
-  { to: "/work" as const, label: "projects", desc: "Hardware, software, and robotics systems I've built.", dot: "orange" as const },
-  { to: "/experience" as const, label: "experience", desc: "Engineering, product, and research.", dot: "green" as const },
-  { to: "/thoughts" as const, label: "writing", desc: "Things I've learned and thought about.", dot: "rose" as const },
+  { to: "/work" as const, label: "selected work", desc: "hardware, software, and product.", dot: "orange" as const },
+  { to: "/experience" as const, label: "experience", desc: "internships, research, and leadership.", dot: "green" as const },
+  { to: "/thoughts" as const, label: "thoughts & writing", desc: "essays, experiments, and personal writing.", dot: "rose" as const },
 ];
 
 function Explore() {
