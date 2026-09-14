@@ -44,7 +44,7 @@ function Hero() {
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
               I build across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
               <span style={{ color: "#1e3a8a" }}>robotics</span>, and{" "}
-              <span style={{ color: "#1e3a8a" }}>software</span> to create products people enjoy using.
+              <span style={{ color: "#1e3a8a" }}>software</span> to create systems that are useful and reliable
             </p>
           </div>
 
