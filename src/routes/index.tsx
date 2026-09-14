@@ -98,7 +98,7 @@ function About() {
               I'm most interested in work where I can move between understanding the problem, building the system, deploying it, and figuring out why it breaks.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Outside of engineering, I've led CMU's Product Management Academy and taught computer systems.
+              Outside class I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
             </p>
           </div>
           <aside className="md:col-span-4">
