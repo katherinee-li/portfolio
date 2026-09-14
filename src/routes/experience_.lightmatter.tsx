@@ -67,29 +67,6 @@ function LightmatterPage() {
         </Container>
       </section>
 
-      {/* 2. Context */}
-      <section className="border-t border-rule py-14 md:py-20">
-        <Container>
-          <SectionLabel dot="blue">the company</SectionLabel>
-          <div className="grid gap-12">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
-                What <span className="text-accent-blue">Lightmatter builds</span>
-              </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Lightmatter builds photonic interconnect hardware that moves data between AI chips using light instead
-                of copper. At a $4.4B valuation and ~300 people, the company was at the inflection point between
-                startup speed and enterprise rigor, scaling programs and processes without losing the ability to ship.
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-foreground md:text-lg">
-                The TPM role sat at that intersection: owning cross-functional alignment across engineering, hardware,
-                and product teams simultaneously building toward large-scale data center deployment.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       {/* 3. Work 1: Product Lifecycle */}
       <section className="border-t border-rule py-14 md:py-20">
         <Container>
