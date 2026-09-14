@@ -34,14 +34,14 @@ function MossPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Sensor Kit<span className="text-accent-green">.</span>
+                Sensor Kit
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
                 Electrical system for an agricultural robotics sensor kit.
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
-                Built the electrical system for an ATV-mounted sensing platform deployed on commercial tree farms
-                managing millions of trees.
+                Built the electrical system for an ATV-mounted sensing platform that automates tree inventory across
+                commercial farms managing millions of trees.
               </p>
               <p className="mt-4 max-w-md font-mono text-xs leading-relaxed text-ink-soft md:text-sm">
                 GPS + LiDAR + IMU → compute → field-ready enclosure → customer deployment
@@ -71,17 +71,20 @@ function MossPage() {
                 The problem with <span className="font-serif-i italic text-accent-green">manual forestry</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                Tree farms run inventory twice a year, minimum. The previous process required 3 people, 2 months,
-                paper records, and manual counting row by row. Version 2.0 of the moss sensor kit replaced that
-                process: mount the box to an ATV, drive the rows, plug in at day's end, and the data appears.
+                Commercial tree farms inventory millions of trees to understand what they can sell each season. The
+                existing process required crews to walk rows, measure trees manually, and record results on paper — a
+                complete inventory could take three people nearly two months. Moss was building a system that could
+                collect the same data while a worker drove through the field on an ATV. My job was to redesign the
+                electrical system for the second-generation sensor kit and make it reliable enough for repeated field
+                deployment.
               </p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-8">
             {[
-              { value: "16%", label: "improvement in field accuracy" },
-              { value: "20%", label: "reduction in sensor failure rates" },
-              { value: "2–10M", label: "trees per farm" },
+              { value: "16%", label: "improvement in positional accuracy" },
+              { value: "20%", label: "reduction in sensor failures" },
+              { value: "2–10M", label: "trees per customer farm" },
             ].map((s) => (
               <div key={s.label} className="border-l-2 border-accent-green pl-4">
                 <p className="font-display text-2xl text-foreground">{s.value}</p>
@@ -100,9 +103,10 @@ function MossPage() {
             How the system <span className="font-serif-i italic text-accent-green">is organized</span>.
           </h2>
           <p className="mb-10 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
-            The sensor kit integrates GPS, LiDAR, and IMU data into a single enclosure built for field deployment.
-            Internal architecture is split across three functional zones. All components are wall-mounted to interior
-            enclosure walls and carry IP67 ratings, verified through in-house water testing.
+            The sensor kit combines GPS, LiDAR, IMU sensing, compute, power management, networking, and thermal
+            control inside a single weatherproof enclosure. Internal architecture is split across three functional
+            areas. All components are wall-mounted to interior enclosure walls and carry IP67 ratings, verified
+            through in-house water testing.
           </p>
           <img
             src="/moss-architecture.jpg"
@@ -111,9 +115,9 @@ function MossPage() {
           />
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { zone: "Sensing and Interface Wing", desc: "Manages primary spatial sensing arrays and localized data routing infrastructure." },
-              { zone: "Compute Engine Core", desc: "Houses the central high-performance processing node and industrial power injection hardware." },
-              { zone: "Power and Climate Matrix", desc: "Controls environmental monitoring, active thermal regulation, power distribution, and system status indication." },
+              { zone: "Sensing & synchronization", desc: "GPS, LiDAR, IMU, and time-synchronized sensor inputs." },
+              { zone: "Compute", desc: "Processes incoming sensor data and manages collection." },
+              { zone: "Power & telemetry", desc: "Battery management, power distribution, thermal control, and system status." },
             ].map((z) => (
               <div key={z.zone} className="border-l-2 border-accent-green pl-4">
                 <p className="text-xs uppercase tracking-[0.18em] text-foreground mb-2">{z.zone}</p>
@@ -243,9 +247,10 @@ function MossPage() {
                 What <span className="font-serif-i italic text-accent-green">changed</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                What took 3 people 2 months now runs on an ATV. The transition from hand-wired prototype to
-                PCB-driven, backplane-organized assembly created a repeatable manufacturing baseline. Inventory
-                data reaches the office before the sales window closes.
+                The redesigned system provided a repeatable hardware platform that could be assembled, serviced, and
+                deployed across multiple farms. Instead of sending a crew through every row with paper and calipers,
+                an operator could mount the system to an ATV, drive the field, and upload inventory data at the end of
+                the day.
               </p>
             </div>
           </div>

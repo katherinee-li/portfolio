@@ -37,7 +37,7 @@ function STEMboxPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="green">Non-Profit · 2020 — 2023</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                STEMbox<span className="text-accent-green">.</span>
+                STEMbox
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
                 Hands-on science experiments delivered.

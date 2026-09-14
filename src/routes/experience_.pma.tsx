@@ -41,7 +41,7 @@ function PMAPage() {
           <SectionLabel dot="green">CMU · Product Management Academy · 2024 — Present</SectionLabel>
           <div className="md:col-span-7">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              PMA<span className="text-accent-green">.</span>
+              PMA
             </h1>
             <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
               President, Product Management Academy at CMU.

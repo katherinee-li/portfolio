@@ -32,7 +32,7 @@ function EarlyWorksPage() {
           <SectionLabel dot="blue">High School · 2022</SectionLabel>
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              Early Works<span className="text-accent-blue">.</span>
+              Early Works
             </h1>
           </div>
         </Container>

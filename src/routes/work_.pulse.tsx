@@ -50,22 +50,29 @@ function PulsePage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Pulse<span className="text-accent-orange">.</span>
+                Pulse
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
                 Proximity-based social navigation device.
               </p>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-foreground">
-                A dedicated, single-purpose device for spontaneous human connection.
+                Built a handheld device that detects nearby friends and provides real-time directional navigation
+                using GNSS, IMU sensing, and device-to-device communication.
               </p>
               <div className="mt-8 rounded-2xl border border-rule p-6">
                 <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">What I built</p>
                 <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-foreground">
-                  <li>ESP32 firmware + sensor pipeline</li>
-                  <li>Node.js/WebSocket backend</li>
-                  <li>Device-to-device synchronization</li>
-                  <li>Integration + system testing</li>
+                  <li>ESP32-C5 firmware</li>
+                  <li>GNSS and IMU processing</li>
+                  <li>Node.js backend services</li>
+                  <li>WebSocket communication</li>
+                  <li>Device state management</li>
+                  <li>Integration and system testing</li>
                 </ul>
+                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+                  The final system connected four physical devices through a shared backend with real-time location
+                  updates.
+                </p>
               </div>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
                 CMU ECE · 18-500 · Spring 2026
@@ -92,8 +99,10 @@ function PulsePage() {
                 Smartphones engineer <span className="font-serif-i italic text-accent-orange">engagement</span>, not connection.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                The friction of opening an app, typing, coordinating, it kills spontaneity. Pulse removes that surface area
-                entirely, then has to earn its place against the phone with measurable engineering targets.
+                Meeting up with someone nearby still usually starts with a phone: send a message, share a location,
+                check a map, and keep looking at the screen. We wanted to see whether a dedicated device could make
+                that interaction simpler. Pulse detects nearby friends, lets you request a meetup, and points you
+                toward them with a live directional arrow.
               </p>
             </div>
           </div>
@@ -242,8 +251,10 @@ function PulsePage() {
             className="w-full max-w-[820px] mx-auto block"
           />
           <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
-            Nine metrics across latency, accuracy, endurance, and usability. Every spec passed; navigation update latency
-            landed at ~140ms against a 200ms target.
+            More than 40 unit, integration, and end-to-end tests across sensors, firmware, REST/WebSocket services,
+            and the database, plus validation across 50+ multi-device scenarios covering latency, positioning
+            accuracy, connection recovery, battery life, and complete meetup flows. Every spec passed; navigation
+            update latency landed at ~140 ms against a 200 ms target.
           </p>
         </Container>
       </section>
@@ -257,9 +268,9 @@ function PulsePage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             {[
-              { risk: "GPS occlusion", fix: "PDR fusion bridges signal gaps; Kalman weighting drops GNSS as HDOP rises." },
-              { risk: "Connection loss", fix: "Reconnect flow with state replay; in-flight meetups survive transient drops." },
-              { risk: "Power budget", fix: "IDLE state aggressively reclaimed by the state machine to extend session life." },
+              { risk: "GNSS loss", fix: "IMU-based dead reckoning bridges short gaps while GNSS accuracy is degraded." },
+              { risk: "Connection loss", fix: "Devices reconnect and recover the active meetup state instead of restarting the interaction." },
+              { risk: "Power consumption", fix: "Firmware returns devices to lower-power states when active navigation is unnecessary." },
             ].map((r) => (
               <div key={r.risk} className="rounded-2xl border border-rule p-6">
                 <p className="font-display text-xl">{r.risk}</p>
@@ -287,9 +298,9 @@ function PulsePage() {
                 A compass that <span className="font-serif-i italic text-accent-orange">asks to be put down</span>.
               </h2>
               <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                Pulse is a device with a single job, and a screen that quietly bows out when that job is done.
-                It earns its place in your pocket by refusing to compete for your attention, and then disappears
-                until the next time a friend is nearby.
+                The final prototype supported real-time meetup and navigation across four physical devices, with
+                roughly 140 ms synchronization latency and all major engineering requirements passing validation.
+                The goal was simple: help two people find each other, then get out of the way.
               </p>
             </div>
           </div>

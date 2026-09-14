@@ -22,7 +22,7 @@ function WorkPage() {
         <Container>
           <SectionLabel dot="orange">selected work</SectionLabel>
           <h1 className="mb-8 font-display text-5xl leading-[0.95] md:text-7xl">
-            Things I've <span className="font-serif-i italic text-accent-orange">built</span>.
+            Things I've <span className="font-serif-i italic text-accent-orange">built</span>
           </h1>
           <div className="grid gap-6 md:grid-cols-12">
             {projects.map((p, i) => {
@@ -57,10 +57,7 @@ function WorkPage() {
                   )}
                   <div>
                     <h3 className="font-display text-3xl leading-[1] md:text-5xl">{p.title}</h3>
-                    <p className="mt-3 text-xs uppercase tracking-[0.18em] text-foreground">
-                      {p.domains.join(" · ")}
-                    </p>
-                    <p className="mt-1 text-xs tracking-[0.06em] text-ink-soft">{p.stack.join(" · ")}</p>
+                    <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground">{p.desc}</p>
                   </div>
                 </div>
               </Tag>

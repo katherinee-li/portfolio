@@ -42,12 +42,12 @@ function Hero() {
             </h1>
 
             <p className="mt-24 font-serif-i text-2xl leading-snug text-ink md:text-4xl whitespace-pre-line">
-              I build and deploy systems across <span style={{ color: "#1e3a8a" }}>hardware</span>,{" "}
-              <span style={{ color: "#1e3a8a" }}>software</span>, and{" "}
-              <span style={{ color: "#1e3a8a" }}>AI</span>.
+              I build <span style={{ color: "#1e3a8a" }}>systems</span> that work in{" "}
+              <span style={{ color: "#1e3a8a" }}>the real world</span>.
             </p>
             <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
-              I like taking ambiguous technical problems from prototype to reliable product.
+              I work across software, hardware, and AI — from embedded devices and robotics to backend systems and
+              developer tooling.
             </p>
           </div>
 
@@ -55,9 +55,9 @@ function Hero() {
             <p className="invisible font-serif-i text-2xl md:text-4xl mb-4">Hi, I'm</p>
             <h1 className="invisible mt-12 font-display text-[24vw] leading-[0.88] md:text-[14rem]" aria-hidden>k</h1>
             <div className="mt-72 text-sm leading-relaxed text-ink-soft">
-              <p className="text-foreground">Engineer + Builder</p>
-              <p>ECE @ Carnegie Mellon</p>
-              <p>Robotics · Systems · AI</p>
+              <p className="text-foreground">ECE @ Carnegie Mellon</p>
+              <p>Evaluations @ General Intuition</p>
+              <p>Previously Lightmatter</p>
             </div>
           </div>
         </div>
@@ -68,12 +68,12 @@ function Hero() {
 
 const skills = [
   {
-    label: "Engineering",
-    items: ["Python", "C++", "JavaScript/TypeScript", "SQL", "React", "Node.js", "REST APIs", "WebSockets"],
+    label: "Software",
+    items: ["Python", "C++", "JavaScript", "TypeScript", "SQL", "React", "Node.js", "REST APIs", "WebSockets"],
   },
   {
-    label: "Systems + Robotics",
-    items: ["ROS", "ESP32", "Linux", "Docker", "GPS/LiDAR/IMU", "I2C/SPI/UART"],
+    label: "Systems & Robotics",
+    items: ["ROS", "ESP32", "Linux", "Docker", "GPS", "LiDAR", "IMU", "I2C", "SPI", "UART"],
   },
   {
     label: "Product",
@@ -89,23 +89,23 @@ function About() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-8">
             <p className="font-serif-i text-3xl leading-snug md:text-5xl">
-              I like building systems where <span className="text-accent-orange">software</span> has to interact with <span className="text-accent-orange">the real world</span>.
+              I like working on problems that sit between <span className="text-accent-orange">software</span> and <span className="text-accent-orange">the physical world</span>.
             </p>
             <p className="mt-10 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              My work has spanned <span className="text-accent-green">robotics</span>, <span className="text-accent-green">embedded hardware</span>, <span className="text-accent-green">backend systems</span>, and <span className="text-accent-green">developer tooling</span> — from sensor kits deployed on farms to autonomous search-and-rescue robots.
+              I've built sensing systems for commercial farms, autonomy tools for search-and-rescue robots, embedded social devices, and developer tooling for photonic computing infrastructure.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              I'm especially interested in problems where the technical and product questions are tightly coupled: figuring out what needs to be built, getting it working in a messy environment, and learning from how people actually use it.
+              I'm most interested in work where I can move between understanding the problem, building the system, deploying it, and figuring out why it breaks.
             </p>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
-              Outside class I run CMU's Product Management Club, mentor students, and compete in Taekwondo sparring.
+              Outside of engineering, I've led CMU's Product Management Academy and taught computer systems.
             </p>
           </div>
           <aside className="md:col-span-4">
             <div className="rounded-2xl border border-rule p-6">
               <p className="text-xs uppercase tracking-[0.22em] text-ink-soft">Education</p>
-              <p className="mt-4 font-display text-2xl">Carnegie Mellon</p>
-              <p className="mt-1 text-sm text-ink-soft">B.S. ECE</p>
+              <p className="mt-4 font-display text-2xl">Carnegie Mellon University</p>
+              <p className="mt-1 text-sm text-ink-soft">B.S. Electrical &amp; Computer Engineering</p>
               <p className="text-sm text-ink-soft">Program GPA 3.74</p>
 
               <div className="my-6 h-px bg-rule" />
@@ -141,9 +141,9 @@ function About() {
 }
 
 const explore = [
-  { to: "/work" as const, label: "selected work", desc: "hardware, software, and product.", dot: "orange" as const },
-  { to: "/experience" as const, label: "experience", desc: "internships, research, and leadership.", dot: "green" as const },
-  { to: "/thoughts" as const, label: "thoughts & writing", desc: "essays, experiments, and personal writing.", dot: "rose" as const },
+  { to: "/work" as const, label: "projects", desc: "Hardware, software, and robotics systems I've built.", dot: "orange" as const },
+  { to: "/experience" as const, label: "experience", desc: "Engineering, product, and research.", dot: "green" as const },
+  { to: "/thoughts" as const, label: "writing", desc: "Things I've learned and thought about.", dot: "rose" as const },
 ];
 
 function Explore() {

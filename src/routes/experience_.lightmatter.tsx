@@ -42,7 +42,7 @@ function LightmatterPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Lightmatter<span className="text-accent-blue">.</span>
+                Lightmatter
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-blue md:text-2xl">
                 Technical Program Management Intern at Lightmatter.

@@ -74,15 +74,7 @@ export function Footer() {
   return (
     <footer id="contact" className="relative border-t border-rule">
       <Container className="py-24 md:py-32">
-        <div className="relative">
-          <h2 className="font-display text-[14vw] leading-[0.9] tracking-tight md:text-[10rem]">
-            let's
-            <span className="font-serif-i italic text-accent-orange"> talk</span>
-            <span className="text-accent-orange">.</span>
-          </h2>
-        </div>
-
-        <div className="mt-12 grid gap-10 md:grid-cols-12">
+        <div className="grid gap-10 md:grid-cols-12">
           <a
             href="mailto:kli5@andrew.cmu.edu"
             className="font-serif-i text-3xl text-accent-orange underline decoration-accent-orange decoration-2 underline-offset-8 md:col-span-7 md:text-5xl"
@@ -112,44 +104,40 @@ export function Footer() {
 
 export const projects = [
   {
-    title: "Proximity-Based Social Navigation",
-    kind: "ECE Capstone",
-    year: "2026",
-    tint: "from-accent-orange/30 to-accent-rose/20",
-    image: proximityDevice,
-    href: "/work/pulse",
-    domains: ["Embedded", "Backend", "Realtime Systems"],
-    stack: ["ESP32", "Node.js", "WebSockets"],
-  },
-  {
-    title: "Farm Sensor Kit",
-    kind: "Moss · Internship",
+    title: "Sensor Kit",
+    kind: "Moss · Engineering",
     year: "2024",
     tint: "from-accent-green/30 to-accent-orange/15",
     image: farmSensorKit,
     href: "/work/moss",
-    domains: ["Hardware", "Field Deployment", "Sensors"],
-    stack: ["GPS", "LiDAR", "IMU", "PCB"],
+    desc: "Built the electrical system for an ATV-mounted sensing platform used to automate inventory across commercial tree farms.",
   },
   {
-    title: "GUI for Search and Rescue Robots",
-    kind: "Biorobotics Lab",
-    year: "2024",
-    tint: "from-accent-orange/25 to-accent-green/20",
-    image: "/mmpug-rc2.jpg",
-    href: "/work/lidar",
-    domains: ["Robotics", "Operator Tools"],
-    stack: ["C++", "ROS", "SLAM"],
+    title: "Pulse",
+    kind: "CMU ECE Capstone",
+    year: "2026",
+    tint: "from-accent-orange/30 to-accent-rose/20",
+    image: proximityDevice,
+    href: "/work/pulse",
+    desc: "Built an embedded device for finding and navigating toward nearby friends using GNSS, IMU sensing, and real-time device communication.",
   },
   {
-    title: "Farm Inventory App",
-    kind: "Moss · Internship",
+    title: "Farm Inventory",
+    kind: "Moss · Engineering",
     year: "2024",
     tint: "from-accent-rose/25 to-accent-cream/15",
     image: "/moss-tablet.jpg",
     href: "/work/farm-app",
-    domains: ["Field Tooling", "HCI"],
-    stack: ["Tablet UI", "Sensor Integration"],
+    desc: "Built the field interface for an agricultural sensing system designed around workers operating ATVs in rain, direct sunlight, and gloves.",
+  },
+  {
+    title: "MMPUG",
+    kind: "CMU Biorobotics Lab · Robotics",
+    year: "2023–2024",
+    tint: "from-accent-orange/25 to-accent-green/20",
+    image: "/mmpug-rc2.jpg",
+    href: "/work/lidar",
+    desc: "Built visualization and operator-control tools for autonomous search-and-rescue robots operating in GPS-denied environments.",
   },
 ];
 
@@ -160,8 +148,9 @@ export const thoughts = [
 ];
 
 export const work = [
-  { role: "Technical PM Intern", org: "Lightmatter", when: "Summer 2025" },
-  { role: "Engineering Intern", org: "Moss", when: "Summer 2024" },
-  { role: "Robot Exploration Researcher", org: "CMU Biorobotics", when: "2023 — 2024" },
-  { role: "President, PM Club", org: "CMU", when: "2024 — Now" },
+  { role: "Incoming Evaluations Intern", org: "General Intuition", when: "2026" },
+  { role: "Technical Program / Product Intern", org: "Lightmatter", when: "2025" },
+  { role: "Engineering Intern", org: "Moss", when: "2024" },
+  { role: "Robotics Researcher", org: "CMU Biorobotics Lab", when: "2023–2024" },
+  { role: "Teaching Assistant", org: "Carnegie Mellon University", when: "2024–2025" },
 ];

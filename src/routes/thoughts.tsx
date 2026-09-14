@@ -20,17 +20,20 @@ function ThoughtsPage() {
       <Nav />
       <section className="py-20 md:py-28">
         <Container>
-          <SectionLabel dot="rose">thoughts &amp; writing</SectionLabel>
+          <SectionLabel dot="rose">writing</SectionLabel>
           <h1 className="font-display text-5xl leading-[0.95] md:text-7xl">
-            Things I've <span className="font-serif-i italic text-accent-orange">written</span>.
+            Things I've <span className="font-serif-i italic text-accent-orange">written</span>
           </h1>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
+            A few things I've written about engineering, teaching, and things I care about.
+          </p>
           <ul className="mt-12">
             {[
               {
                 to: "/thoughts/early-works" as const,
                 title: "Early Works",
-                desc: "Two physics experiments built from scratch in high school. IB Extended Essays on eddy current braking and CRT deflection.",
-                label: "High School · 2022",
+                desc: "Two physics experiments I designed and built in high school, exploring eddy-current braking and CRT deflection.",
+                label: "Physics · 2022",
                 color: "hover:bg-accent-blue/10",
                 labelColor: "text-accent-blue",
                 arrowColor: "group-hover:text-accent-blue",
@@ -38,7 +41,7 @@ function ThoughtsPage() {
               {
                 to: "/thoughts/learning-to-take-up-space" as const,
                 title: "Learning to take up space",
-                desc: "On taekwondo, noise, and learning to claim space.",
+                desc: "On taekwondo, confidence, and getting comfortable being heard.",
                 label: "Personal · 2022",
                 color: "hover:bg-accent-orange/10",
                 labelColor: "text-accent-orange",
@@ -47,7 +50,7 @@ function ThoughtsPage() {
               {
                 to: "/thoughts/magic-in-the-mundane" as const,
                 title: "Magic in the mundane",
-                desc: "On teaching physics to kids, finding magic in ordinary things, and co-founding STEMbox.",
+                desc: "On teaching physics to kids, building STEMbox, and why ordinary things become interesting once you understand how they work.",
                 label: "Personal · 2022",
                 color: "hover:bg-accent-orange/10",
                 labelColor: "text-accent-orange",

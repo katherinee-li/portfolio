@@ -31,7 +31,7 @@ function LearningToTakeUpSpacePage() {
           <SectionLabel dot="orange">Personal · 2022</SectionLabel>
           <div className="max-w-2xl">
             <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-              Learning to take up <span className="text-accent-orange">space</span>.
+              Learning to take up <span className="text-accent-orange">space</span>
             </h1>
           </div>
         </Container>

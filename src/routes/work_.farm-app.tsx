@@ -33,15 +33,15 @@ function FarmAppPage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-5">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Farm Inventory<span className="text-accent-green">.</span>
+                Farm Inventory
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-green md:text-2xl">
                 Tablet application for agricultural inventory collection.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
-                Designed the tablet application and field interface for the moss sensor kit. Built around one
-                constraint: field workers wear gloves, work in direct sunlight, and do not stop moving to interact
-                with software.
+                Built the field interface for Moss's agricultural sensing system, designed for operators collecting
+                inventory from an ATV. Workers wear gloves, drive through direct sunlight and rain, and rarely stop
+                the ATV just to interact with software.
               </p>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
                 Engineering Intern · Moss · Summer 2024
@@ -259,9 +259,9 @@ function FarmAppPage() {
             Remove the clipboard, <span className="font-serif-i italic text-accent-green">not add a screen</span>.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-2xl">
-            Every decision, tablet selection, LED color, button placement, cable choice, traced back to a field
-            observation or interview finding. The goal was to make the technology disappear into an existing workflow,
-            not add to it.
+            The final interface replaced much of the paper-based workflow without forcing workers to constantly
+            interact with another screen. The goal wasn't to add software to the field. It was to make the sensing
+            system fit naturally into work that was already happening.
           </p>
         </Container>
       </section>

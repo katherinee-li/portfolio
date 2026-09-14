@@ -37,17 +37,27 @@ function LidarPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                MMPUG<span className="text-accent-orange">.</span>
+                MMPUG
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
                 GUI tools for autonomous search and rescue robot fleets.
               </p>
               <p className="mt-8 text-lg leading-relaxed text-foreground">
-                Data visualization GUI and live video feedback system for a fleet of autonomous search and rescue robots
-                operating in GPS-denied, communication-degraded environments.
+                Built visualization, calibration, and operator-control tools for autonomous search-and-rescue robots
+                operating in GPS-denied environments.
               </p>
+              <div className="mt-8 max-w-md rounded-2xl border border-rule p-6">
+                <p className="text-xs uppercase tracking-[0.22em] text-accent-orange">What I built</p>
+                <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-foreground">
+                  <li>C++/ROS autonomous behaviors</li>
+                  <li>Robot operator controls</li>
+                  <li>Sensor-data replay tooling</li>
+                  <li>Multi-camera visualization</li>
+                  <li>AprilTag-based map calibration</li>
+                </ul>
+              </div>
               <p className="mt-6 text-xs uppercase tracking-[0.22em] text-foreground">
-                Robot Exploration Researcher · Jan 2024
+                Robotics Researcher · CMU Biorobotics Lab · 2023–2024
               </p>
             </div>
             <div className="md:col-span-5 flex items-start justify-center">
@@ -174,6 +184,32 @@ function LidarPage() {
         </Container>
       </section>
 
+      {/* 4b. Calibration + testing */}
+      <section className="border-t border-rule py-24 md:py-32">
+        <Container>
+          <SectionLabel dot="green">calibration &amp; testing</SectionLabel>
+          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+            Faster setup, <span className="font-serif-i italic text-accent-orange">measured behavior</span>.
+          </h2>
+          <div className="grid gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-lg leading-relaxed text-foreground">
+                Before deployment, robots had to agree on a shared map frame, and the existing process required several
+                minutes of manual alignment. I implemented an AprilTag-based calibration workflow that automatically
+                aligned maps across robots, reducing setup from roughly four minutes to one.
+              </p>
+            </div>
+            <div>
+              <p className="text-lg leading-relaxed text-foreground">
+                I developed and tested autonomous behaviors across more than 100 simulation runs before deployment,
+                evaluated against defined success conditions: goal completion, collision avoidance, localization
+                stability, and recovery behavior. The resulting changes improved task success by roughly 25%.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* 5. Impact */}
       <section className="border-t border-rule py-24 md:py-32">
         <Container>
@@ -191,8 +227,9 @@ function LidarPage() {
                 Full autonomy hierarchy, <span className="font-serif-i italic text-accent-orange">accessible in the field</span>.
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-foreground max-w-lg">
-                The control panel GUI made the full autonomy hierarchy accessible in high-stress field conditions, with
-                state-aware controls and persistent per-robot status panels.
+                The tooling reduced setup time, made robot behavior easier to inspect, and gave operators clearer
+                control over a fleet with multiple levels of autonomy. More importantly, it gave researchers faster
+                feedback when autonomous systems behaved differently from what they expected.
               </p>
             </div>
           </div>
