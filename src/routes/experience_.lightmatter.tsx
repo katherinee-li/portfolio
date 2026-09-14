@@ -287,11 +287,6 @@ function LightmatterPage() {
                 alt="Lightmatter intern cohort group photo"
                 className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
-              <img
-                src="/lightmatter-intern-card.jpg"
-                alt="Lightmatter intern feature card"
-                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
-              />
               <a
                 href="https://www.linkedin.com/pulse/lightmatter-2025-internship-program-angela-bertolini-she-her--wt0lc/"
                 target="_blank"
