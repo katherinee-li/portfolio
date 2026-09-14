@@ -78,7 +78,7 @@ function PMAPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="60+" label="students trained per year" />
             <Stat value="2" label="company partnerships secured" />
           </div>

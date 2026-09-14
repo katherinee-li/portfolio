@@ -63,6 +63,19 @@ const adoption = [
   },
 ];
 
+function FigureRow({ figures }: { figures: { src: string; caption: string }[] }) {
+  return (
+    <div className="mt-12 grid gap-6 md:grid-cols-2">
+      {figures.map((f) => (
+        <figure key={f.src}>
+          <img src={f.src} alt={f.caption} className="aspect-[4/3] w-full rounded-2xl border border-rule object-cover" />
+          <figcaption className="mt-3 text-sm leading-relaxed text-ink-soft">{f.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[]; dot: "green" | "orange" | "rose" }) {
   const accent =
     dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-rose";
@@ -100,8 +113,8 @@ function FarmAppPage() {
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
           <SectionLabel dot="green">Engineering · Summer 2024</SectionLabel>
-          <div className="grid gap-12 md:grid-cols-12 md:gap-16">
-            <div className="md:col-span-5">
+          <div className="grid items-center gap-12 md:grid-cols-12 md:gap-16">
+            <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 Autonomous Tree Inventory System
               </h1>
@@ -121,11 +134,11 @@ function FarmAppPage() {
                 Engineering Intern · Moss · Summer 2024
               </p>
             </div>
-            <div className="md:col-span-7 flex items-start justify-center">
+            <div className="md:col-span-6">
               <img
                 src="/moss-tablet.jpg"
                 alt="Field interface showing an active collection session"
-                className="w-full max-w-[560px] object-contain"
+                className="w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -139,19 +152,17 @@ function FarmAppPage() {
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             Inventory was still <span className="text-accent-green">manual</span>
           </h2>
-          <div className="grid gap-10 md:grid-cols-12">
-            <div className="md:col-span-8">
-              <p className="text-base leading-relaxed text-foreground md:text-lg">
-                Tree farmers struggle to maintain accurate inventory. The manual process left little traceability
-                when numbers were wrong.
-              </p>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
-                At J. Frank Schmidt & Son Co., one of the largest tree nurseries in the U.S., crews measured trees
-                with calipers, recorded counts on tally sheets, and later re-entered the data into existing software.
-              </p>
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-base leading-relaxed text-foreground md:text-lg">
+              Tree farmers struggle to maintain accurate inventory. The manual process left little traceability
+              when numbers were wrong.
+            </p>
+            <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg">
+              At J. Frank Schmidt & Son Co., one of the largest tree nurseries in the U.S., crews measured trees
+              with calipers, recorded counts on tally sheets, and later re-entered the data into existing software.
+            </p>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { value: "2M", label: "trees" },
               { value: "3,000", label: "acres" },
@@ -164,14 +175,12 @@ function FarmAppPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <div className="w-full max-w-[340px]">
-              <img src="/moss-caliper.jpg" alt="Manual caliper measurement in the field" className="w-full aspect-[4/3] object-cover" />
-            </div>
-            <div className="w-full max-w-[340px]">
-              <img src="/moss-inventory-screen.jpg" alt="Office re-entry of handwritten inventory data" className="w-full aspect-[4/3] object-cover" />
-            </div>
-          </div>
+          <FigureRow
+            figures={[
+              { src: "/moss-caliper.jpg", caption: "Manual caliper measurement in the field" },
+              { src: "/moss-inventory-screen.jpg", caption: "Office re-entry of handwritten inventory data" },
+            ]}
+          />
         </Container>
       </section>
 
@@ -245,15 +254,13 @@ function FarmAppPage() {
             know what the system was doing without opening developer tools or reading internal error codes.
           </p>
           <PairTable rows={adoption} dot="orange" />
-          <div className="mt-12 flex flex-wrap justify-center gap-6">
-            <div className="w-full max-w-[340px]">
-              <img src="/tablet-candidates.jpg" alt="Tablets and controllers evaluated for field use" className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule" />
-            </div>
-            <div className="w-full max-w-[340px]">
-              <img src="/IMG_2927.jpg" alt="Dunk-testing the sealed enclosure" className="w-full aspect-[4/3] object-cover rounded-2xl border border-rule" />
-            </div>
-          </div>
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
+          <FigureRow
+            figures={[
+              { src: "/tablet-candidates.jpg", caption: "Tablets and controllers evaluated for field use" },
+              { src: "/IMG_2927.jpg", caption: "Dunk-testing the sealed enclosure" },
+            ]}
+          />
+          <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground md:text-lg">
             <span className="text-xs uppercase tracking-[0.22em] text-accent-orange">result</span>
             <br />
             A sensor kit farmers could deploy independently during the Oregon field pilot.
@@ -271,7 +278,7 @@ function FarmAppPage() {
           <img
             src="/moss-architecture.jpg"
             alt="Subsystem block diagram of the sensor kit"
-            className="w-full max-w-[900px] mx-auto block mb-10"
+            className="mb-12 block w-full rounded-2xl border border-rule"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -286,7 +293,7 @@ function FarmAppPage() {
               </div>
             ))}
           </div>
-          <div className="mt-10 grid gap-10 md:grid-cols-12">
+          <div className="mt-12 grid items-center gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
                 I reorganized the internal hardware around modular backplanes and fixed component positions, so a
@@ -297,7 +304,7 @@ function FarmAppPage() {
               <img
                 src="/IMG_2924.jpg"
                 alt="Interior wall mounting and detachable backplane"
-                className="w-full max-w-[300px] rounded-2xl border border-rule block"
+                className="block aspect-[4/3] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>

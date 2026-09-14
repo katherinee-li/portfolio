@@ -60,11 +60,11 @@ function LidarPage() {
                 Robotics Researcher · CMU Biorobotics Lab · 2023–2024
               </p>
             </div>
-            <div className="md:col-span-5 flex items-start justify-center">
+            <div className="md:col-span-5">
               <img
                 src="/mmpug-rc2.jpg"
                 alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-                className="w-full max-w-[420px] object-contain"
+                className="w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -115,7 +115,7 @@ function LidarPage() {
               <img
                 src="/mmpug-replay.jpg"
                 alt="Multi-camera replay grid showing RC3 fisheye feeds across three simultaneous viewpoints"
-                className="w-full max-w-[560px] mx-auto block rounded-xl border border-rule"
+                className="block w-full rounded-xl border border-rule"
               />
               <Caption>Multi-camera replay grid: RC3 fisheye feeds across three simultaneous viewpoints, victim circled in center frame.</Caption>
             </div>

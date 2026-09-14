@@ -78,11 +78,11 @@ function PulsePage() {
                 CMU ECE · 18-500 · Spring 2026
               </p>
             </div>
-            <div className="md:col-span-6 flex justify-center md:justify-end items-start -mt-10">
+            <div className="md:col-span-6">
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
-                className="w-full max-w-[380px] object-contain object-top"
+                className="w-full rounded-2xl object-contain object-top"
               />
             </div>
           </div>
@@ -111,7 +111,7 @@ function PulsePage() {
             <img
               src={pulseRequirements}
               alt="Use-case to design requirements table"
-              className="w-full max-w-[720px] mx-auto block"
+              className="block w-full"
             />
             <Caption>
               Four use-case requirements mapped to engineering specs with explicit justification, the traceability matrix
@@ -131,7 +131,7 @@ function PulsePage() {
           <img
             src={pulsePipeline}
             alt="Full system architecture diagram"
-            className="w-full max-w-[820px] mx-auto block"
+            className="block w-full"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -155,7 +155,7 @@ function PulsePage() {
           <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
             Sensor-to-display <span className="text-accent-orange">pipeline</span>, 200ms budget
           </h2>
-          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="w-full max-w-[820px] mx-auto block" />
+          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="block w-full" />
 
           {/* Pipeline budget — centered */}
           <div className="mt-12 max-w-2xl mx-auto text-center">
@@ -215,9 +215,9 @@ function PulsePage() {
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="w-full max-w-[820px] mx-auto border border-rule block mb-10"
+            className="mb-10 block w-full rounded-2xl border border-rule"
           />
-          <div className="grid grid-cols-3 gap-4 md:grid-cols-5 max-w-[820px] mx-auto">
+          <div className="grid grid-cols-3 gap-4 md:grid-cols-5">
             {[
               { src: "/pulse-screen-welcome.jpg", label: "Welcome" },
               { src: "/pulse-screen-send-request.jpg", label: "Send request" },
@@ -248,7 +248,7 @@ function PulsePage() {
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
-            className="w-full max-w-[820px] mx-auto block"
+            className="block w-full"
           />
           <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
             More than 40 unit, integration, and end-to-end tests across sensors, firmware, REST/WebSocket services,

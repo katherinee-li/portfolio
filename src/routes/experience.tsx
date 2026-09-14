@@ -15,8 +15,9 @@ export const Route = createFileRoute("/experience")({
 
 const entries = [
   {
-    role: "Incoming Evaluations Intern",
+    role: "Evaluations Intern",
     org: "General Intuition · New York",
+    logo: "/logo-general-intuition.png",
     when: "2026",
     desc: "Integrating action models into new environments and hardware, building evaluation systems, and testing model behavior ahead of deployment.",
     tint: "hover:bg-accent-orange/10",

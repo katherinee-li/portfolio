@@ -56,11 +56,11 @@ function LightmatterPage() {
                 Technical Program Management Intern · Mountain View, CA · Summer 2025
               </p>
             </div>
-            <div className="md:col-span-5 flex justify-center md:justify-end items-start">
+            <div className="md:col-span-5">
               <img
                 src="/lightmatter-rack.jpg"
                 alt="Lightmatter photonic computing rack showing Passage and Guide modules with fiber optic interconnects"
-                className="w-full max-w-[420px] object-contain rounded-2xl border border-rule"
+                className="w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -116,7 +116,7 @@ function LightmatterPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="55+" label="lifecycle milestones defined" />
             <Stat value="~300" label="person org aligned" />
             <Stat value="2 tracks" label="hardware and software timelines reconciled" />
@@ -144,7 +144,7 @@ function LightmatterPage() {
               </p>
             </div>
           </div>
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="40+" label="validation criteria authored" />
             <Stat value="FIT" label="evaluations against market standards" />
             <Stat value="Unblocked" label="large-scale AI data center deployment" />
@@ -195,7 +195,7 @@ function LightmatterPage() {
             </div>
           </div>
 
-          <div className="mt-10 flex flex-wrap gap-8">
+          <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Stat value="65%" label="reduction in update cycle time" />
             <Stat value="8→3 min" label="test suite runtime" />
             <Stat value="30+" label="program and product managers served" />

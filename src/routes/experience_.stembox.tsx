@@ -50,11 +50,11 @@ function STEMboxPage() {
                 Co-Founder · Greater Vancouver Area · 2020 — 2023
               </p>
             </div>
-            <div className="md:col-span-5 flex items-start justify-center">
+            <div className="md:col-span-5">
               <img
                 src="/stembox-team.jpg"
                 alt="STEMbox team"
-                className="w-full max-w-[340px] object-contain rounded-xl"
+                className="w-full rounded-xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ function STEMboxPage() {
               </p>
             </div>
             <div className="md:col-span-6 flex flex-col gap-6">
-              <div className="max-w-[340px]">
+              <div>
                 <img
                   src="/stembox-assembly.jpg"
                   alt="STEMbox kits being assembled on the living room floor, materials spread out across the carpet"
@@ -97,7 +97,7 @@ function STEMboxPage() {
                 />
                 <Caption>Assembly on the living room floor: materials portioned for each student.</Caption>
               </div>
-              <div className="max-w-[340px]">
+              <div>
                 <img
                   src="/stembox-boxes.jpg"
                   alt="Finished STEMbox kits stacked in the garage, each labeled with a student name"
