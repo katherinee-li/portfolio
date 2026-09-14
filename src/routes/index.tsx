@@ -66,15 +66,15 @@ function Hero() {
 const skills = [
   {
     label: "Software",
-    items: ["Python", "C++", "JavaScript", "TypeScript", "SQL", "React", "Node.js", "REST APIs", "WebSockets"],
+    items: ["Python", "C++", "TypeScript", "React", "Node.js", "SQL"],
   },
   {
     label: "Systems & Robotics",
-    items: ["ROS", "ESP32", "Linux", "Docker", "GPS", "LiDAR", "IMU", "I2C", "SPI", "UART"],
+    items: ["ROS", "ESP32", "Linux", "Docker", "LiDAR", "GPS / IMU"],
   },
   {
     label: "Product",
-    items: ["Customer Discovery", "User Research", "Roadmapping", "PRDs"],
+    items: ["Customer Discovery", "User Research", "PRDs"],
   },
 ];
 
