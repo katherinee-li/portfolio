@@ -46,10 +46,6 @@ function Hero() {
               <span style={{ color: "#1e3a8a" }}>robotics</span>, and{" "}
               <span style={{ color: "#1e3a8a" }}>software</span> to create products people enjoy using.
             </p>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft md:text-lg">
-              I work across software, hardware, and AI — from embedded devices and robotics to backend systems and
-              developer tooling.
-            </p>
           </div>
 
           <div className="hidden md:flex md:flex-col md:items-end md:text-right">
