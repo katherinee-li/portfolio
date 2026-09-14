@@ -152,5 +152,4 @@ export const work = [
   { role: "Technical Program / Product Intern", org: "Lightmatter", when: "2025" },
   { role: "Engineering Intern", org: "Moss", when: "2024" },
   { role: "Robotics Researcher", org: "CMU Biorobotics Lab", when: "2023–2024" },
-  { role: "Teaching Assistant", org: "Carnegie Mellon University", when: "2024–2025" },
 ];

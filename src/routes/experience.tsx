@@ -52,14 +52,6 @@ const entries = [
     tint: "hover:bg-accent-orange/10",
     href: "/work/lidar",
   },
-  {
-    role: "Teaching Assistant",
-    org: "Carnegie Mellon University",
-    logo: "/logo-cmu.png",
-    when: "2024–2025",
-    desc: "Taught computer systems and supported weekly office hours for 40+ students. Built more than 50 autograder tests across nine programming labs.",
-    tint: "hover:bg-accent-green/10",
-  },
 ] as const;
 
 const leadership = [
