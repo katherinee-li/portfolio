@@ -124,7 +124,6 @@ export const thoughts = [
 ];
 
 export const work = [
-  { role: "Product Management Intern", org: "Coinbase", when: "Summer 2026" },
   { role: "Technical PM Intern", org: "Lightmatter", when: "Summer 2025" },
   { role: "President, PM Club", org: "CMU", when: "2024 — Now" },
   { role: "Engineering Intern", org: "Moss", when: "Summer 2024" },

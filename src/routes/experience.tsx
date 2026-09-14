@@ -16,15 +16,6 @@ export const Route = createFileRoute("/experience")({
 
 const entries = [
   {
-    role: "Product Management Intern",
-    org: "Coinbase",
-    logo: "/logo-coinbase.png",
-    when: "Summer 2026",
-    desc: "Scaling product systems at one of the largest crypto platforms.",
-    tint: "hover:bg-accent-orange/10",
-    coming: true,
-  },
-  {
     role: "Technical PM Intern",
     org: "Lightmatter",
     logo: "/logo-lightmatter.png",
@@ -86,7 +77,6 @@ function ExperiencePage() {
           </h1>
           <ul>
             {entries.map((entry) => {
-              const hasLink = "href" in entry;
               const hasDropdown = "links" in entry;
 
               const rowContent = (
@@ -94,9 +84,6 @@ function ExperiencePage() {
                   <div className="col-span-12 md:col-span-5">
                     <p className="font-display text-xl md:text-2xl">{entry.role}</p>
                     <p className="mt-1 text-sm leading-relaxed text-ink-soft">{entry.desc}</p>
-                    {"coming" in entry && entry.coming && (
-                      <p className="mt-1 text-sm font-semibold text-foreground">In the works.</p>
-                    )}
                   </div>
                   <span className="col-span-7 flex items-center gap-2 font-serif-i text-lg text-accent-orange md:col-span-4">
                     <img src={entry.logo} alt={entry.org} className="h-5 w-5 rounded object-contain" />
@@ -128,25 +115,14 @@ function ExperiencePage() {
                 );
               }
 
-              if (hasLink) {
-                return (
-                  <li key={entry.role + entry.when}>
-                    <Link
-                      to={entry.href}
-                      className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
-                    >
-                      {rowContent}
-                    </Link>
-                  </li>
-                );
-              }
-
               return (
-                <li
-                  key={entry.role + entry.when}
-                  className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
-                >
-                  {rowContent}
+                <li key={entry.role + entry.when}>
+                  <Link
+                    to={entry.href}
+                    className={`group grid grid-cols-12 items-baseline gap-4 border-b border-rule py-6 transition-colors -mx-6 px-6 md:-mx-10 md:px-10 ${entry.tint} md:py-7`}
+                  >
+                    {rowContent}
+                  </Link>
                 </li>
               );
             })}
