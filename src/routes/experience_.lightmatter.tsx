@@ -249,12 +249,6 @@ function LightmatterPage() {
               <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">
                 What the <span className="text-accent-blue">summer was</span>
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-foreground md:text-lg max-w-lg">
-                Lightmatter was at the exact moment where process starts to matter: large enough that ad hoc
-                coordination breaks down, small enough that the right system could still be designed from scratch.
-                The summer was spent building those systems: for milestones, for validation, and for documentation.
-                Each one designed to scale with the org rather than constrain it.
-              </p>
               <div className="mt-10 flex flex-col gap-6">
                 {[
                   {
