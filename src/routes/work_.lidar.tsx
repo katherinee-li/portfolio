@@ -64,7 +64,7 @@ function LidarPage() {
               <img
                 src="/mmpug-rc2.jpg"
                 alt="MMPUG RC2 wheeled robot with LiDAR sensor array"
-                className="w-full rounded-2xl border border-rule object-cover"
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -72,7 +72,7 @@ function LidarPage() {
       </section>
 
       {/* 2. Problem */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">problem</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
@@ -94,10 +94,10 @@ function LidarPage() {
       </section>
 
       {/* 3. What Was Built */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">contributions</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Two GUI tools for <span className="text-accent-orange">data validation and operator control</span>
           </h2>
 
@@ -115,7 +115,7 @@ function LidarPage() {
               <img
                 src="/mmpug-replay.jpg"
                 alt="Multi-camera replay grid showing RC3 fisheye feeds across three simultaneous viewpoints"
-                className="block w-full rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain block w-full rounded-xl border border-rule"
               />
               <Caption>Multi-camera replay grid: RC3 fisheye feeds across three simultaneous viewpoints, victim circled in center frame.</Caption>
             </div>
@@ -134,7 +134,7 @@ function LidarPage() {
               <img
                 src="/mmpug-dual-screen.jpg"
                 alt="Full operator setup with RViz 3D LiDAR map and control panel side by side"
-                className="w-full rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-xl border border-rule"
               />
             </div>
           </div>
@@ -142,10 +142,10 @@ function LidarPage() {
       </section>
 
       {/* 4. System Context */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">system · MMPUG</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Sliding-mode autonomy across <span className="text-accent-orange">four control levels</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-12">
@@ -185,10 +185,10 @@ function LidarPage() {
       </section>
 
       {/* 4b. Calibration + testing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">calibration &amp; testing</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Faster setup, <span className="text-accent-orange">measured behavior</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-2">
@@ -211,14 +211,14 @@ function LidarPage() {
       </section>
 
       {/* 5. Impact */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
                 src="/mmpug-fleet.jpg"
                 alt="MMPUG heterogeneous robot fleet: wheeled RC robots and legged Spot robots"
-                className="w-full border border-rule block rounded-xl"
+                className="max-h-[26rem] object-contain w-full border border-rule block rounded-xl"
               />
             </div>
             <div className="md:col-span-7">

@@ -54,7 +54,7 @@ function STEMboxPage() {
               <img
                 src="/stembox-team.jpg"
                 alt="STEMbox team"
-                className="w-full rounded-xl border border-rule object-cover"
+                className="max-h-[26rem] w-full rounded-xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -62,7 +62,7 @@ function STEMboxPage() {
       </section>
 
       {/* 2. Problem */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose" size="base">problem</SectionLabel>
           <p className="text-lg leading-relaxed text-foreground">
@@ -76,7 +76,7 @@ function STEMboxPage() {
       </section>
 
       {/* 3. The Kit */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green" size="base">solution</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -111,7 +111,7 @@ function STEMboxPage() {
       </section>
 
       {/* 4. Curriculum */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green" size="base">curriculum · 12+ lessons</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -128,7 +128,7 @@ function STEMboxPage() {
               <img
                 src="/stembox-lessons.jpg"
                 alt="Grid of 12+ lesson decks including DNA extraction, electromagnets, volcano, buoyancy, and Alka-Seltzer"
-                className="w-full rounded-xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-xl border border-rule"
               />
               <Caption>Original lesson decks spanning physics, chemistry, biology, and engineering.</Caption>
             </div>
@@ -137,7 +137,7 @@ function STEMboxPage() {
       </section>
 
       {/* 5. Scale */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange" size="base">impact</SectionLabel>
           <p className="mb-10 text-lg leading-relaxed text-foreground max-w-2xl">
@@ -163,7 +163,7 @@ function STEMboxPage() {
       </section>
 
       {/* 6. Press */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose" size="base">recognition</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">

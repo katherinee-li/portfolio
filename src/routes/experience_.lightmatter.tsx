@@ -60,7 +60,7 @@ function LightmatterPage() {
               <img
                 src="/lightmatter-rack.jpg"
                 alt="Lightmatter photonic computing rack showing Passage and Guide modules with fiber optic interconnects"
-                className="w-full rounded-2xl border border-rule object-cover"
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -68,7 +68,7 @@ function LightmatterPage() {
       </section>
 
       {/* 2. Context */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">the company</SectionLabel>
           <div className="grid gap-12">
@@ -91,7 +91,7 @@ function LightmatterPage() {
       </section>
 
       {/* 3. Work 1: Product Lifecycle */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">task 01 · product lifecycle</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
@@ -125,7 +125,7 @@ function LightmatterPage() {
       </section>
 
       {/* 4. Work 2: Validation Criteria */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">task 02 · engineering validation</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
@@ -153,7 +153,7 @@ function LightmatterPage() {
       </section>
 
       {/* 5. Work 3: CI/CD Documentation Pipeline */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">task 03 · documentation pipeline</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
@@ -204,7 +204,7 @@ function LightmatterPage() {
       </section>
 
       {/* 6. Goals & Growth */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">internship goals</SectionLabel>
           <h2 className="mb-8 font-display text-3xl leading-[1.05] md:text-5xl">
@@ -241,7 +241,7 @@ function LightmatterPage() {
       </section>
 
       {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-start">
             <div className="md:col-span-7">
@@ -285,12 +285,12 @@ function LightmatterPage() {
               <img
                 src="/lightmatter-team.jpg"
                 alt="Lightmatter intern cohort group photo"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
               <img
                 src="/lightmatter-intern-card.jpg"
                 alt="Lightmatter intern feature card"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
               <a
                 href="https://www.linkedin.com/pulse/lightmatter-2025-internship-program-angela-bertolini-she-her--wt0lc/"

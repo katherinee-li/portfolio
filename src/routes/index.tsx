@@ -37,7 +37,7 @@ function Hero() {
               Hi, I'm
             </p>
 
-            <h1 className="mt-12 font-display text-[24vw] leading-[0.88] tracking-tight text-accent-cream md:text-[14rem]">
+            <h1 className="mt-10 font-display text-[24vw] leading-[0.88] tracking-tight text-accent-cream md:text-[14rem]">
               <span className="font-serif-i italic text-accent-orange">katherine</span>
             </h1>
 

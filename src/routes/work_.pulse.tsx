@@ -82,7 +82,7 @@ function PulsePage() {
               <img
                 src={pulseDevice}
                 alt="Pulse device showing welcome screen"
-                className="w-full rounded-2xl object-contain object-top"
+                className="max-h-[26rem] w-full rounded-2xl object-contain object-top"
               />
             </div>
           </div>
@@ -90,7 +90,7 @@ function PulsePage() {
       </section>
 
       {/* 2. Problem + Requirements */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">problem & requirements</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12">
@@ -111,7 +111,7 @@ function PulsePage() {
             <img
               src={pulseRequirements}
               alt="Use-case to design requirements table"
-              className="block w-full"
+              className="max-h-[26rem] object-contain block w-full"
             />
             <Caption>
               Four use-case requirements mapped to engineering specs with explicit justification, the traceability matrix
@@ -122,16 +122,16 @@ function PulsePage() {
       </section>
 
       {/* 3. System Architecture */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">system architecture</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             System <span className="text-accent-orange">architecture</span>: device · firmware · server
           </h2>
           <img
             src={pulsePipeline}
             alt="Full system architecture diagram"
-            className="block w-full"
+            className="max-h-[26rem] object-contain block w-full"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
@@ -149,16 +149,16 @@ function PulsePage() {
       </section>
 
       {/* 4. Firmware & State Machine */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">firmware & state machine</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Sensor-to-display <span className="text-accent-orange">pipeline</span>, 200ms budget
           </h2>
-          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="block w-full" />
+          <img src={pulseArchitecture} alt="Data pipeline and device state machine" className="max-h-[26rem] object-contain block w-full" />
 
           {/* Pipeline budget — centered */}
-          <div className="mt-12 max-w-2xl mx-auto text-center">
+          <div className="mt-10 max-w-2xl mx-auto text-center">
             <p className="leading-relaxed text-foreground" style={{ fontSize: "22px" }}>
               The end-to-end pipeline runs inside a single 200ms budget, from accelerometer sample to rendered arrow on the
               opposite device.
@@ -188,7 +188,7 @@ function PulsePage() {
               <img
                 src="/pulse-state-machine.jpg"
                 alt="State machine with per-state current draw"
-                className="w-full border border-rule block"
+                className="max-h-[26rem] object-contain w-full border border-rule block"
               />
             </div>
             <div className="rounded-2xl border border-rule p-6">
@@ -206,16 +206,16 @@ function PulsePage() {
       </section>
 
       {/* 5. UI Walkthrough */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">UI walkthrough</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl text-center">
             UI flow: idle <span className="text-accent-orange">→ request → navigate → meetup</span>
           </h2>
           <img
             src="/pulse-meetup-flow.jpg"
             alt="5-step meetup flow: Device Wake to SUCCESS"
-            className="mb-10 block w-full rounded-2xl border border-rule"
+            className="max-h-[26rem] object-contain mb-10 block w-full rounded-2xl border border-rule"
           />
           <div className="grid grid-cols-3 gap-4 md:grid-cols-5">
             {[
@@ -239,16 +239,16 @@ function PulsePage() {
       </section>
 
       {/* 6. Testing & Validation */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">testing & validation</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl text-center">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl text-center">
             Targets vs. <span className="text-accent-orange">measured results</span>
           </h2>
           <img
             src="/pulse-validation.jpg"
             alt="Validation results table: targets vs. measured"
-            className="block w-full"
+            className="max-h-[26rem] object-contain block w-full"
           />
           <p className="mt-8 max-w-2xl mx-auto text-base leading-relaxed text-foreground md:text-lg text-center">
             More than 40 unit, integration, and end-to-end tests across sensors, firmware, REST/WebSocket services,
@@ -260,10 +260,10 @@ function PulsePage() {
       </section>
 
       {/* 7. Risk Mitigations */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">risk mitigations</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Failure modes and <span className="text-accent-orange">mitigations</span>
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -282,14 +282,14 @@ function PulsePage() {
       </section>
 
       {/* 8. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-center">
             <div className="md:col-span-5">
               <img
                 src="/pulse-device-final.jpg"
                 alt="Pulse device displaying ARE YOU STILL THERE? idle prompt"
-                className="w-full border border-rule block"
+                className="max-h-[26rem] object-contain w-full border border-rule block"
               />
             </div>
             <div className="md:col-span-7">

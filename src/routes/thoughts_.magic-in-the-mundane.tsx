@@ -37,7 +37,7 @@ function MagicInTheMundanePage() {
         </Container>
       </section>
 
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="max-w-2xl space-y-6 text-base leading-relaxed text-foreground md:text-lg">
             <p>

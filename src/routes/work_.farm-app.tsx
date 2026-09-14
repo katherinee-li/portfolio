@@ -65,10 +65,10 @@ const adoption = [
 
 function FigureRow({ figures }: { figures: { src: string; caption: string }[] }) {
   return (
-    <div className="mt-12 grid gap-6 md:grid-cols-2">
+    <div className="mt-10 grid gap-6 md:grid-cols-2">
       {figures.map((f) => (
         <figure key={f.src}>
-          <img src={f.src} alt={f.caption} className="aspect-[4/3] w-full rounded-2xl border border-rule object-cover" />
+          <img src={f.src} alt="" className="aspect-[16/10] w-full rounded-2xl border border-rule object-cover" />
           <figcaption className="mt-3 text-sm leading-relaxed text-ink-soft">{f.caption}</figcaption>
         </figure>
       ))}
@@ -80,15 +80,15 @@ function PairTable({ rows, dot }: { rows: { insight: string; solution: string }[
   const accent =
     dot === "green" ? "text-accent-green" : dot === "orange" ? "text-accent-orange" : "text-accent-rose";
   return (
-    <div className="mt-10 border-t border-rule">
+    <div className="mt-8 border-t border-rule">
       {rows.map((r) => (
-        <div key={r.insight} className="grid gap-4 border-b border-rule py-6 md:grid-cols-2 md:gap-12">
+        <div key={r.insight} className="grid gap-2 border-b border-rule py-4 md:grid-cols-2 md:gap-12">
           <div>
-            <p className={`mb-2 text-xs uppercase tracking-[0.18em] ${accent}`}>insight</p>
+            <p className={`mb-1 text-xs uppercase tracking-[0.18em] ${accent}`}>insight</p>
             <p className="text-base leading-relaxed text-foreground">{r.insight}</p>
           </div>
           <div>
-            <p className={`mb-2 text-xs uppercase tracking-[0.18em] ${accent}`}>solution</p>
+            <p className={`mb-1 text-xs uppercase tracking-[0.18em] ${accent}`}>solution</p>
             <p className="text-base leading-relaxed text-foreground">{r.solution}</p>
           </div>
         </div>
@@ -137,8 +137,8 @@ function FarmAppPage() {
             <div className="md:col-span-6">
               <img
                 src="/moss-tablet.jpg"
-                alt="Field interface showing an active collection session"
-                className="w-full rounded-2xl border border-rule object-cover"
+                alt=""
+                className="max-h-[26rem] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -146,10 +146,10 @@ function FarmAppPage() {
       </section>
 
       {/* 2. Background */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">background</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Inventory was still <span className="text-accent-green">manual</span>
           </h2>
           <div className="max-w-3xl">
@@ -162,7 +162,7 @@ function FarmAppPage() {
               with calipers, recorded counts on tally sheets, and later re-entered the data into existing software.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
               { value: "2M", label: "trees" },
               { value: "3,000", label: "acres" },
@@ -185,10 +185,10 @@ function FarmAppPage() {
       </section>
 
       {/* 3. Current vs target */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">scope</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Prototype to <span className="text-accent-green">pilot-ready system</span>
           </h2>
           <div className="grid gap-10 md:grid-cols-2">
@@ -222,7 +222,7 @@ function FarmAppPage() {
       </section>
 
       {/* 4. Deliverable 1 */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">deliverable 01 · deployment</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
@@ -243,7 +243,7 @@ function FarmAppPage() {
       </section>
 
       {/* 5. Deliverable 2 */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">deliverable 02 · adoption</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
@@ -269,16 +269,16 @@ function FarmAppPage() {
       </section>
 
       {/* 6. Sensor kit architecture */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">the sensor kit</SectionLabel>
-          <h2 className="mb-10 font-display text-3xl leading-[1.05] md:text-5xl">
+          <h2 className="mb-6 font-display text-3xl leading-[1.05] md:text-5xl">
             Four subsystems, <span className="text-accent-green">one enclosure</span>
           </h2>
           <img
             src="/moss-architecture.jpg"
             alt="Subsystem block diagram of the sensor kit"
-            className="mb-12 block w-full rounded-2xl border border-rule"
+            className="mb-10 block max-h-[24rem] w-full rounded-2xl border border-rule object-contain"
           />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
@@ -293,7 +293,7 @@ function FarmAppPage() {
               </div>
             ))}
           </div>
-          <div className="mt-12 grid items-center gap-10 md:grid-cols-12">
+          <div className="mt-10 grid items-center gap-10 md:grid-cols-12">
             <div className="md:col-span-7">
               <p className="text-base leading-relaxed text-foreground md:text-lg">
                 I reorganized the internal hardware around modular backplanes and fixed component positions, so a
@@ -303,8 +303,8 @@ function FarmAppPage() {
             <div className="md:col-span-5">
               <img
                 src="/IMG_2924.jpg"
-                alt="Interior wall mounting and detachable backplane"
-                className="block aspect-[4/3] w-full rounded-2xl border border-rule object-cover"
+                alt=""
+                className="block aspect-[16/10] w-full rounded-2xl border border-rule object-cover"
               />
             </div>
           </div>
@@ -312,7 +312,7 @@ function FarmAppPage() {
       </section>
 
       {/* 7. Deliverable 3 — scaling */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">deliverable 03 · scaling</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl">
@@ -332,7 +332,7 @@ function FarmAppPage() {
       </section>
 
       {/* 8. Lessons learned */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">lessons learned</SectionLabel>
           <h2 className="font-display text-3xl leading-[1.05] md:text-5xl mt-4">

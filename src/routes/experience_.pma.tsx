@@ -59,7 +59,7 @@ function PMAPage() {
       </section>
 
       {/* 2. Overview */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">the program</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12">
@@ -86,7 +86,7 @@ function PMAPage() {
       </section>
 
       {/* 3. Project 1: Industry Presentation */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">project 1 · industry presentation</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -103,13 +103,13 @@ function PMAPage() {
               <img
                 src="/pma-presentation.jpg"
                 alt="Students presenting an Xbox AI assistant redesign"
-                className="mt-8 w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain mt-8 w-full rounded-2xl border border-rule block"
               />
             </div>
             <div className="md:col-span-7">
               <iframe
                 src="/pma-industry-presentation.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="Industry Presentation Assignment"
               />
@@ -119,7 +119,7 @@ function PMAPage() {
       </section>
 
       {/* 4. Project 2: Company Partnership */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="orange">project 2 · company partnership</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -141,7 +141,7 @@ function PMAPage() {
             <div className="md:col-span-7">
               <iframe
                 src="/pma-perflection.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="PMA x Perflection AI Project Documentation"
               />
@@ -151,7 +151,7 @@ function PMAPage() {
       </section>
 
       {/* 5. Speaker Series */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="green">speaker series</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 items-start">
@@ -169,7 +169,7 @@ function PMAPage() {
               <img
                 src="/pma-speaker.jpg"
                 alt="Speaker session with Sofie Yang, Harvard MBA, former Uber PM and McKinsey consultant"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
             </div>
           </div>
@@ -177,7 +177,7 @@ function PMAPage() {
       </section>
 
       {/* 6. Operations */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="rose">running the org</SectionLabel>
           <div className="grid gap-10 md:grid-cols-12 items-start">
@@ -199,7 +199,7 @@ function PMAPage() {
             <div className="md:col-span-7">
               <iframe
                 src="/pma-developing-product.pdf"
-                className="w-full rounded-2xl border border-rule"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule"
                 style={{ height: "520px" }}
                 title="Developing a New Product — curriculum slides"
               />
@@ -221,7 +221,7 @@ function PMAPage() {
       </section>
 
       {/* 7. Closing */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <div className="grid gap-14 md:grid-cols-12 items-start">
             <div className="md:col-span-6">
@@ -239,7 +239,7 @@ function PMAPage() {
               <img
                 src="/pma-cohort.jpg"
                 alt="Fall 2025 PMA cohort welcome session, members holding name cards"
-                className="w-full rounded-2xl border border-rule block"
+                className="max-h-[26rem] object-contain w-full rounded-2xl border border-rule block"
               />
             </div>
           </div>

@@ -39,7 +39,7 @@ function EarlyWorksPage() {
       </section>
 
       {/* Experiment 1: Eddy Current Braking */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">experiment 01 · eddy current braking</SectionLabel>
           <div className="max-w-2xl">
@@ -78,7 +78,7 @@ function EarlyWorksPage() {
       </section>
 
       {/* Experiment 2: Cathode Ray Tube */}
-      <section className="border-t border-rule py-24 md:py-32">
+      <section className="border-t border-rule py-14 md:py-20">
         <Container>
           <SectionLabel dot="blue">experiment 02 · cathode ray tube deflection</SectionLabel>
           <div className="max-w-2xl">
