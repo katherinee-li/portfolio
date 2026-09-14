@@ -113,7 +113,7 @@ export const projects = [
     desc: "Turned an autonomous tree-inventory prototype into a system farmers could independently operate, from field interface to repeatable sensor-kit assembly.",
   },
   {
-    title: "Pulse",
+    title: "Proximity Navigation Device",
     kind: "CMU ECE Capstone",
     year: "2026",
     tint: "from-accent-orange/30 to-accent-rose/20",
@@ -122,7 +122,7 @@ export const projects = [
     desc: "Built an embedded device for finding and navigating toward nearby friends using GNSS, IMU sensing, and real-time device communication.",
   },
   {
-    title: "MMPUG",
+    title: "Search-and-Rescue Vehicles",
     kind: "CMU Biorobotics Lab · Robotics",
     year: "2023–2024",
     tint: "from-accent-orange/25 to-accent-green/20",

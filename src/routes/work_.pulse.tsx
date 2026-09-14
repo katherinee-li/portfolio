@@ -9,9 +9,9 @@ import pulsePipeline from "@/assets/pulse-architecture.jpg";
 export const Route = createFileRoute("/work_/pulse")({
   head: () => ({
     meta: [
-      { title: "Pulse — The Compass That Connects" },
+      { title: "Proximity Navigation Device · Pulse" },
       { name: "description", content: "A dedicated, single-purpose device for spontaneous human connection. CMU ECE Capstone." },
-      { property: "og:title", content: "Pulse — The Compass That Connects" },
+      { property: "og:title", content: "Proximity Navigation Device · Pulse" },
       { property: "og:description", content: "A dedicated, single-purpose device for spontaneous human connection." },
     ],
   }),
@@ -50,7 +50,7 @@ function PulsePage() {
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-6">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                Pulse
+                Proximity Navigation Device
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
                 Proximity-based social navigation device

@@ -5,9 +5,9 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/work_/lidar")({
   head: () => ({
     meta: [
-      { title: "MMPUG — GUI for Search and Rescue Robots" },
+      { title: "Search-and-Rescue Vehicles · MMPUG" },
       { name: "description", content: "Data visualization GUI and live video feedback system for autonomous search and rescue robots." },
-      { property: "og:title", content: "MMPUG — GUI for Search and Rescue Robots" },
+      { property: "og:title", content: "Search-and-Rescue Vehicles · MMPUG" },
       { property: "og:description", content: "GUI tools for a fleet of autonomous search and rescue robots operating in GPS-denied environments." },
     ],
   }),
@@ -37,7 +37,7 @@ function LidarPage() {
             <div className="md:col-span-7">
               <SectionLabel dot="orange">CMU Biorobotics Lab · 2024</SectionLabel>
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
-                MMPUG
+                Search-and-Rescue Vehicles
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-orange md:text-2xl">
                 GUI tools for autonomous search and rescue robot fleets
