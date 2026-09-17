@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { Container, PageShell, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/thoughts")({
   head: () => ({
@@ -16,8 +16,7 @@ export const Route = createFileRoute("/thoughts")({
 
 function ThoughtsPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
+    <PageShell>
       <section className="py-20 md:py-28">
         <Container>
           <SectionLabel dot="rose">thoughts &amp; writing</SectionLabel>
@@ -71,6 +70,6 @@ function ThoughtsPage() {
           </ul>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }

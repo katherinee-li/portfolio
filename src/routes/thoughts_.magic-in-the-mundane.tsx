@@ -1,6 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { createFileRoute } from "@tanstack/react-router";
+import { BackLink, Container, PageShell, SectionLabel } from "@/components/site";
 
 export const Route = createFileRoute("/thoughts_/magic-in-the-mundane")({
   head: () => ({
@@ -16,15 +15,8 @@ export const Route = createFileRoute("/thoughts_/magic-in-the-mundane")({
 
 function MagicInTheMundanePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
-
-      <Container className="pt-4">
-        <Link to="/thoughts" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" />
-          back to thoughts
-        </Link>
-      </Container>
+    <PageShell>
+      <BackLink to="/thoughts" label="back to thoughts" />
 
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
@@ -81,6 +73,6 @@ function MagicInTheMundanePage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }

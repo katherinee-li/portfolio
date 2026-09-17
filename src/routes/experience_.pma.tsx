@@ -1,6 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft } from "lucide-react";
-import { Container, Nav, SectionLabel } from "@/components/site";
+import { createFileRoute } from "@tanstack/react-router";
+import { BackLink, Container, PageShell, SectionLabel, Stat } from "@/components/site";
 
 export const Route = createFileRoute("/experience_/pma")({
   head: () => ({
@@ -14,26 +13,10 @@ export const Route = createFileRoute("/experience_/pma")({
   component: PMAPage,
 });
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="border-l-2 border-accent-green pl-4">
-      <p className="font-display text-2xl text-foreground">{value}</p>
-      <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{label}</p>
-    </div>
-  );
-}
-
 function PMAPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
-
-      <Container className="pt-4">
-        <Link to="/experience" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground">
-          <ArrowLeft className="h-3.5 w-3.5" />
-          back to experience
-        </Link>
-      </Container>
+    <PageShell>
+      <BackLink to="/experience" label="back to experience" />
 
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
@@ -79,8 +62,8 @@ function PMAPage() {
             </div>
           </div>
           <div className="mt-10 flex flex-wrap gap-8">
-            <Stat value="60+" label="students trained per year" />
-            <Stat value="2" label="company partnerships secured" />
+            <Stat value="60+" label="students trained per year" accent="green" />
+            <Stat value="2" label="company partnerships secured" accent="green" />
           </div>
         </Container>
       </section>
@@ -245,6 +228,6 @@ function PMAPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }

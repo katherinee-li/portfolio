@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Nav, SectionLabel, projects } from "@/components/site";
+import { Container, PageShell, SectionLabel, projects } from "@/components/site";
 
 export const Route = createFileRoute("/work")({
   head: () => ({
@@ -16,8 +16,7 @@ export const Route = createFileRoute("/work")({
 
 function WorkPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
+    <PageShell>
       <section className="pt-6 pb-20 md:pt-8 md:pb-28">
         <Container>
           <SectionLabel dot="orange">selected work</SectionLabel>
@@ -63,6 +62,6 @@ function WorkPage() {
           </div>
         </Container>
       </section>
-    </main>
+    </PageShell>
   );
 }

@@ -1,7 +1,10 @@
 import { Link } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
 import type { ReactNode } from "react";
 import proximityDevice from "@/assets/proximity-device.png";
 import farmSensorKit from "@/assets/farm-sensor-kit.png";
+
+type Accent = "orange" | "green" | "rose" | "blue";
 
 export const categories = [
   "Product Management",
@@ -15,6 +18,49 @@ export const categories = [
 
 export function Container({ children, className = "" }: { children: ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-[1320px] px-6 md:px-10 ${className}`}>{children}</div>;
+}
+
+export function PageShell({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return (
+    <main className={`min-h-screen overflow-x-hidden bg-background text-foreground ${className}`}>
+      <Nav />
+      {children}
+    </main>
+  );
+}
+
+export function BackLink({ to, label }: { to: "/work" | "/experience" | "/thoughts"; label: string }) {
+  return (
+    <Container className="pt-4">
+      <Link
+        to={to}
+        className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-foreground hover:text-foreground"
+      >
+        <ArrowLeft className="h-3.5 w-3.5" />
+        {label}
+      </Link>
+    </Container>
+  );
+}
+
+export function Caption({ children }: { children: ReactNode }) {
+  return <p className="mt-3 text-base leading-relaxed text-foreground text-center">{children}</p>;
+}
+
+const accentBorder: Record<Accent, string> = {
+  orange: "border-accent-orange",
+  green: "border-accent-green",
+  rose: "border-accent-rose",
+  blue: "border-accent-blue",
+};
+
+export function Stat({ value, label, accent = "orange" }: { value: string; label: string; accent?: Accent }) {
+  return (
+    <div className={`border-l-2 pl-4 ${accentBorder[accent]}`}>
+      <p className="font-display text-2xl text-foreground">{value}</p>
+      <p className="mt-0.5 text-sm leading-relaxed text-ink-soft">{label}</p>
+    </div>
+  );
 }
 
 export function Nav() {
@@ -59,7 +105,7 @@ export function Marquee() {
   );
 }
 
-export function SectionLabel({ children, dot = "orange", size = "sm" }: { children: ReactNode; dot?: "orange" | "green" | "rose" | "blue"; size?: "sm" | "base" | "lg" }) {
+export function SectionLabel({ children, dot = "orange", size = "sm" }: { children: ReactNode; dot?: Accent; size?: "sm" | "base" | "lg" }) {
   const dotClass = dot === "green" ? "bg-accent-green" : dot === "rose" ? "bg-accent-rose" : dot === "blue" ? "bg-accent-blue" : "bg-accent-orange";
   const sizeClass = size === "lg" ? "text-lg" : size === "base" ? "text-base" : "text-sm";
   return (

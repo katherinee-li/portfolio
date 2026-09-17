@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
-import { Container, Footer, Nav, SectionLabel } from "@/components/site";
+import { Container, Footer, PageShell, SectionLabel } from "@/components/site";
 import katherinePortrait from "@/assets/katherine-portrait.png";
 
 export const Route = createFileRoute("/")({
@@ -9,13 +9,12 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-background text-foreground">
-      <Nav />
+    <PageShell>
       <Hero />
       <About />
       <Explore />
       <Footer />
-    </main>
+    </PageShell>
   );
 }
 
