@@ -5,10 +5,10 @@ import { Container, Nav, SectionLabel } from "@/components/site";
 export const Route = createFileRoute("/experience_/lightmatter")({
   head: () => ({
     meta: [
-      { title: "Lightmatter · Technical Program Management" },
-      { name: "description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems." },
-      { property: "og:title", content: "Lightmatter · Technical Program Management" },
-      { property: "og:description", content: "Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems for a 300-person engineering org." },
+      { title: "Lightmatter · Technical Product" },
+      { name: "description", content: "Technical Product intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems." },
+      { property: "og:title", content: "Lightmatter · Technical Product" },
+      { property: "og:description", content: "Technical Product intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones, authoring validation criteria, and building documentation systems for a 300-person engineering org." },
     ],
   }),
   component: LightmatterPage,
@@ -38,22 +38,22 @@ function LightmatterPage() {
       {/* 1. Hero */}
       <section className="pt-6 pb-12 md:pt-10 md:pb-16">
         <Container>
-          <SectionLabel dot="blue">Technical Program Management · Summer 2025</SectionLabel>
+          <SectionLabel dot="blue">Technical Product · Summer 2025</SectionLabel>
           <div className="grid gap-12 md:grid-cols-12 md:gap-16">
             <div className="md:col-span-7">
               <h1 className="font-display text-4xl leading-[0.92] tracking-tight md:text-6xl">
                 Lightmatter<span className="text-accent-blue">.</span>
               </h1>
               <p className="mt-4 font-serif-i text-xl leading-snug text-accent-blue md:text-2xl">
-                Technical Program Management Intern at Lightmatter.
+                Technical Product Intern at Lightmatter.
               </p>
               <p className="mt-8 max-w-lg text-lg leading-relaxed text-foreground">
-                Technical PM intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones,
+                Technical Product intern at a $4.4B AI photonic computing unicorn. Defining product lifecycle milestones,
                 authoring validation criteria, and building documentation systems for a 300-person engineering org
                 shipping AI data center hardware.
               </p>
               <p className="mt-8 text-xs uppercase tracking-[0.22em] text-foreground">
-                Technical Program Management Intern · Mountain View, CA · Summer 2025
+                Technical Product Intern · Mountain View, CA · Summer 2025
               </p>
             </div>
             <div className="md:col-span-5 flex justify-center md:justify-end items-start">

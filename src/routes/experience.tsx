@@ -25,7 +25,7 @@ const entries = [
     coming: true,
   },
   {
-    role: "Technical PM Intern",
+    role: "Technical Product Intern",
     org: "Lightmatter",
     logo: "/logo-lightmatter.png",
     when: "Summer 2025",
